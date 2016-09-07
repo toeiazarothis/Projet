@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta charset="utf-8">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../img/stylo.ico">
+    <link rel="shortcut icon" href="img/stylo.ico">
     <meta property="og:title" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="Petit site des familles" />
@@ -26,6 +26,7 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
+
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand">SchoolNotes</h3>
@@ -47,9 +48,9 @@
                 <form class="form-signin">
                   <h2 class="form-signin-heading">Connectez vous</h2>
                   <label for="inputEmail" class="sr-only">Identifiant</label>
-                  <input type="email" id="inputEmail" class="form-control" placeholder="Identifiant" required autofocus>
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Identifiant" required autofocus><br>
                   <label for="inputPassword" class="sr-only">Mots de passe</label>
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" required>
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" required><br>
                   <div class="checkbox">
                     <label>
                       <input type="checkbox" value="remember-me"> Se souvenir de moi
@@ -60,6 +61,13 @@
             </div>
             </p>
           </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

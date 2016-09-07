@@ -19,6 +19,10 @@ a:hover {
   border: 1px solid #fff;
 }
 
+.navbar-default {
+  background-color: #ff9800;
+}
+
 
 /*
  * Base structure
@@ -95,7 +99,7 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .masthead-brand {
     float: left;
   }
@@ -132,7 +136,7 @@ body {
  * Affix and center
  */
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;

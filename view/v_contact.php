@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta charset="utf-8">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../img/stylo.ico">
+    <link rel="shortcut icon" href="img/stylo.ico">
     <meta property="og:title" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="Petit site des familles" />
@@ -87,7 +87,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    
+
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>  </body>

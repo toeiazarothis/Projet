@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta charset="utf-8">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../img/stylo.ico">
+    <link rel="shortcut icon" href="img/stylo.ico">
     <meta property="og:title" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="Petit site des familles" />
