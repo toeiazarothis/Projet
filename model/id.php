@@ -1,4 +1,4 @@
 <?php
-define('UTILISATEUR','');
-define('PASS','');
+define('UTILISATEUR','u240317083_admin');
+define('PASS','root');
  ?>
