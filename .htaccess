@@ -1,0 +1,9 @@
+RewriteBase /home/u240317083/public_html/
+Options +FollowSymlinks
+RewriteEngine On
+
+#Regles
+RewriteRule ^$ controller/c_index.php [L]
+RewriteRule ^$ controller/c_eleve.php [L]
+RewriteRule ^$ controller/c_prof.php [L]
+RewriteRule ^$ controller/c_viescolaire.php [L]
