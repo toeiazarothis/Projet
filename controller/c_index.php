@@ -1,1 +1,1 @@
-<?php include ('v_index.php');?>
+<?php include ('../view/v_index.php');?>
