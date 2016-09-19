@@ -47,8 +47,8 @@
                 <li><a href="#absence">Absence</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Information administrative</li>
-                <li><a href="#">Appreciation de prof</a></li>
-                <li><a href="#">Appreciation de la direction</a></li>
+                <li><a href="#prof">Appreciation de prof</a></li>
+                <li><a href="#administration">Appreciation de la direction</a></li>
               </ul>
             </li>
           </ul>
@@ -76,7 +76,47 @@
                 <h2 class="section-heading">Absences</h2>
                 <h3 class="section-subheading text-muted">Ici ce trouve les differentes absence enregistrer dernierement.<br>Si une de c'est absence vous apparait comme "etrange" contacter nous rapidement</h3>
             </div>
+            <br>
+            <div class="col-md-8 col-md-offset-2 text-center">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
         </div>
+    </section>
+
+    <section id="prof">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Appreciation de prof</h2>
+            <h3 class="section-subheading text-muted">Ici ce trouve les differentes appreciation donné par le corps enseignant de l'etablisement.<br>Si une de c'est appreciation vous apparait comme "etrange" contacter nous rapidement</h3>
+          </div>
+          <br>
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="administration" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Appreciation de la direction</h2>
+            <h3 class="section-subheading text-muted">Ici ce trouve les differentes appreciation donné par le corps administratif de l'etablisement.<br>Si une de c'est appreciation vous apparait comme "etrange" contacter nous rapidement</h3>
+          </div>
+          <br>
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- <section id="">
