@@ -46,17 +46,7 @@
                 <li><a href="#devoir" class="page-scroll">Devoir</a></li>
               </ul>
             </li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parent <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Absence</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Information administrative</li>
-                <li><a href="#">Appreciation de prof</a></li>
-                <li><a href="#">Appreciation de la direction</a></li>
-              </ul>
-            </li>
+            <li><a href="c_parent.php">Parent</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Deconnexion</a></li>
@@ -161,94 +151,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section id="devoir">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Les devoirs</h2>
-            <h3 class="section-subheading text-muted">Ceci est votre agenda virtuel.</h3>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1 text-center">
-            <div class="panel-group" id="accordion">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Français</a>
-                  </h4>
-                </div>
-                <div id="collapse10" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice pour $date.</div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Histoire</a>
-                  </h4>
-                </div>
-                <div id="collapse12" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice pour $date.</div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">Mathematique</a>
-                  </h4>
-                </div>
-                <div id="collapse13" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice pour $date.</div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">EPS</a>
-                  </h4>
-                </div>
-                <div id="collapse14" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice pour $date.</div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">Science</a>
-                  </h4>
-                </div>
-                <div id="collapse15" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice pour $date.</div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">Anglais</a>
-                  </h4>
-                </div>
-                <div id="collapse16" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice pour $date.</div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">template de $devoir</a>
-                  </h4>
-                </div>
-                <div id="collapse17" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice.<br> (l'exercice 3 de la page 45 pour le 16/12 (16 decembre))</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- <section id="">
       <div class="container">
