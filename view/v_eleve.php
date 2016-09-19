@@ -162,7 +162,7 @@
       </div>
     </section>
 
-    <section id="devoir">
+    <!-- <section id="devoir">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 col-md-offset-1 text-center">
@@ -241,14 +241,14 @@
                   </h4>
                 </div>
                 <div id="collapse17" class="panel-collapse collapse">
-                  <div class="panel-body">Vous devez faire comme devoirs $exercice.</div>
+                  <div class="panel-body">Vous devez faire comme devoirs $exercice.<br> (l'exercice 3 de la page 45 pour le 16/12 (16 decembre))</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- <section id="">
       <div class="container">
