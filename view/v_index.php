@@ -46,8 +46,8 @@
             <div class="col-md-6 col-md-offset-3">
               <form class="form-signin">
                 <h2 class="form-signin-heading">Connectez vous</h2>
-                <label for="inputEmail" class="sr-only">Identifiant</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Identifiant" required autofocus><br>
+                <label for="inputUsername" class="sr-only">Identifiant</label>
+                <input type="email" id="inputUsername" class="form-control" placeholder="Identifiant" required autofocus><br>
                 <label for="inputPassword" class="sr-only">Mots de passe</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" required><br>
                 <div class="checkbox">
