@@ -7,25 +7,44 @@ function verifUserIfExist($users){
 	while ($donnees = $reponse->fetch())
 	{
 		if ($users == $donnees['identifiant']) {
-			echo 'Identifiant <b>'.$donnees['identifiant'].'</b> trouvée!';
+			$_SESSION['stats'] = 'eleve';
+			return $donnees['id'];
+		}
+		$reponse2 = $bdd->query('SELECT id, identifiant FROM professeurs');
+		$donnees = $reponse2->fetch();
+		if ($users == $donnees['identifiant']) {
+			$_SESSION['stats'] = 'prof';
 			return $donnees['id'];
 		}
 	}
-	return 'Cette utilisateur na pas été trouvé!';
+	echo 'Cette utilisateur na pas été trouvé!';
 }
 
 function verifPassIsUser($user, $pass) {
 	$bdd = connectionDB();
 	$id = verifUserIfExist($user);
-	$reponse = $bdd->query('SELECT mot_de_passe, classe FROM eleves WHERE id='.$id.'');
-	$donnees = $reponse->fetch();
-	if ($pass != $donnees['mot_de_passe']) {
-		return ('Mot de passe incorrect!');
+	if ($_SESSION['stats'] == 'eleve') {
+		$reponse = $bdd->query('SELECT mot_de_passe, classe FROM eleves WHERE id='.$id.'');
+		$donnees = $reponse->fetch();
+		if ($pass != $donnees['mot_de_passe']) {
+			exit ('Mot de passe incorrect!');
+		}
+		$_SESSION['users'] = $user;
+		$_SESSION['userid'] = $id;
+		$_SESSION['classe'] = $donnees['classe'];
+		return header('Location: ../controller/c_eleve.php');
 	}
-	$_SESSION['users'] = $user;
-	$_SESSION['userid'] = $id;
-	$_SESSION['classe'] = $donnees['classe'];
-	return header('Location: ../controller/c_eleve.php');
+	else if ($_SESSION['stats'] == 'prof') {
+		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM professeurs WHERE id='.$id.'');
+		$donnees = $reponse->fetch();
+		if ($pass != $donnees['mot_de_passe']) {
+			exit ('Mot de passe incorrect!');
+		}
+		$_SESSION['users'] = $user;
+		$_SESSION['userid'] = $id;
+		$_SESSION['p_matiere'] = $donnees['matiere'];
+		return header('Location: ../controller/c_prof.php');
+	}
 }
 
 function matiere ($userID, $matiere) {
