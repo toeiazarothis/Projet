@@ -36,12 +36,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#" class="page-scroll">Accueil</a></li>
-            <!-- <li><a href="#note" class="page-scroll">Note</a></li>
-            <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
-            <li><a href="#event">Evenement</a></li>
-            <li><a href="#absProf">Absence Professeur</a></li>
-            <li><a href="#absEleve">Absence Eleve</a></li>
+            <li><a href="#event" class="page-scroll">Evenement</a></li>
+            <li><a href="#absProf" class="page-scroll">Absence Professeur</a></li>
+            <li><a href="#absEleve" class="page-scroll">Absence Eleve</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
