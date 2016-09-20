@@ -36,21 +36,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#" class="page-scroll">Accueil</a></li>
             <!-- <li><a href="#note" class="page-scroll">Note</a></li>
             <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
-            <li><a href="c_eleve.php">Eleve</a></li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parent <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#absence">Absence</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Information administrative</li>
-                <li><a href="#prof">Appreciation de prof</a></li>
-                <li><a href="#administration">Appreciation de la direction</a></li>
-              </ul>
-            </li>
+            <li><a href="#Note">Note</a></li>
+            <li><a href="#Devoir">Devoir</a></li>
+            <li><a href="#AbsEleve">Absence d'eleve</a></li>
+            <li><a href="#Appreciation">Appreciation</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contact.php">Contact</a></li>
@@ -67,17 +58,68 @@
       </div>
     </header>
 
-    <section id="rajoutdenote">
-
+    <section id="Note" class="bg bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Note</h2>
+              <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du derniere controlle pour transmetre l'information a l'eleve.</h3>
+          </div>
+          <div class="col-lg-10">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="devoirafaire">
 
+    <section id="Devoir">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Devoir</h2>
+              <h3 class="section-subheading text-muted">Des devoirs a donner a vos eleve ? Rempliser ce formulaire.</h3>
+          </div>
+          <div class="col-lg-10">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="eleveabsent">
 
+    <section id="AbsEleve" class="bg bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Declaration d'abscence</h2>
+              <h3 class="section-subheading text-muted">Pour declarer l'absence d'un eleve il vous suffit de choisir son nom est de cliquer dessus pour ensuite envoyer l'information au parents et a la vie scolaire</h3>
+          </div>
+          <div class="col-lg-10">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="avisduprofsurleleve">
 
+    <section id="Appreciation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Appreciation</h2>
+              <h3 class="section-subheading text-muted">Ici vous allez pouvoir marquer une appreciation au sujet d'un elevede votre choix</h3>
+          </div>
+          <div class="col-lg-10">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
