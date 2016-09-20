@@ -67,5 +67,17 @@
       </div>
     </header>
 
+    <section id="rajoutdenote">
+
+    </section>
+    <section id="devoirafaire">
+
+    </section>
+    <section id="eleveabsent">
+
+    </section>
+    <section id="avisduprofsurleleve">
+
+    </section>
   </body>
 </html>

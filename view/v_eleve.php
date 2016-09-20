@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">iSchool Note</a>
+          <a class="navbar-brand" href="#">iSchool Notes</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -46,7 +46,7 @@
                 <li><a href="#devoir" class="page-scroll">Devoir</a></li>
               </ul>
             </li>
-            <li><a href="c_parent.php">Parent</a></li>
+            <!-- <li><a href="c_parent.php">Parent</a></li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="c_index.php">Deconnexion</a></li>

@@ -19,7 +19,7 @@
     <link  href="../view/css/connecter.css" rel="stylesheet">
 
 
-    <title>Eleve - iSchool Notes</title>
+    <title>Parent - iSchool Notes</title>
   </head>
   <body>
     <!-- Fixed navbar -->

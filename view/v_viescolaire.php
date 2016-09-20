@@ -19,7 +19,7 @@
     <link  href="css/cover.css" rel="stylesheet">
 
 
-    <title>SchoolNotes</title>
+    <title>Vie Scolaire - iSchool Notes</title>
   </head>
   <body>
 <<<<<<< HEAD
