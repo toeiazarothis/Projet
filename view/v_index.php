@@ -44,17 +44,17 @@
             <p class="lead">Voici le premier site entierement adaptatif.</p>
             <p class="lead">
             <div class="col-md-6 col-md-offset-3">
-              <form class="form-signin">
+              <form class="form-signin" action="c_index.php" method="POST">
                 <h2 class="form-signin-heading">Connectez vous</h2>
                 <label for="inputUsername" class="sr-only">Identifiant</label>
-                <input type="email" id="inputUsername" class="form-control" placeholder="Identifiant" required autofocus><br>
+                <input type="text" id="inputUsername" class="form-control" placeholder="Identifiant" name="users" required autofocus><br>
                 <label for="inputPassword" class="sr-only">Mots de passe</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" required><br>
-                <div class="checkbox">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" name="password" required><br>
+                <!-- <div class="checkbox">
                   <label>
                     <input type="checkbox" value="remember-me"> Se souvenir de moi
                   </label>
-                </div>
+                </div> -->
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
               </form>
           </div>

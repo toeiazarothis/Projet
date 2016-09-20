@@ -49,7 +49,7 @@
             <li><a href="c_parent.php">Parent</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Deconnexion</a></li>
+            <li><a href="c_index.php">Deconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -78,11 +78,99 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Français</a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'francais') ?></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Histoire</a>
+                  </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'histoire') ?></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Mathematique</a>
+                  </h4>
+                </div>
+                <div id="collapse12" class="panel-collapse collapse">
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'mathematique') ?></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">EPS</a>
+                  </h4>
+                </div>
+                <div id="collapse13" class="panel-collapse collapse">
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'eps') ?></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">Science</a>
+                  </h4>
+                </div>
+              <div id="collapse14" class="panel-collapse collapse">
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'science') ?></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">Anglais</a>
+                  </h4>
+                </div>
+                <div id="collapse15" class="panel-collapse collapse">
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'anglais') ?></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">template</a>
+                  </h4>
+                </div>
+                <div id="collapse16" class="panel-collapse collapse">
+                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section id="devoirs" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <h2 class="section-heading">Les Devoirs</h2>
+                <h3 class="section-subheading text-muted">Ici ce trouve le résumer du cours & le devoir à effectuer.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matiere concerné</h3>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 col-md-offset-1 text-center">
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Français</a>
                   </h4>
                 </div>
                 <div id="collapse1" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.</div>
+                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -92,7 +180,7 @@
                   </h4>
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.</div>
+                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'histoire') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -102,7 +190,7 @@
                   </h4>
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.</div>
+                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'mathematique') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -112,7 +200,7 @@
                   </h4>
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.</div>
+                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'eps') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -122,7 +210,7 @@
                   </h4>
                 </div>
                 <div id="collapse5" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.</div>
+                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'science') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -132,7 +220,7 @@
                   </h4>
                 </div>
                 <div id="collapse6" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.</div>
+                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'anglais') ?>/div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -151,17 +239,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section id="">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Titre</h2>
-            <h3 class="section-subheading text-muted">Sous titre.</h3>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
 
 
