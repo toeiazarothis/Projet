@@ -15,13 +15,14 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
-    <link href="../view/css/bootstrap.css" rel="stylesheet">
-    <link  href="../view/css/connecter.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link  href="css/cover.css" rel="stylesheet">
 
 
     <title>SchoolNotes</title>
   </head>
   <body>
+<<<<<<< HEAD
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -132,13 +133,13 @@
 
 
 
-
-
     <!-- Bootstrap core JavaScript ======================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../view/js/bootstrap.min.js"></script>
     <script src="../view/jquery/jquery.min.js"></script>
+=======
+>>>>>>> 33dd7f43b611958fd70e590bea65bc23352e8e34
 
   </body>
 </html>
