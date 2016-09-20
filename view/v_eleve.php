@@ -70,6 +70,7 @@
             <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Les Notes</h2>
                 <h3 class="section-subheading text-muted">Ici ce trouve les differentes notes.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matiere concerné</h3>
+                <br><br><br>
             </div>
         </div>
         <div class="row">
@@ -152,7 +153,7 @@
       </div>
     </section>
 
-		<section id="devoirs" class="bg-light-gray">
+		<section id="devoir">
       <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
@@ -220,7 +221,7 @@
                   </h4>
                 </div>
                 <div id="collapse6" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'anglais') ?>/div>
+                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'anglais') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -238,7 +239,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
 
