@@ -69,17 +69,24 @@
             <select class="form-control">
               <option>Liste des classe</option>
             </select>
-            <br>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox2" value="option2">eleve 2
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
-            </label>
-            <br>
+            
+              <li>Eleve 1 /20</li>
+              <li>Eleve 2 /20</li>
+              <li>Eleve 3 /20</li>
+              <li>Eleve 4 /20</li>
+
+
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="NoteScolaire">Note sur </label>
+                <div class="input-group">
+                  <div class="input-group-addon">Nom de l'eleve</div>
+                  <input type="text" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l'eleve">
+                  <div class="input-group-addon">20</div>
+                </div>
+              </div>
+            </form>
+
             <textarea class="form-control" rows="3"></textarea><br>
             <a class="btn btn-success" href="#" role="button">Rajouter la note</a>
           </div>
@@ -129,6 +136,8 @@
               <h2 class="section-heading">Déclaration d'abscence</h2>
               <h3 class="section-subheading text-muted">Pour déclarer l'absence d'un élève, il vous suffit de choisir son nom et de cliquer dessus, pour ensuite envoyer l'information au parent et dans l'espace vie scolaire</h3>
           </div>
+        </div>
+        <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
               <select class="form-control">
                 <option>Liste des classes</option>
@@ -146,16 +155,15 @@
               <br><br>
               <a class="btn btn-danger" href="#" role="button">Absent</a>
           </div>
-        </div><br>
-
         </div>
+        <br>
         <div class="row">
           <div class="col-lg-10 col-md-offset-1">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
+          </p>
         </div>
+      </div>
     </section>
 
     <section id="Appreciation">
