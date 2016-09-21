@@ -14,5 +14,5 @@ if($_SESSION['stats'] != 'viescolaire') {
 		return header('Location: c_parent.php');
 	}
 }
-include ('../model/m_fonctions.php')
+include ('../model/m_fonctions.php');
 include ('../view/v_viescolaire.php');?>

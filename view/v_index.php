@@ -63,7 +63,7 @@
 
         <div class="mastfoot">
           <div class="inner">
-            <p>Copyright &copy; ToeiAzarothis / Moody / Akram / Josselyn ,   All rights reserved .</p>
+            <p>Copyright &copy; Mikomi &trade; ,   All rights reserved .</p>
           </div>
         </div>
 
