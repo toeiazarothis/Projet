@@ -72,12 +72,6 @@
               <option>Liste des classe</option>
             </select>
 
-              <li>Eleve 1 /20</li>
-              <li>Eleve 2 /20</li>
-              <li>Eleve 3 /20</li>
-              <li>Eleve 4 /20</li>
-
-
             <form class="form-inline">
               <div class="form-group">
                 <label class="sr-only" for="NoteScolaire">Note sur </label>
