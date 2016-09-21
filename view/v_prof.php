@@ -66,7 +66,6 @@
               <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du dernier contrôle pour transmettre l'information à l'élève.</h3>
           </div>
           <div class="col-xs-4 col-xs-offset-4 text-center">
-<<<<<<< HEAD
             <select class="form-control">
               <option>Liste des classe</option>
             </select>
@@ -81,9 +80,7 @@
               <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
             </label>
             <br>
-=======
             <textarea class="form-control" rows="3"></textarea><br>
->>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
             <a class="btn btn-success" href="#" role="button">Rajouter la note</a>
           </div>
         </div>
@@ -136,7 +133,6 @@
               <select class="form-control">
                 <option>Liste des classes</option>
               </select>
-<<<<<<< HEAD
               <br>
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
@@ -148,22 +144,9 @@
                 <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
               </label>
               <br><br>
-=======
-            </div>
-            <div class="col-xs-5">
-              <select class="form-control">
-                <option>Liste des élèves à mettre en absent</option>
-              </select>
-            </div>
-            <div class="col-xs-2">
->>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
               <a class="btn btn-danger" href="#" role="button">Absent</a>
           </div>
-<<<<<<< HEAD
         </div><br>
-=======
->>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
-
 
         </div>
         <div class="row">
@@ -190,13 +173,8 @@
             <option>Liste des eleves</option>
           </select>
             <textarea class="form-control" rows="3"></textarea><br>
-<<<<<<< HEAD
             <a class="btn btn-success" href="#" role="button">Ajouter l'appreciation</a>
-
-=======
-            <a class="btn btn-success" href="#" role="button">Ajouter l'appréciation</a>
           </div>
->>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
         </div><br>
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
