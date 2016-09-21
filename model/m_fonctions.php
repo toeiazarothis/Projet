@@ -32,7 +32,8 @@ function verifPassIsUser($user, $pass) {
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
 		$_SESSION['classe'] = $donnees['classe'];
-		return header('Location: ../controller/c_eleve.php');
+		// return header('Location: /eleve');
+		return '<script>window.location.href = "eleve";</script>';
 	}
 	else if ($_SESSION['stats'] == 'prof') {
 		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM professeurs WHERE id='.$id.'');
@@ -43,7 +44,8 @@ function verifPassIsUser($user, $pass) {
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
 		$_SESSION['p_matiere'] = $donnees['matiere'];
-		return header('Location: ../controller/c_prof.php');
+		// return header('Location: /prof');
+		return '<script>window.location.href = "prof";</script>';
 	}
 }
 
