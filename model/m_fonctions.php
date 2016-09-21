@@ -73,4 +73,16 @@ function devoir ($userID, $classe, $matiere) {
 	}
 	return $texte;
 }
+
+// Test pour liste des classe
+
+function listeDesCLasse(){
+	$connexion = new PDO('');
+	$listeCLasses =query('SELECT nom_classe FROM classe GROUP BY nom_classe ASC');
+	$listeDesClasse = $listeCLasses->fetchALL();
+	return $listeDesClasse;
+}
+
+
+
 ?>
