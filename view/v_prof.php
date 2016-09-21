@@ -53,7 +53,9 @@
 
     <header>
       <div class="container">
-        <div class="intro-text"><br><br><br><br><br><br><br><br>
+        <div class="intro-text">
+          <div class="intro-lead-in">Bienvenue $NomDeLutilisateur.<br>
+            Grâce à cette page vous allez pouvoir visualiser vos eleve est ainsi leurs fournires toutes les informations utile.Tels que leurs notes ou bien des devoirs a realiser.</div>
         </div>
       </div>
     </header>
