@@ -58,7 +58,7 @@
     <header>
       <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Grace a ce site vous allez pouvoir visualiser votre evolution scolaire.</div>
+            <div class="intro-lead-in">Grace a ce site vous allez pouvoir visualiser votre evolution scolaire.</div><br><br><br>
         </div>
       </div>
     </header>

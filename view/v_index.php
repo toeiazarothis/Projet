@@ -33,7 +33,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="v_index.php">Accueil</a></li>
-                  <li><a href="v_contact.php">Contact</a></li>
+                  <!-- <li><a href="v_contact.php">Contact</a></li> -->
                 </ul>
               </nav>
             </div>
