@@ -113,7 +113,8 @@
               <option>Liste des classe</option>
             </select>
             <br>
-            <textarea class="form-control" rows="3"></textarea><br>
+            <textarea class="form-control" rows="3" placeholder="Resume du cours"></textarea><br>
+            <textarea class="form-control" rows="3" placeholder="Devoir à faire"></textarea><br>
             <a class="btn btn-success" href="#" role="button">Rajouter le devoir</a>
           </div>
         </div>
