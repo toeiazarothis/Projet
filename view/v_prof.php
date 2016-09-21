@@ -68,10 +68,19 @@
           <div class="col-xs-4 col-xs-offset-4 text-center">
             <select class="form-control">
               <option>Liste des classe</option>
-            </select><br>
-            
-
-            <br><a class="btn btn-success" href="#" role="button">Rajouter la note</a>
+            </select>
+            <br>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox2" value="option2">eleve 2
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
+            </label>
+            <br>
+            <a class="btn btn-success" href="#" role="button">Rajouter la note</a>
           </div>
         </div>
         <div class="row">
@@ -91,7 +100,13 @@
               <h2 class="section-heading">Devoir</h2>
               <h3 class="section-subheading text-muted">Des devoirs a donner a vos eleve ? Rempliser ce formulaire.</h3>
           </div>
-          <div class="col-lg-10 col-md-offset-1 text-center">
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-4 text-center">
+            <select class="form-control">
+              <option>Liste des classe</option>
+            </select>
+            <br>
             <textarea class="form-control" rows="3"></textarea><br>
             <a class="btn btn-success" href="#" role="button">Rajouter le devoir</a>
           </div>
@@ -114,12 +129,10 @@
               <h3 class="section-subheading text-muted">Pour declarer l'absence d'un eleve il vous suffit de choisir son nom est de cliquer dessus pour ensuite envoyer l'information au parents et a la vie scolaire</h3>
           </div>
           <div class="col-md-8 col-md-offset-2 text-center">
-            <div class="col-xs-5">
               <select class="form-control">
                 <option>Liste des classe</option>
               </select>
-            </div>
-            <div class="col-xs-5">
+              <br>
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
               </label>
@@ -129,12 +142,10 @@
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
               </label>
-            </div>
-            <div class="col-xs-2">
+              <br><br>
               <a class="btn btn-danger" href="#" role="button">Absent</a>
-            </div>
           </div>
-        </div>
+        </div><br>
 
         <div class="row">
           <div class="col-lg-10 col-md-offset-1">
@@ -153,9 +164,15 @@
               <h3 class="section-subheading text-muted">Ici vous allez pouvoir marquer une appreciation au sujet d'un eleve de votre choix</h3>
           </div>
           <div class="col-lg-10 col-md-offset-1 text-center">
+            <select class="form-control">
+              <option>Liste des classe</option>
+            </select>
+          <select class="form-control">
+            <option>Liste des eleves</option>
+          </select>
             <textarea class="form-control" rows="3"></textarea><br>
             <a class="btn btn-success" href="#" role="button">Ajouter l'appreciation</a>
-          </div>
+
         </div><br>
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
