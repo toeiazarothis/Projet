@@ -3,8 +3,7 @@ Options +FollowSymlinks
 RewriteEngine On
 
 #Regles
-RewriteRule ^$ controller/c_index.php [L]
-RewriteRule ^accueil$ controller/c_index.php [L]
-RewriteRule ^eleve$ controller/c_eleve.php [L]
-RewriteRule ^prof$ controller/c_prof.php [L]
-RewriteRule ^viescolaire$ controller/c_viescolaire.php [L]
+RewriteRule ^index.php$ controller/c_index.php [L]
+RewriteRule ^eleve.php$ controller/c_eleve.php [L]
+RewriteRule ^prof.php$ controller/c_prof.php [L]
+RewriteRule ^viescolaire.php$ controller/c_viescolaire.php [L]
