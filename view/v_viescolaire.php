@@ -36,9 +36,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#event" class="page-scroll">Evenement</a></li>
-            <li><a href="#absProf" class="page-scroll">Absence Professeur</a></li>
-            <li><a href="#absEleve" class="page-scroll">Absence Eleve</a></li>
+            <li><a href="#event" class="page-scroll">Evénement</a></li>
+            <li><a href="#absProf" class="page-scroll">Absence professeur</a></li>
+            <li><a href="#absEleve" class="page-scroll">Absence élève</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -53,10 +53,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Evenement</h2>
-            <h3 class="section-subheading text-muted">Calendrier d'evenement</h3>
+            <h2 class="section-heading">Evénement</h2>
+            <h3 class="section-subheading text-muted">Calendrier d'événement</h3>
             <p>
-              Afin de communiquer au mieux les informations sur les different evenement qui concerne l'ecole nous avons mis en place un agenda virtuel qui vous permet a vous parent comme enfant de voir les sortie prevue.
+              Afin de communiquer au mieux les informations sur les differents événements qui concernent l'école, nous avons mis en place un agenda virtuel qui vous permet a vous, parent, ainsi que vos enfants de voir les sorties prevues.
             </p>
             <a class="btn btn-warning" href="v_event.php" role="button">L'agenda !</a>
           </div>
@@ -69,7 +69,7 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
             <h2 class="section-heading">Absence de professeur</h2>
-            <h3 class="section-subheading text-muted">Declarer l'absence d'un professeur</h3>
+            <h3 class="section-subheading text-muted">Déclarer l'absence d'un professeur</h3>
           </div>
         </div>
         <div class="row text-center">
@@ -81,11 +81,11 @@
                 </h4>
               </div>
               <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body">Liste des prof absent.</div>
+                <div class="panel-body">Liste des prof. absents</div>
                 <select class="form-control col-md-6">
-                  <option>Liste des prof a mettre en absennt</option>
+                  <option>Liste des prof. à mettre en absent</option>
                 </select>
-                Declarer le professeur absent ?<br>
+                Déclarer le professeur absent ?<br>
                 <a class="btn btn-success" href="#" role="button">Oui</a>
                 <a class="btn btn-danger" href="#" role="button">Non</a>
               </div>
@@ -100,8 +100,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Absence d'éleve</h2>
-            <h3 class="section-subheading text-muted">Declarer l'absence d'un eleve</h3>
+            <h2 class="section-heading">Absence d'élève</h2>
+            <h3 class="section-subheading text-muted">Déclarer l'absence d'un élève</h3>
           </div>
         </div>
         <div class="row text-center">
@@ -113,12 +113,12 @@
                 </h4>
               </div>
               <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">Liste des eleve absent.</div>
+                <div class="panel-body">Liste des élèves absents.</div>
                   <select class="form-control">
-                    <option>Liste des eleve a mettre en absennt</option>
+                    <option>Liste des élèves à mettre en absent</option>
                   </select>
                   <br>
-                  Declarer l'eleve absent ?
+                  Déclarer l'élève absent ?
                   <br>
                   <a class="btn btn-success" href="#" role="button">Oui</a>
                   <a class="btn btn-danger" href="#" role="button">Non</a>
