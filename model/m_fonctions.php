@@ -17,7 +17,15 @@ function verifUserIfExist($users){
 		if ($users == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'prof';
 			$_SESSION['prenom'] = $donnees['prenom'];
-			$_SESSION['nom'] = $donnees['nom']; 
+			$_SESSION['nom'] = $donnees['nom'];
+			return $donnees['id'];
+		}
+		$reponse2 = $bdd->query('SELECT id, identifiant, nom, prenom FROM vie_scolaire');
+		$donnees = $reponse2->fetch();
+		if ($users == $donnees['identifiant']) {
+			$_SESSION['stats'] = 'viescolaire';
+			$_SESSION['prenom'] = $donnees['prenom'];
+			$_SESSION['nom'] = $donnees['nom'];
 			return $donnees['id'];
 		}
 	}
@@ -49,6 +57,16 @@ function verifPassIsUser($user, $pass) {
 		$_SESSION['p_matiere'] = $donnees['matiere'];
 		return header('Location: ../controller/c_prof.php');
 	}
+	else if ($_SESSION['stats'] == 'viescolaire') {
+		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM vie_scolaire WHERE id='.$id.'');
+		$donnees = $reponse->fetch();
+		if ($pass != $donnees['mot_de_passe']) {
+			exit ('Mot de passe incorrect!');
+		}
+		$_SESSION['users'] = $user;
+		$_SESSION['userid'] = $id;
+		return header('Location: ../controller/c_viescolaire.php');
+	}
 }
 
 function matiere ($userID, $matiere) {
@@ -79,19 +97,26 @@ function devoir ($userID, $classe, $matiere) {
 }
 
 function afficherListeClasse () {
-
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, nom FROM classe");
+	$texte = '';
+	while ($donnees = $reponse->fetch())
+	{
+			$texte .= $donnees['nom'];
+	}
+	return $texte;
 }
 
 function afficherListeEleveDansClasse ($classe) {
 	$bdd = connectionDB();
-	$reponse = $bdd->query("SELECT id, classe FROM eleves");
+	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
 	$texte = '';
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
-			$texte .= $donnees['eleve'];
+			$texte .= ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']);
 		}
-		return $texte;
 	}
+	return $texte;
 }
 ?>
