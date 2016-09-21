@@ -45,7 +45,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="#">Deconnexion</a></li>
+            <li><a href="c_index.php">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

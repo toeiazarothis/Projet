@@ -22,7 +22,6 @@
     <title>Vie Scolaire - iSchool Notes</title>
   </head>
   <body>
-<<<<<<< HEAD
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -43,7 +42,7 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Deconnexion</a></li>
+            <li><a href="c_index.php">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
