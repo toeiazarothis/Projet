@@ -41,7 +41,7 @@
             <li><a href="#Note">Note</a></li>
             <li><a href="#Devoir">Devoir</a></li>
             <li><a href="#AbsEleve">Absence d'eleve</a></li>
-            <li><a href="#Appreciation">Appreciation</a></li>
+            <li><a href="#Appreciation">Appréciation</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contact.php">Contact</a></li>
@@ -63,9 +63,10 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
               <h2 class="section-heading">Note</h2>
-              <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du derniere controlle pour transmetre l'information a l'eleve.</h3>
+              <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du dernier contrôle pour transmettre l'information à l'élève.</h3>
           </div>
           <div class="col-xs-4 col-xs-offset-4 text-center">
+<<<<<<< HEAD
             <select class="form-control">
               <option>Liste des classe</option>
             </select>
@@ -80,6 +81,9 @@
               <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
             </label>
             <br>
+=======
+            <textarea class="form-control" rows="3"></textarea><br>
+>>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
             <a class="btn btn-success" href="#" role="button">Rajouter la note</a>
           </div>
         </div>
@@ -98,7 +102,7 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
               <h2 class="section-heading">Devoir</h2>
-              <h3 class="section-subheading text-muted">Des devoirs a donner a vos eleve ? Rempliser ce formulaire.</h3>
+              <h3 class="section-subheading text-muted">Des devoirs à donner à vos élèves ? Rempliser ce formulaire.</h3>
           </div>
         </div>
         <div class="row">
@@ -125,13 +129,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
-              <h2 class="section-heading">Declaration d'abscence</h2>
-              <h3 class="section-subheading text-muted">Pour declarer l'absence d'un eleve il vous suffit de choisir son nom est de cliquer dessus pour ensuite envoyer l'information au parents et a la vie scolaire</h3>
+              <h2 class="section-heading">Déclaration d'abscence</h2>
+              <h3 class="section-subheading text-muted">Pour déclarer l'absence d'un élève, il vous suffit de choisir son nom et de cliquer dessus, pour ensuite envoyer l'information au parent et dans l'espace vie scolaire</h3>
           </div>
           <div class="col-md-8 col-md-offset-2 text-center">
               <select class="form-control">
-                <option>Liste des classe</option>
+                <option>Liste des classes</option>
               </select>
+<<<<<<< HEAD
               <br>
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
@@ -143,10 +148,24 @@
                 <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
               </label>
               <br><br>
+=======
+            </div>
+            <div class="col-xs-5">
+              <select class="form-control">
+                <option>Liste des élèves à mettre en absent</option>
+              </select>
+            </div>
+            <div class="col-xs-2">
+>>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
               <a class="btn btn-danger" href="#" role="button">Absent</a>
           </div>
+<<<<<<< HEAD
         </div><br>
+=======
+>>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
 
+
+        </div>
         <div class="row">
           <div class="col-lg-10 col-md-offset-1">
             <p>
@@ -161,7 +180,7 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
               <h2 class="section-heading">Appreciation</h2>
-              <h3 class="section-subheading text-muted">Ici vous allez pouvoir marquer une appreciation au sujet d'un eleve de votre choix</h3>
+              <h3 class="section-subheading text-muted">Ici vous allez pouvoir marquer une appréciation au sujet d'un élève de votre choix</h3>
           </div>
           <div class="col-lg-10 col-md-offset-1 text-center">
             <select class="form-control">
@@ -171,8 +190,13 @@
             <option>Liste des eleves</option>
           </select>
             <textarea class="form-control" rows="3"></textarea><br>
+<<<<<<< HEAD
             <a class="btn btn-success" href="#" role="button">Ajouter l'appreciation</a>
 
+=======
+            <a class="btn btn-success" href="#" role="button">Ajouter l'appréciation</a>
+          </div>
+>>>>>>> 88914777a3495459c9e0c70ae6d8be0ad81d075a
         </div><br>
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
