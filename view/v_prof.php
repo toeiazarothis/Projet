@@ -145,9 +145,9 @@
           </div>
           <div class="col-lg-10 col-md-offset-1 text-center">
             <textarea class="form-control" rows="3"></textarea><br>
-            <a class="btn btn-warning" href="#" role="button">Ajouter l'appreciation</a>
-          </div><br>
-        </div>
+            <a class="btn btn-success" href="#" role="button">Ajouter l'appreciation</a>
+          </div>
+        </div><br>
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
             <p>
@@ -157,5 +157,12 @@
         </div>
       </div>
     </section>
+
+
+    <!-- Bootstrap core JavaScript ======================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../view/js/bootstrap.min.js"></script>
+    <script src="../view/jquery/jquery.min.js"></script>
   </body>
 </html>
