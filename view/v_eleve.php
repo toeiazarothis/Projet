@@ -159,7 +159,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Les Devoirs</h2>
-                <h3 class="section-subheading text-muted">Ici ce trouve le résumer du cours & le devoir à effectuer.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matiere concerné</h3>
+                <h3 class="section-subheading text-muted">Ici ce trouve le résumer du cours & les devoirs à effectuer.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matiere concerné</h3>
             </div>
         </div>
         <div class="row">
