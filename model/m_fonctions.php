@@ -58,7 +58,7 @@ function verifPassIsUser($user, $pass) {
 		return header('Location: ../controller/c_prof.php');
 	}
 	else if ($_SESSION['stats'] == 'viescolaire') {
-		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM vie_scolaire WHERE id='.$id.'');
+		$reponse = $bdd->query('SELECT mot_de_passe FROM vie_scolaire WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
 			exit ('Mot de passe incorrect!');

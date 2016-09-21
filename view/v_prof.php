@@ -68,9 +68,16 @@
               <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du dernier contrôle pour transmettre l'information à l'élève.</h3>
           </div>
           <div class="col-xs-4 col-xs-offset-4 text-center">
+						<h4>Liste des classe:</h4>
             <select class="form-control">
-              <option>Liste des classe</option>
+              <option><?php echo afficherListeClasse () ?></option>
             </select>
+						<br>
+              <!-- <li>Eleve 1 /20</li>
+              <li>Eleve 2 /20</li>
+              <li>Eleve 3 /20</li>
+              <li>Eleve 4 /20</li> -->
+
 
             <form class="form-inline">
               <div class="form-group">
