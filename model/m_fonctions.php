@@ -3,17 +3,21 @@ include ('forMySQL.php');
 
 function verifUserIfExist($users){
 	$bdd = connectionDB();
-	$reponse = $bdd->query('SELECT id, identifiant FROM eleves');
+	$reponse = $bdd->query('SELECT id, identifiant, nom_eleve, prenom_eleve FROM eleves');
 	while ($donnees = $reponse->fetch())
 	{
 		if ($users == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'eleve';
+			$_SESSION['prenom'] = $donnees['prenom_eleve'];
+			$_SESSION['nom'] = $donnees['nom_eleve'];
 			return $donnees['id'];
 		}
-		$reponse2 = $bdd->query('SELECT id, identifiant FROM professeurs');
+		$reponse2 = $bdd->query('SELECT id, identifiant, nom, prenom FROM professeurs');
 		$donnees = $reponse2->fetch();
 		if ($users == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'prof';
+			$_SESSION['prenom'] = $donnees['prenom'];
+			$_SESSION['nom'] = $donnees['nom']; 
 			return $donnees['id'];
 		}
 	}
@@ -74,15 +78,20 @@ function devoir ($userID, $classe, $matiere) {
 	return $texte;
 }
 
-// Test pour liste des classe
+function afficherListeClasse () {
 
-function listeDesCLasse(){
-	$connexion = new PDO('');
-	$listeCLasses =query('SELECT nom_classe FROM classe GROUP BY nom_classe ASC');
-	$listeDesClasse = $listeCLasses->fetchALL();
-	return $listeDesClasse;
 }
 
-
-
+function afficherListeEleveDansClasse ($classe) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, classe FROM eleves");
+	$texte = '';
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['classe'] == $classe) {
+			$texte .= $donnees['eleve'];
+		}
+		return $texte;
+	}
+}
 ?>
