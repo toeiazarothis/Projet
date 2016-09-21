@@ -71,13 +71,13 @@
             </select>
             <br>
             <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
+              <input type="checkbox" id="inlineCheckbox1" value="option1">élève 1
             </label>
             <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox2" value="option2">eleve 2
+              <input type="checkbox" id="inlineCheckbox2" value="option2">élève 2
             </label>
             <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
+              <input type="checkbox" id="inlineCheckbox3" value="option3">élève 3
             </label>
             <br>
             <textarea class="form-control" rows="3"></textarea><br>
@@ -135,13 +135,13 @@
               </select>
               <br>
               <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
+                <input type="checkbox" id="inlineCheckbox1" value="option1">élève 1
               </label>
               <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox2" value="option2">eleve 2
+                <input type="checkbox" id="inlineCheckbox2" value="option2">élève 2
               </label>
               <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
+                <input type="checkbox" id="inlineCheckbox3" value="option3">élève 3
               </label>
               <br><br>
               <a class="btn btn-danger" href="#" role="button">Absent</a>
@@ -163,17 +163,17 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
               <h2 class="section-heading">Appreciation</h2>
-              <h3 class="section-subheading text-muted">Ici vous allez pouvoir marquer une appréciation au sujet d'un élève de votre choix</h3>
+              <h3 class="section-subheading text-muted">Ici, vous allez pouvoir marquer une appréciation au sujet d'un élève de votre choix</h3>
           </div>
           <div class="col-lg-10 col-md-offset-1 text-center">
             <select class="form-control">
-              <option>Liste des classe</option>
+              <option>Liste des classes</option>
             </select>
           <select class="form-control">
-            <option>Liste des eleves</option>
+            <option>Liste des élèves</option>
           </select>
             <textarea class="form-control" rows="3"></textarea><br>
-            <a class="btn btn-success" href="#" role="button">Ajouter l'appreciation</a>
+            <a class="btn btn-success" href="#" role="button">Ajouter l'appréciation</a>
           </div>
         </div><br>
         <div class="row">
