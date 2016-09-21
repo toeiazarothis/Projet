@@ -55,13 +55,14 @@
       </div>
     </nav>
 
-    <header>
-      <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in">Grâce à ce site vous allez pouvoir visualiser votre évolution scolaire.</div><br><br><br>
-        </div>
-      </div>
-    </header>
+		<header>
+			<div class="container">
+				<div class="intro-text">
+					<div class="intro-lead-in">Bienvenue <?php 	echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']);  ?>.<br>
+						Grâce à cette page vous allez pouvoir visualiser vos eleve est ainsi leurs fournires toutes les informations utile.Tels que leurs notes ou bien des devoirs a realiser.</div>
+				</div>
+			</div>
+		</header>
 
 
     <section id="note" class="bg-light-gray">
@@ -69,7 +70,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Les Notes</h2>
-                <h3 class="section-subheading text-muted">Ici ce trouve les differentes notes.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+                <h3 class="section-subheading text-muted">Ici ce trouve les differentes notes.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matiere concerné</h3>
                 <br><br><br>
             </div>
         </div>
@@ -123,7 +124,7 @@
                   </h4>
                 </div>
               <div id="collapse14" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matière ($_SESSION['userid'], 'science') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'science') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -133,7 +134,7 @@
                   </h4>
                 </div>
                 <div id="collapse15" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matière ($_SESSION['userid'], 'anglais') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'anglais') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -143,7 +144,7 @@
                   </h4>
                 </div>
                 <div id="collapse16" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier controle.
+                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.
                   </div>
                 </div>
               </div>
@@ -158,7 +159,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Les Devoirs</h2>
-                <h3 class="section-subheading text-muted">Ici ce trouve le résumer du cours & le devoir à effectuer.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+                <h3 class="section-subheading text-muted">Ici ce trouve le résumer du cours & le devoir à effectuer.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matiere concerné</h3>
             </div>
         </div>
         <div class="row">
@@ -231,7 +232,7 @@
                   </h4>
                 </div>
                 <div id="collapse7" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier controle.
+                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.
                   </div>
                 </div>
               </div>

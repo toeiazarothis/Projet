@@ -54,7 +54,7 @@
     <header>
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Bienvenue <?php 	echo $_SESSION['nom'].' '.$_SESSION['prenom'];  ?>.<br>
+          <div class="intro-lead-in">Bienvenue <?php 	echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']);  ?>.<br>
             Grâce à cette page vous allez pouvoir visualiser vos eleve est ainsi leurs fournires toutes les informations utile.Tels que leurs notes ou bien des devoirs a realiser.</div>
         </div>
       </div>
