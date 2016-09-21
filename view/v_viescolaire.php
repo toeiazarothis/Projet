@@ -53,7 +53,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Evenement</h2>
+            <h2 class="section-heading">Evénement</h2>
             <h3 class="section-subheading text-muted">Calendrier d'événement</h3>
             <p>
               Afin de communiquer au mieux les informations sur les differents événements qui concernent l'école, nous avons mis en place un agenda virtuel qui vous permet a vous, parent, ainsi que vos enfants de voir les sorties prevues.
