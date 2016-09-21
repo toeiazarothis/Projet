@@ -65,7 +65,13 @@
               <h2 class="section-heading">Note</h2>
               <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du derniere controlle pour transmetre l'information a l'eleve.</h3>
           </div>
-          <div class="col-lg-10">
+          <div class="col-xs-4 col-xs-offset-4 text-center">
+            <textarea class="form-control" rows="3"></textarea><br>
+            <a class="btn btn-success" href="#" role="button">Rajouter la note</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 col-md-offset-1 text-center"><br>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -81,9 +87,15 @@
               <h2 class="section-heading">Devoir</h2>
               <h3 class="section-subheading text-muted">Des devoirs a donner a vos eleve ? Rempliser ce formulaire.</h3>
           </div>
-          <div class="col-lg-10">
+          <div class="col-lg-10 col-md-offset-1 text-center">
+            <textarea class="form-control" rows="3"></textarea><br>
+            <a class="btn btn-success" href="#" role="button">Rajouter le devoir</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 col-md-offset-1 text-center"><br>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
         </div>
@@ -97,13 +109,31 @@
               <h2 class="section-heading">Declaration d'abscence</h2>
               <h3 class="section-subheading text-muted">Pour declarer l'absence d'un eleve il vous suffit de choisir son nom est de cliquer dessus pour ensuite envoyer l'information au parents et a la vie scolaire</h3>
           </div>
-          <div class="col-lg-10">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <div class="col-xs-5">
+              <select class="form-control">
+                <option>Liste des classe</option>
+              </select>
+            </div>
+            <div class="col-xs-5">
+              <select class="form-control">
+                <option>Liste des eleve a mettre en absent</option>
+              </select>
+            </div>
+            <div class="col-xs-2">
+              <a class="btn btn-danger" href="#" role="button">Absent</a>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row">
+          <div class="col-lg-10 col-md-offset-1">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
         </div>
-      </div>
     </section>
 
     <section id="Appreciation">
@@ -111,9 +141,15 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
               <h2 class="section-heading">Appreciation</h2>
-              <h3 class="section-subheading text-muted">Ici vous allez pouvoir marquer une appreciation au sujet d'un elevede votre choix</h3>
+              <h3 class="section-subheading text-muted">Ici vous allez pouvoir marquer une appreciation au sujet d'un eleve de votre choix</h3>
           </div>
-          <div class="col-lg-10">
+          <div class="col-lg-10 col-md-offset-1 text-center">
+            <textarea class="form-control" rows="3"></textarea><br>
+            <a class="btn btn-warning" href="#" role="button">Ajouter l'appreciation</a>
+          </div><br>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
