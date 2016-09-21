@@ -66,8 +66,12 @@
               <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du derniere controlle pour transmetre l'information a l'eleve.</h3>
           </div>
           <div class="col-xs-4 col-xs-offset-4 text-center">
-            <textarea class="form-control" rows="3"></textarea><br>
-            <a class="btn btn-success" href="#" role="button">Rajouter la note</a>
+            <select class="form-control">
+              <option>Liste des classe</option>
+            </select><br>
+            
+
+            <br><a class="btn btn-success" href="#" role="button">Rajouter la note</a>
           </div>
         </div>
         <div class="row">
@@ -116,17 +120,22 @@
               </select>
             </div>
             <div class="col-xs-5">
-              <select class="form-control">
-                <option>Liste des eleve a mettre en absent</option>
-              </select>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1">eleve 1
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2">eleve 2
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3">eleve 3
+              </label>
             </div>
             <div class="col-xs-2">
               <a class="btn btn-danger" href="#" role="button">Absent</a>
             </div>
           </div>
-
-
         </div>
+
         <div class="row">
           <div class="col-lg-10 col-md-offset-1">
             <p>
