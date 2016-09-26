@@ -39,10 +39,10 @@
           <ul class="nav navbar-nav">
             <!-- <li><a href="#note" class="page-scroll">Note</a></li>
             <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
-            <li><a href="#Note">Note</a></li>
-            <li><a href="#Devoir">Devoir</a></li>
-            <li><a href="#AbsEleve">Absence d'eleve</a></li>
-            <li><a href="#Appreciation">Appréciation</a></li>
+            <li><a href="#Note" class="page-scroll">Note</a></li>
+            <li><a href="#Devoir" class="page-scroll">Devoir</a></li>
+            <li><a href="#AbsEleve" class="page-scroll">Absence d'eleve</a></li>
+            <li><a href="#Appreciation" class="page-scroll">Appréciation</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contact.php">Contact</a></li>
@@ -90,7 +90,6 @@
                 </div>
               </div>
             </form>
-
           </div>
         </div>
       </div>
@@ -176,5 +175,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../view/js/bootstrap.min.js"></script>
     <script src="../view/jquery/jquery.min.js"></script>
+    <script src="../view/js/connecter.js"></script>
+    <script src="../view/jqBootstrapValidation.js"></script>
+
   </body>
 </html>
