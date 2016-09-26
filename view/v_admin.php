@@ -36,9 +36,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#ajoutEleve" class="page-scroll">ajout de eleve</a></li>
-            <li><a href="#ajoutProf" class="page-scroll">ajout de prof</a></li>
-            <li><a href="#ajoutClasse" class="page-scroll">ajout de classe</a></li>
+            <li><a href="#ajoutEleve" class="page-scroll">Ajout d'leve</a></li>
+            <li><a href="#ajoutProf" class="page-scroll">Ajout de professeur</a></li>
+            <li><a href="#ajoutClasse" class="page-scroll">Ajout de classe</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
