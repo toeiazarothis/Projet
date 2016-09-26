@@ -43,14 +43,20 @@
     <table>
     <?php
         $jour = array(null, "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi");
+        $rdv["Lundi"]["12"]="Repas";
+        $rdv["Mardi"]["12"]="Repas";
+        $rdv["Mercredi"]["12"]="Repas";
+        $rdv["Jeudi"]["12"]="Repas";
+        $rdv["Vendredi"]["12"]="Repas";
         $rdv["Lundi"]["8"] = "Mathematique";
         $rdv["Lundi"]["10"] = "Français";
         $rdv["Jeudi"]["16"] = "Physique";
+
         echo "<tr><th>Heure</th>";
         for($x = 1; $x < 6; $x++)
             echo "<th>".$jour[$x]."</th>";
         echo "</tr>";
-        for($j = 8; $j < 17; $j += 0.5) {
+        for($j = 8; $j < 17; $j += 1) {
             echo "<tr>";
             for($i = 0; $i < 5; $i++) {
                 if($i == 0) {
