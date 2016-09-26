@@ -36,9 +36,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#event" class="page-scroll">Evénement</a></li>
-            <li><a href="#absProf" class="page-scroll">Absence professeur</a></li>
-            <li><a href="#absEleve" class="page-scroll">Absence élève</a></li>
+            <li><a href="#ajoutEleve" class="page-scroll">Ajout d'leve</a></li>
+            <li><a href="#ajoutProf" class="page-scroll">Ajout de professeur</a></li>
+            <li><a href="#ajoutClasse" class="page-scroll">Ajout de classe</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -60,17 +60,15 @@
           </div>
 
           <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-              <form class="form-inline">
                 <div class="form-group">
-                  <label class="sr-only" for="nomDeFamille"></label>
+                  <label class="sr-only" for="nomDeFamille">Nom de famille de l'eleve</label>
                   <div class="input-group">
                     <div class="input-group-addon">Nom de famille</div>
                     <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                  <label class="sr-only" for="exampleInputAmount">Prenom de l'eleve</label>
                   <div class="input-group">
                     <div class="input-group-addon">Prenom</div>
                     <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
@@ -89,25 +87,65 @@
                     <div class="input-group-addon">Adresse</div>
                     <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
                   </div>
-                  </div>
-              </form>
+                </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="ajoutProf">
+    <section id="ajoutProf" class="bg bg-light-gray">
       <div class="container">
         <div class="row">
-          
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Ajout de professeur</h2>
+            <h3 class="section-subheading text-muted">Rajouter un prof</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Nom du prof</label>
+            <div class="input-group">
+              <div class="input-group-addon">Nom</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Prenom du prof</label>
+            <div class="input-group">
+              <div class="input-group-addon">Prenom</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">classe que gere le prof</label>
+            <div class="input-group">
+              <div class="input-group-addon">Classe</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="ajout">
+    <section id="ajoutClasse">
       <div class="container">
         <div class="row">
-
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Ajout dune classe</h2>
+            <h3 class="section-subheading text-muted">Rajouter une classe</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">classe a rajouter</label>
+            <div class="input-group">
+              <div class="input-group-addon">Classe</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            </div>
+          </div>
         </div>
       </div>
     </section>
