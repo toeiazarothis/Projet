@@ -99,19 +99,17 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .masthead-brand {
     float: left;
   }
   .masthead-nav {
     float: right;
   }
-}
+}*/
 
 
-/*
- * Cover
- */
+/** Cover **/
 
 .cover {
   padding: 0 20px;
@@ -122,9 +120,7 @@ body {
 }
 
 
-/*
- * Footer
- */
+/** Footer **/
 
 .mastfoot {
   color: #999; /* IE8 proofing */
@@ -132,9 +128,7 @@ body {
 }
 
 
-/*
- * Affix and center
- */
+/** Affix and center **/
 
 @media (min-width: 768px) {
   /* Pull out the header and footer */

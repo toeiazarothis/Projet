@@ -5,6 +5,7 @@
     <meta lang="fr">
     <meta content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta charset="utf-8">
     <meta name="author" content="">
@@ -50,44 +51,45 @@
     </nav>
 
 
-      <section id="ajoutEleve">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-              <h2 class="section-heading">Ajout d'élève</h2>
-              <h3 class="section-subheading text-muted">Rajouter un élève</h3>
-            </div>
+    <section id="ajoutEleve">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Ajout d'élève</h2>
+            <h3 class="section-subheading text-muted">Rajouter un élève</h3>
           </div>
+        </div><br>
 
-          <div class="row">
-                <div class="form-group">
-                  <label class="sr-only" for="nomDeFamille">Nom de famille de l'eleve</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Nom de famille</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Prenom de l'eleve</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Prenom</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Classe de l'eleve</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Classe</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'eleve">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Adresse de l'eleve</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Adresse</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                  </div>
-                </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="form-group">
+              <label class="sr-only" for="nomDeFamille">Nom de famille de l'eleve</label>
+                <div class="input-group">
+                <div class="input-group-addon">Nom de famille</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputAmount">Prenom de l'eleve</label>
+              <div class="input-group">
+                <div class="input-group-addon">Prenom</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputAmount">Classe de l'eleve</label>
+              <div class="input-group">
+                <div class="input-group-addon">Classe</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'eleve">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputAmount">Adresse de l'eleve</label>
+              <div class="input-group">
+                <div class="input-group-addon">Adresse</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -100,9 +102,10 @@
             <h2 class="section-heading">Ajout de professeur</h2>
             <h3 class="section-subheading text-muted">Rajouter un prof</h3>
           </div>
-        </div>
+        </div><br>
 
-        <div class="row">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
           <div class="form-group">
             <label class="sr-only" for="exampleInputAmount">Nom du prof</label>
             <div class="input-group">
@@ -137,8 +140,10 @@
             <h2 class="section-heading">Ajout dune classe</h2>
             <h3 class="section-subheading text-muted">Rajouter une classe</h3>
           </div>
-        </div>
+        </div><br>
+
         <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
           <div class="form-group">
             <label class="sr-only" for="exampleInputAmount">classe a rajouter</label>
             <div class="input-group">
