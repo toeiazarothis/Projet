@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Note</a>
+          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Notes</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -58,7 +58,7 @@
             <h2 class="section-heading">Evénement</h2>
             <h3 class="section-subheading text-muted">Calendrier d'événement</h3>
             <p>
-              Afin de communiquer au mieux les informations sur les differents événements qui concernent l'école, nous avons mis en place un agenda virtuel qui vous permet a vous, parent, ainsi que vos enfants de voir les sorties prevues.
+              Afin de communiquer au mieux les informations sur les differents événements qui concernent l'école, nous avons mis en place un agenda virtuel qui vous permet à vous, parent, ainsi que vos enfants de voir les sorties prevues.
             </p>
             <a class="btn btn-warning" href="v_event.php" role="button">L'agenda !</a>
           </div>
