@@ -24,12 +24,10 @@ function verifUserIfExist($users){
 		$donnees = $reponse2->fetch();
 		if ($users == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'viescolaire';
-			$_SESSION['prenom'] = $donnees['prenom'];
-			$_SESSION['nom'] = $donnees['nom'];
 			return $donnees['id'];
 		}
 	}
-	echo 'Cet utilisateur n\'a pas été trouvé!';
+	echo 'Cette utilisateur na pas été trouvé!';
 }
 
 function verifPassIsUser($user, $pass) {
@@ -163,7 +161,7 @@ function envoyerAppreciationEleve ($eleve, $apreciation) {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("UPDATE `eleves` SET `appreciation_eleve`= '$apreciation' WHERE id=3");
 	if ($reponse == FALSE){
-		return ('La mise à jour de l\'appréciation de l\'élève n\'a pas pu être effectué!');
+		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
 	}
 	return header('Location: ../controller/c_prof.php');
 }
