@@ -64,7 +64,7 @@
     <header>
       <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Grâce à ce site vous allez pouvoir visualiser votre évolution scolaire.</div>
+            <div class="intro-lead-in">Grâce à ce site, vous allez pouvoir visualiser votre évolution scolaire.</div>
         </div>
       </div>
     </header>
@@ -91,7 +91,7 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
             <h2 class="section-heading">Appréciation de prof</h2>
-            <h3 class="section-subheading text-muted">Ici ce trouve les différentes appréciations données par le corps enseignant de l'etablisement.<br>Si l'une de ces appreciations vous apparait comme "étrange", contactez-nous rapidement</h3>
+            <h3 class="section-subheading text-muted">Ici ce trouve les différentes appréciations données par le corps enseignant de l'etablisement.<br>Si l'une de ces appréciations vous apparait comme "étrange", contactez-nous rapidement</h3>
           </div>
           <br>
           <div class="col-md-8 col-md-offset-2 text-center">
@@ -107,7 +107,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Appreciation de la direction</h2>
+            <h2 class="section-heading">Appréciation de la direction</h2>
             <h3 class="section-subheading text-muted">Ici ce trouve les différentes appréciations données par le corps administratif de l'etablisement.<br>Si l'une de ces appréciations vous apparait comme "etrange", contactez-nous rapidement</h3>
           </div>
           <br>
