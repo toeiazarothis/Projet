@@ -29,7 +29,7 @@ function verifUserIfExist($users){
 			return $donnees['id'];
 		}
 	}
-	echo 'Cette utilisateur na pas été trouvé!';
+	echo 'Cet utilisateur n\'a pas été trouvé!';
 }
 
 function verifPassIsUser($user, $pass) {
@@ -163,7 +163,7 @@ function envoyerAppreciationEleve ($eleve, $apreciation) {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("UPDATE `eleves` SET `appreciation_eleve`= '$apreciation' WHERE id=3");
 	if ($reponse == FALSE){
-		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
+		return ('La mise à jour de l\'appréciation de l\'élève n\'a pas pu être effectué!');
 	}
 	return header('Location: ../controller/c_prof.php');
 }
