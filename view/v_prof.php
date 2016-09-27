@@ -175,7 +175,6 @@
     <script src="../view/jquery/jquery.min.js"></script>
     <script src="../view/js/connecter.js"></script>
     <script src="../view/jqBootstrapValidation.js"></script>
-<<<<<<< HEAD
     <script>
       $(document).ready(function() {
         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -186,8 +185,6 @@
         });
       });
     </script>
-=======
->>>>>>> 8dc605271719bc63c336b2382cd6c0bcc7ec4a36
   </body>
 	<!-- Script pour afficher la liste eleve pour la parti Note -->
 	<script>
