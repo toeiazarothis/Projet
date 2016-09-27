@@ -41,7 +41,7 @@
           <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Contact</h2>
-                <h3>Grâce à ce formulaire vous allez pouvoir nous contacter et avoir une réponse dans les plus brefs délais.</h3>
+                <h3>Grâce à ce formulaire, vous allez pouvoir nous contacter et avoir une réponse dans les plus brefs délais.</h3>
             </div>
           </div>
 
