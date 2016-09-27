@@ -17,12 +17,13 @@
 
     <!-- Link -->
     <link href="../view/css/bootstrap.css" rel="stylesheet">
-    <link  href="../view/css/connecter.css" rel="stylesheet">
+    <link href="../view/css/connecter.css" rel="stylesheet">
+    <link href="../view/css/eventpage.css" rel="stylesheet">
 
 
     <title>Event - iSchool Notes</title>
   </head>
-  <body>
+  <body id="top">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -33,18 +34,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">iSchool Note</a>
+          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Note</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#" class="page-scroll">Accueil</a></li>
-            <!-- <li><a href="#note" class="page-scroll">Note</a></li>
-            <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
-            <li><a href="#event">Evenement</a></li>
-            <li><a href="#absProf">Absence Professeur</a></li>
-            <li><a href="#absEleve">Absence Eleve</a></li>
-          </ul>
-
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Deconnexion</a></li>
           </ul>
@@ -106,6 +98,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../view/js/bootstrap.min.js"></script>
     <script src="../view/jquery/jquery.min.js"></script>
+
 
   </body>
 </html>

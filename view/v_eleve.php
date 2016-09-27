@@ -22,7 +22,7 @@
 
     <title>Eleve - iSchool Notes</title>
   </head>
-  <body>
+  <body id="top">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -37,14 +37,14 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#" class="page-scroll">Accueil</a></li>
+            <li><a href="#top" class="js-scrollTo">Accueil</a></li>
             <!-- <li><a href="#note" class="page-scroll">Note</a></li>
             <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eleve <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#note" class="page-scroll">Note</a></li>
-                <li><a href="#devoir" class="page-scroll">Devoir</a></li>
+                <li><a href="#note" class="js-scrollTo">Note</a></li>
+                <li><a href="#devoir" class="js-scrollTo">Devoir</a></li>
               </ul>
             </li>
             <!-- <li><a href="c_parent.php">Parent</a></li> -->
@@ -165,11 +165,11 @@
         </div>
         <div class="row">
           <div class="col-lg-10 col-md-offset-1 text-center">
-            <div class="panel-group" id="accordion">
+            <div class="panel-group" id="accordion2">
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Français</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1">Français</a>
                   </h4>
                 </div>
                 <div id="collapse1" class="panel-collapse collapse">
@@ -179,7 +179,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Histoire</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2">Histoire</a>
                   </h4>
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
@@ -189,7 +189,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Mathematique</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3">Mathematique</a>
                   </h4>
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
@@ -199,7 +199,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">EPS</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">EPS</a>
                   </h4>
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
@@ -209,7 +209,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Science</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5">Science</a>
                   </h4>
                 </div>
                 <div id="collapse5" class="panel-collapse collapse">
@@ -219,7 +219,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Anglais</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6">Anglais</a>
                   </h4>
                 </div>
                 <div id="collapse6" class="panel-collapse collapse">
@@ -229,7 +229,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">template</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse7">template</a>
                   </h4>
                 </div>
                 <div id="collapse7" class="panel-collapse collapse">
@@ -254,6 +254,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../view/js/bootstrap.min.js"></script>
     <script src="../view/jquery/jquery.min.js"></script>
+    <script src="../view/js/connecter.js"></script>
+    <script src="../view/jqBootstrapValidation.js"></script>
+    <script>
+    	$(document).ready(function() {
+    		$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+    			var page = $(this).attr('href'); // Page cible
+    			var speed = 750; // Durée de l'animation (en ms)
+    			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+    			return false;
+    		});
+    	});
+    </script>
 
 
   </body>

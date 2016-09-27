@@ -22,7 +22,7 @@
 
     <title>Professeur - iSchool Notes</title>
   </head>
-  <body>
+  <body id="top">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -33,16 +33,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">iSchool Note</a>
+          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Note</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <!-- <li><a href="#note" class="page-scroll">Note</a></li>
             <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
-            <li><a href="#Note" class="page-scroll">Note</a></li>
-            <li><a href="#Devoir" class="page-scroll">Devoir</a></li>
-            <li><a href="#AbsEleve" class="page-scroll">Absence d'eleve</a></li>
-            <li><a href="#Appreciation" class="page-scroll">Appréciation</a></li>
+            <li><a href="#Note" class="js-scrollTo">Note</a></li>
+            <li><a href="#Devoir" class="js-scrollTo">Devoir</a></li>
+            <li><a href="#AbsEleve" class="js-scrollTo">Absence d'eleve</a></li>
+            <li><a href="#Appreciation" class="js-scrollTo">Appréciation</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contact.php">Contact</a></li>
@@ -177,6 +177,15 @@
     <script src="../view/jquery/jquery.min.js"></script>
     <script src="../view/js/connecter.js"></script>
     <script src="../view/jqBootstrapValidation.js"></script>
-
+    <script>
+      $(document).ready(function() {
+        $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+          var page = $(this).attr('href'); // Page cible
+          var speed = 750; // Durée de l'animation (en ms)
+          $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+          return false;
+        });
+      });
+    </script>
   </body>
 </html>

@@ -22,7 +22,7 @@
 
     <title>Parent - iSchool Notes</title>
   </head>
-  <body>
+  <body id="top">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -37,7 +37,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#" class="page-scroll">Accueil</a></li>
+            <li><a href="#top" class="js-scrollTo">Accueil</a></li>
             <!-- <li><a href="#note" class="page-scroll">Note</a></li>
             <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
             <li><a href="c_eleve.php">Elève</a></li>
@@ -45,11 +45,11 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parent <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#absence">Absence</a></li>
+                <li><a href="#absence" class="js-scrollTo">Absence</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Information administrative</li>
-                <li><a href="#prof">Appréciation de prof</a></li>
-                <li><a href="#administration">Appréciation de la direction</a></li>
+                <li><a href="#prof" class="js-scrollTo">Appréciation de prof</a></li>
+                <li><a href="#administration" class="js-scrollTo">Appréciation de la direction</a></li>
               </ul>
             </li>
           </ul>
