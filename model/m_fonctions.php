@@ -102,21 +102,69 @@ function afficherListeClasse () {
 	$texte = '';
 	while ($donnees = $reponse->fetch())
 	{
-			$texte .= $donnees['nom'];
+		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
 	}
 	return $texte;
 }
 
-function afficherListeEleveDansClasse ($classe) {
+if (isset($_POST['classe_note'])) {
+  echo afficherListeEleveDansClassePourNote($_POST['classe_note']);
+}
+
+function afficherListeEleveDansClassePourNote ($classe) {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
 	$texte = '';
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
-			$texte .= ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']);
+
+			$texte .= '<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-only" for="NoteScolaire">Note sur </label>
+					<div class="input-group">
+						<div class="input-group-addon">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</div>
+						<input type="text" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l\'eleve">
+						<div class="input-group-addon">20</div>
+					</div>
+				</div>
+			</form>';
 		}
 	}
 	return $texte;
+}
+
+if (isset($_POST['classe_appreciation'])) {
+  echo afficherListeEleveDansClassePourAppreciation($_POST['classe_appreciation']);
+}
+
+function afficherListeEleveDansClassePourAppreciation ($classe) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+	$texte = '';
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['classe'] == $classe) {
+			$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</option>';
+		}
+	}
+	return $texte;
+}
+
+if (isset($_POST['eleve_appreciation'])) {
+  return $_SESSION['eleve_appreciation'] = $_POST['eleve_appreciation'];
+}
+
+if (isset($_SESSION['eleve_appreciation'], $_POST['appreciation'])) {
+	echo envoyerAppreciationEleve ($_POST['eleve_appreciation'], $_POST['appreciation']);
+}
+
+function envoyerAppreciationEleve ($eleve, $apreciation) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("UPDATE `eleves` SET `appreciation_eleve`= '$apreciation' WHERE id=3");
+	if ($reponse == FALSE){
+		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
+	}
+	return header('Location: ../controller/c_prof.php');
 }
 ?>
