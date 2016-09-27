@@ -68,29 +68,16 @@
               <h2 class="section-heading">Note</h2>
               <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du dernier contrôle pour transmettre l'information à l'élève.</h3>
           </div>
-          <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
+          <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center" id="note">
 						<h4>Liste des classe:</h4>
             <select class="form-control">
-              <option><?php echo afficherListeClasse () ?></option>
+							<option value="par_default">Selectionner une classe</option>
+              <?php echo afficherListeClasse ();?>
             </select>
 						<br>
-              <!-- <li>Eleve 1 /20</li>
-              <li>Eleve 2 /20</li>
-              <li>Eleve 3 /20</li>
-              <li>Eleve 4 /20</li> -->
-
-
-            <form class="form-inline">
-              <div class="form-group">
-                <label class="sr-only" for="NoteScolaire">Note sur </label>
-                <div class="input-group">
-                  <div class="input-group-addon">Nom de l'eleve</div>
-                  <input type="text" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l'eleve">
-                  <div class="input-group-addon">20</div>
-                </div>
-              </div>
-            </form>
-          </div>
+						<div id="list_eleve_for_note">
+						</div>
+					</div>
         </div>
       </div>
     </section>
@@ -105,8 +92,10 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
+						<h4>Liste des classe:</h4>
             <select class="form-control">
-              <option>Liste des classe</option>
+							<option value="par_default">Selectionner une classe</option>
+              <?php echo afficherListeClasse ();?>
             </select>
             <br>
             <textarea class="form-control" rows="3" placeholder="Resume du cours"></textarea><br>
@@ -127,9 +116,11 @@
         </div>
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-              <select class="form-control">
-                <option>Liste des classes</option>
-              </select>
+							<h4>Liste des classe:</h4>
+	            <select class="form-control">
+								<option value="par_default">Selectionner une classe</option>
+	              <?php echo afficherListeClasse ();?>
+	            </select>
               <br>
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1">élève 1
@@ -155,15 +146,22 @@
               <h2 class="section-heading">Appreciation</h2>
               <h3 class="section-subheading text-muted">Ici, vous allez pouvoir marquer une appréciation au sujet d'un élève de votre choix</h3>
           </div>
-          <div class="col-lg-10 col-md-offset-1 text-center">
-            <select class="form-control">
-              <option>Liste des classes</option>
-            </select>
-          <select class="form-control">
-            <option>Liste des élèves</option>
-          </select>
-            <textarea class="form-control" rows="3"></textarea><br>
-            <a class="btn btn-success" href="#" role="button">Ajouter l'appréciation</a>
+          <div class="col-lg-10 col-md-offset-1 text-center" id="appreciation">
+						<h4>Liste des classe:</h4>
+	          <select class="form-control" id="liste_for_classe">
+							<option value="par_default">Selectionner une classe</option>
+	            <?php echo afficherListeClasse ();?>
+	          </select>
+						<br>
+	          <select class="form-control" id='list_eleve_for_apreciation'>
+							<option value="par_default">Liste des eleves</option>
+	          </select>
+						<br>
+						<form action="../model/m_fonctions.php" method="post" id="for_appreciation">
+							<textarea name="appreciation" class="form-control" rows="3"></textarea>
+							<br>
+							<button class="btn btn-success" type="submit" id="valider_appreciation">Ajouter l'appréciation</button>
+						</form>
           </div>
         </div><br>
       </div>
@@ -177,6 +175,29 @@
     <script src="../view/jquery/jquery.min.js"></script>
     <script src="../view/js/connecter.js"></script>
     <script src="../view/jqBootstrapValidation.js"></script>
-
   </body>
+	<!-- Script pour afficher la liste eleve pour la parti Note -->
+	<script>
+		$( "#note > select" ).change(function () {
+			var classe = $('#note > select option:selected').val()
+			$.ajax({
+				url: '../model/m_fonctions.php',
+				type: 'post',
+				data: { 'classe_note': classe },
+				success: function(response) { $("#list_eleve_for_note" ).html(response);}
+			});
+		});
+	</script>
+	<!-- Script pour affichage de la liste pour la parti Appreciation -->
+	<script>
+		$( "#appreciation > #liste_for_classe" ).change(function () {
+			var classe = $('#appreciation > #liste_for_classe option:selected').val()
+			$.ajax({
+				url: '../model/m_fonctions.php',
+				type: 'post',
+				data: { 'classe_appreciation': classe },
+				success: function(response) { $( "#list_eleve_for_apreciation" ).html('<option value="par_default">Selectionner un élève</option>' + response);}
+			});
+		});
+	</script>
 </html>
