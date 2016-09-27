@@ -138,7 +138,7 @@
                   <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'anglais') ?></div>
                 </div>
               </div>
-              <div class="panel panel-default">
+              <!-- <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">template</a>
@@ -148,7 +148,7 @@
                   <div class="panel-body">Vous avez eu $note/20 à votre dernier control.
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -226,7 +226,7 @@
                   <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'anglais') ?></div>
                 </div>
               </div>
-              <div class="panel panel-default">
+              <!-- <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#collapse7">template</a>
@@ -236,7 +236,7 @@
                   <div class="panel-body">Vous avez eu $note/20 à votre dernier control.
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
