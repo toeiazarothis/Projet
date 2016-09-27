@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Note</a>
+          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Notes</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -41,7 +41,7 @@
             <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
             <li><a href="#Note" class="js-scrollTo">Note</a></li>
             <li><a href="#Devoir" class="js-scrollTo">Devoir</a></li>
-            <li><a href="#AbsEleve" class="js-scrollTo">Absence d'eleve</a></li>
+            <li><a href="#AbsEleve" class="js-scrollTo">Absence d'élève</a></li>
             <li><a href="#Appreciation" class="js-scrollTo">Appréciation</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -56,7 +56,7 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Bienvenue <?php 	echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']);  ?>.<br>
-            Grâce à cette page vous allez pouvoir visualiser vos eleve est ainsi leurs fournires toutes les informations utile.Tels que leurs notes ou bien des devoirs a realiser.</div>
+            Grâce à cette page, vous allez pouvoir visualiser vos élèves et ainsi leur fournir toutes les informations utiles telles que leurs notes ou bien des devoirs à réaliser.</div>
         </div>
       </div>
     </header>
@@ -69,7 +69,7 @@
               <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du dernier contrôle pour transmettre l'information à l'élève.</h3>
           </div>
           <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center" id="note">
-						<h4>Liste des classe:</h4>
+						<h4>Liste des classes:</h4>
             <select class="form-control">
 							<option value="par_default">Selectionner une classe</option>
               <?php echo afficherListeClasse ();?>
@@ -92,7 +92,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
-						<h4>Liste des classe:</h4>
+						<h4>Liste des classes:</h4>
             <select class="form-control">
 							<option value="par_default">Selectionner une classe</option>
               <?php echo afficherListeClasse ();?>
@@ -116,7 +116,7 @@
         </div>
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-							<h4>Liste des classe:</h4>
+							<h4>Liste des classes:</h4>
 	            <select class="form-control">
 								<option value="par_default">Selectionner une classe</option>
 	              <?php echo afficherListeClasse ();?>
@@ -143,18 +143,18 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
-              <h2 class="section-heading">Appreciation</h2>
+              <h2 class="section-heading">Appréciation</h2>
               <h3 class="section-subheading text-muted">Ici, vous allez pouvoir marquer une appréciation au sujet d'un élève de votre choix</h3>
           </div>
           <div class="col-lg-10 col-md-offset-1 text-center" id="appreciation">
-						<h4>Liste des classe:</h4>
+						<h4>Liste des classes:</h4>
 	          <select class="form-control" id="liste_for_classe">
 							<option value="par_default">Selectionner une classe</option>
 	            <?php echo afficherListeClasse ();?>
 	          </select>
 						<br>
 	          <select class="form-control" id='list_eleve_for_apreciation'>
-							<option value="par_default">Liste des eleves</option>
+							<option value="par_default">Liste des élèves</option>
 	          </select>
 						<br>
 						<form action="../model/m_fonctions.php" method="post" id="for_appreciation">
