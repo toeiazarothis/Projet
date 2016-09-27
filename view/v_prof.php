@@ -45,7 +45,7 @@
             <li><a href="#Appreciation" class="js-scrollTo">Appréciation</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="contact.php">Contact</a></li>
+            <!-- <li><a href="contact.php">Contact</a></li> -->
             <li><a href="c_index.php">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
