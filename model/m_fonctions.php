@@ -20,7 +20,7 @@ function verifUserIfExist($users){
 			$_SESSION['nom'] = $donnees['nom'];
 			return $donnees['id'];
 		}
-		$reponse2 = $bdd->query('SELECT id, identifiant, nom, prenom FROM vie_scolaire');
+		$reponse2 = $bdd->query('SELECT id, identifiant FROM vie_scolaire');
 		$donnees = $reponse2->fetch();
 		if ($users == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'viescolaire';
