@@ -41,12 +41,12 @@
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">Bienvenue sur iSchool Notes.</h1>
-            <p class="lead">Voici le premier site entierement adaptatif.</p>
+            <h1 class="cover-heading">Bienvenue sur iSchool Notes</h1>
+            <p class="lead">Voici le premier ENT entièrement adaptatif</p>
             <p class="lead">
             <div class="col-md-6 col-md-offset-3">
               <form class="form-signin" action="c_index.php" method="POST">
-                <h2 class="form-signin-heading">Connectez vous</h2>
+                <h2 class="form-signin-heading">Connectez-vous</h2>
                 <label for="inputUsername" class="sr-only">Identifiant</label>
                 <input type="text" id="inputUsername" class="form-control" placeholder="Identifiant" name="users" required autofocus><br>
                 <label for="inputPassword" class="sr-only">Mots de passe</label>
