@@ -33,11 +33,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Note</a>
+          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Notes</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#ajoutEleve" class="js-scrollTo">Ajout d'leve</a></li>
+            <li><a href="#ajoutEleve" class="js-scrollTo">Ajout d'élève</a></li>
             <li><a href="#ajoutProf" class="js-scrollTo">Ajout de professeur</a></li>
             <li><a href="#ajoutClasse" class="js-scrollTo">Ajout de classe</a></li>
           </ul>
@@ -63,28 +63,28 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
             <div class="form-group">
-              <label class="sr-only" for="nomDeFamille">Nom de famille de l'eleve</label>
+              <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
                 <div class="input-group">
                 <div class="input-group-addon">Nom de famille</div>
                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
               </div>
             </div>
             <div class="form-group">
-              <label class="sr-only" for="exampleInputAmount">Prenom de l'eleve</label>
+              <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
               <div class="input-group">
                 <div class="input-group-addon">Prenom</div>
                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
               </div>
             </div>
             <div class="form-group">
-              <label class="sr-only" for="exampleInputAmount">Classe de l'eleve</label>
+              <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
               <div class="input-group">
                 <div class="input-group-addon">Classe</div>
                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'eleve">
               </div>
             </div>
             <div class="form-group">
-              <label class="sr-only" for="exampleInputAmount">Adresse de l'eleve</label>
+              <label class="sr-only" for="exampleInputAmount">Adresse de l'élève</label>
               <div class="input-group">
                 <div class="input-group-addon">Adresse</div>
                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
@@ -123,7 +123,7 @@
           </div>
 
           <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">classe que gere le prof</label>
+            <label class="sr-only" for="exampleInputAmount">classe que gère le prof</label>
             <div class="input-group">
               <div class="input-group-addon">Classe</div>
               <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
@@ -137,7 +137,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Ajout dune classe</h2>
+            <h2 class="section-heading">Ajout d'une classe</h2>
             <h3 class="section-subheading text-muted">Rajouter une classe</h3>
           </div>
         </div><br>
@@ -145,7 +145,7 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
           <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">classe a rajouter</label>
+            <label class="sr-only" for="exampleInputAmount">classe à rajouter</label>
             <div class="input-group">
               <div class="input-group-addon">Classe</div>
               <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
