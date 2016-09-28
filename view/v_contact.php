@@ -32,7 +32,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li><a href="v_index.php">Accueil</a></li>
-                  <li class="active"><a href="v_contact.php">Contact</a></li>
+                  <li class="active"><a href="contact">Contact</a></li>
                 </ul>
               </nav>
             </div>

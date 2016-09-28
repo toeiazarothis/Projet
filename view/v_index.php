@@ -33,7 +33,7 @@
               <h3 class="masthead-brand">SchoolNotes</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="v_index.php">Accueil</a></li>
+                  <li class="active"><a href="accueil">Accueil</a></li>
                   <!-- <li><a href="v_contact.php">Contact</a></li> -->
                 </ul>
               </nav>
@@ -45,7 +45,7 @@
             <p class="lead">Voici le premier ENT entièrement adaptatif</p>
             <p class="lead">
             <div class="col-md-6 col-md-offset-3">
-              <form class="form-signin" action="c_index.php" method="POST">
+              <form class="form-signin" action="accueil" method="POST">
                 <h2 class="form-signin-heading">Connectez-vous</h2>
                 <label for="inputUsername" class="sr-only">Identifiant</label>
                 <input type="text" id="inputUsername" class="form-control" placeholder="Identifiant" name="users" required autofocus><br>

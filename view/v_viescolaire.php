@@ -43,8 +43,8 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="c_admin.php">Administration</a></li>
-            <li><a href="c_index.php">Déconnexion</a></li>
+            <li><a href="admin">Administration</a></li>
+            <li><a href="accueil">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -149,6 +149,6 @@
         });
       });
     </script>
-    
+
   </body>
 </html>

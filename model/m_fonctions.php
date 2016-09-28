@@ -47,7 +47,7 @@ function verifPassIsUser($user, $pass) {
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
 		$_SESSION['classe'] = $donnees['classe'];
-		return header('Location: ../controller/c_eleve.php');
+		return header('url=eleve');
 	}
 	else if ($_SESSION['stats'] == 'prof') {
 		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM professeurs WHERE id='.$id.'');
@@ -58,7 +58,7 @@ function verifPassIsUser($user, $pass) {
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
 		$_SESSION['p_matiere'] = $donnees['matiere'];
-		return header('Location: ../controller/c_prof.php');
+		return header('url=prof');
 	}
 	else if ($_SESSION['stats'] == 'viescolaire') {
 		$reponse = $bdd->query('SELECT mot_de_passe FROM vie_scolaire WHERE id='.$id.'');
@@ -68,7 +68,7 @@ function verifPassIsUser($user, $pass) {
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
-		return header('Location: ../controller/c_viescolaire.php');
+		return header('url=viescolaire');
 	}
 }
 
@@ -168,6 +168,6 @@ function envoyerAppreciationEleve ($eleve, $apreciation) {
 	if ($reponse == FALSE){
 		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
 	}
-	return header('Location: ../controller/c_prof.php');
+	return header('url=prof');
 }
 ?>
