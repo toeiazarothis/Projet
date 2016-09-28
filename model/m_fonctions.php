@@ -12,16 +12,21 @@ function verifUserIfExist($users){
 			$_SESSION['nom'] = $donnees['nom_eleve'];
 			return $donnees['id'];
 		}
-		$reponse2 = $bdd->query('SELECT id, identifiant, nom, prenom FROM professeurs');
-		$donnees = $reponse2->fetch();
+	}
+	$reponse = $bdd->query('SELECT id, identifiant, nom, prenom FROM professeurs');
+	while ($donnees = $reponse->fetch())
+	{
 		if ($users == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'prof';
 			$_SESSION['prenom'] = $donnees['prenom'];
 			$_SESSION['nom'] = $donnees['nom'];
 			return $donnees['id'];
 		}
-		$reponse2 = $bdd->query('SELECT id, identifiant FROM vie_scolaire');
-		$donnees = $reponse2->fetch();
+	}
+	$reponse = $bdd->query('SELECT id, identifiant FROM vie_scolaire');
+	$donnees = $reponse->fetch();
+	while ($donnees = $reponse->fetch())
+	{
 		if ($users == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'viescolaire';
 			return $donnees['id'];
