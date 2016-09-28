@@ -3,7 +3,7 @@ Options +FollowSymlinks
 RewriteEngine On
 
 #Regles
-RewriteRule ^$ controller/c_index.php [L]
+RewriteRule ^$ accueil [L]
 RewriteRule ^accueil$ controller/c_index.php [L]
 RewriteRule ^eleve$ controller/c_eleve.php [L]
 RewriteRule ^prof$ controller/c_prof.php [L]

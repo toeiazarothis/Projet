@@ -2,17 +2,17 @@
 session_start();
 include ('../model/m_fonctions.php');
 if(!isset($_SESSION['users'], $_SESSION['userid'])) {
-	return header('Location: c_index.php');
+	return header('url=accueil');
 }
 if($_SESSION['stats'] != 'eleve') {
 	if($_SESSION['stats'] == 'prof') {
-		return header('Location: c_prof.php');
+		return header('url=prof');
 	}
 	if($_SESSION['stats'] == 'viescolaire') {
-		return header('Location: c_viescolaire.php');
+		return header('url=viescolaire');
 	}
 	if($_SESSION['stats'] == 'parent') {
-		return header('Location: c_parent.php');
+		return header('url=parent');
 	}
 }
 include ('../view/v_eleve.php');
