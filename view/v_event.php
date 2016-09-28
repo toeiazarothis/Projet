@@ -56,7 +56,7 @@
     <section id="">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 col-md-offset-1 text-center">
+          <div class="col-md-4 col-md-offset-4 text-center">
             <div class="cbpgct cibulCategories" data-oact data-cbctl="13805352/50895249" data-lang="fr"></div>
             <iframe style="width:100%;" frameborder="0" scrolling="no" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="//openagenda.com/agendas/13805352/embeds/50895249/events"></iframe><script type="text/javascript" src="//openagenda.com/js/embed/cibulBodyWidget.js"></script>
           </div>
