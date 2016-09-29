@@ -38,12 +38,12 @@ function identifiant($nom,$prenom)
 function ajouteleve()
 {
   $nomeleve = $_POST['nom'];
-  $pronomeleve = $_POST['pronom'];
-  $class = $_POST['class'];
+  $pronomeleve = $_POST['prenom'];
+  $class = $_POST['classe'];
   $nomparent = $_POST['nomparent'];
   $prenomparent = $_POST['prenomparent'];
   $prefparent = $_POST['prefparent'];
-  $adress = $_POST['adress'];
+  $adress = $_POST['adresse'];
   $email = $_POST['email'];
   $tel = $_POST['tel'];
   $username = identifiant($_POST['nom'],$_POST['pronom']);

@@ -42,7 +42,7 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">Bienvenue sur iSchool Notes</h1>
-            <p class="lead">Voici le premier ENT entièrement adaptatif</p>
+            <p class="lead">Voici le premier ENT entièrement adaptatif et responsive design.</p>
             <p class="lead">
             <div class="col-md-6 col-md-offset-3">
               <form class="form-signin" action="c_index.php" method="POST">
