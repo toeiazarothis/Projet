@@ -2,8 +2,8 @@
 include ('../.confidentiel/private.inc.php');
 
 function connectionDB(){
-	$nomServeur = "localhost";
-	$nomDB = "iSchool-Notes";
+	$nomServeur = "mysql.hostinger.fr";
+	$nomDB = "u240317083_notes";
 	$utilisateurServeur = UTILISATEUR;
 	$motDePasse = PASS;
 

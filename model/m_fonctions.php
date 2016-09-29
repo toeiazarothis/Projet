@@ -1,12 +1,12 @@
 <?php
 include ('forMySQL.php');
 
-function verifUserIfExist($users){
+function verifUserIfExist ($user){
 	$bdd = connectionDB();
 	$reponse = $bdd->query('SELECT id, identifiant, nom_eleve, prenom_eleve FROM eleves');
 	while ($donnees = $reponse->fetch())
 	{
-		if ($users == $donnees['identifiant']) {
+		if ($user == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'eleve';
 			$_SESSION['prenom'] = $donnees['prenom_eleve'];
 			$_SESSION['nom'] = $donnees['nom_eleve'];
@@ -16,7 +16,7 @@ function verifUserIfExist($users){
 	$reponse = $bdd->query('SELECT id, identifiant, nom, prenom FROM professeurs');
 	while ($donnees = $reponse->fetch())
 	{
-		if ($users == $donnees['identifiant']) {
+		if ($user == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'prof';
 			$_SESSION['prenom'] = $donnees['prenom'];
 			$_SESSION['nom'] = $donnees['nom'];
@@ -27,15 +27,15 @@ function verifUserIfExist($users){
 	$donnees = $reponse->fetch();
 	while ($donnees = $reponse->fetch())
 	{
-		if ($users == $donnees['identifiant']) {
+		if ($user == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'viescolaire';
 			return $donnees['id'];
 		}
 	}
-	echo 'Cette utilisateur na pas été trouvé!';
+	echo 'Cet utilisateur n a pas été trouvé!';
 }
 
-function verifPassIsUser($user, $pass) {
+function verifPassIsUser ($user, $pass) {
 	$bdd = connectionDB();
 	$id = verifUserIfExist($user);
 	if ($_SESSION['stats'] == 'eleve') {
@@ -47,7 +47,7 @@ function verifPassIsUser($user, $pass) {
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
 		$_SESSION['classe'] = $donnees['classe'];
-		return header('url=eleve');
+		return header('Location: ../controller/c_eleve.php');
 	}
 	else if ($_SESSION['stats'] == 'prof') {
 		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM professeurs WHERE id='.$id.'');
@@ -168,6 +168,6 @@ function envoyerAppreciationEleve ($eleve, $apreciation) {
 	if ($reponse == FALSE){
 		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
 	}
-	return header('url=prof');
+	return header('url');
 }
 ?>
