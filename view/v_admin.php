@@ -38,22 +38,50 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#ajoutEleve" class="js-scrollTo">Ajout d'élève</a></li>
-            <li><a href="#ajoutProf" class="js-scrollTo">Ajout de professeur</a></li>
-            <li><a href="#ajoutPersonnelVS" class="js-scrollTo">Ajout membre du personnel</a></li>
-            <li><a href="#ajoutClasse" class="js-scrollTo">Ajout de classe</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Éleve <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#ajoutEleve" class="js-scrollTo">Ajout</a></li>
+                <li><a href="#majEleve" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#deleteEleve" class="js-scrollTo">Suppression</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prof <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#ajoutProf" class="js-scrollTo">Ajout</a></li>
+                <li><a href="#majProf" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#deleteProf" class="js-scrollTo">Suppression</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Membre du personnel<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#ajoutPersonnel" class="js-scrollTo">Ajout</a></li>
+                <li><a href="#majPersonnel" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#deletePersonnel" class="js-scrollTo">Suppression</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CLasse<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#ajoutClasse" class="js-scrollTo">Ajout</a></li>
+                <li><a href="#majClasse" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#deleteClasse" class="js-scrollTo">Suppression</a></li>
+              </ul>
+            </li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
             <li><a href="admin">Administration</a></li>
-            <li><a href="c_index.php">Déconnexion</a></li>
+            <li><a href="accueil">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
 
-    <section id="ajoutEleve">
+    <section id="ajout">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
@@ -97,7 +125,7 @@
       </div>
     </section>
 
-    <section id="ajoutProf" class="bg bg-light-gray">
+    <section id="miseajour" class="bg bg-light-gray">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
@@ -135,7 +163,7 @@
       </div>
     </section>
 
-    <section id="ajoutClasse">
+    <section id="suppresion">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
