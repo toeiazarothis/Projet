@@ -16,6 +16,7 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="./view/css/bootstrap.css" rel="stylesheet">
     <link href="./view/css/connecter.css" rel="stylesheet">
     <link href="./view/css/eventpage.css" rel="stylesheet">
