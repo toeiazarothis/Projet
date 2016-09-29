@@ -16,6 +16,7 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="./view/css/bootstrap.css" rel="stylesheet">
     <link  href="./view/css/connecter.css" rel="stylesheet">
 
@@ -39,12 +40,13 @@
           <ul class="nav navbar-nav">
             <li><a href="#ajoutEleve" class="js-scrollTo">Ajout d'élève</a></li>
             <li><a href="#ajoutProf" class="js-scrollTo">Ajout de professeur</a></li>
+            <li><a href="#ajoutPersonnelVS" class="js-scrollTo">Ajout membre du personnel</a></li>
             <li><a href="#ajoutClasse" class="js-scrollTo">Ajout de classe</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
             <li><a href="admin">Administration</a></li>
-            <li><a href="accueil">Déconnexion</a></li>
+            <li><a href="c_index.php">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
