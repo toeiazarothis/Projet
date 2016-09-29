@@ -16,8 +16,8 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
-    <link href="../view/css/bootstrap.css" rel="stylesheet">
-    <link  href="../view/css/cover.css" rel="stylesheet">
+    <link href="./view/css/bootstrap.css" rel="stylesheet">
+    <link  href="./view/css/cover.css" rel="stylesheet">
 
 
     <title>SchoolNotes</title>
@@ -33,7 +33,7 @@
               <h3 class="masthead-brand">SchoolNotes</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="c_index.php">Accueil</a></li>
+                  <li class="active"><a href="accueil">Accueil</a></li>
                   <!-- <li><a href="v_contact.php">Contact</a></li> -->
                 </ul>
               </nav>
@@ -75,7 +75,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../view/js/bootstrap.min.js"></script>
+    <script src="./view/js/bootstrap.min.js"></script>
 
   </body>
 </html>
