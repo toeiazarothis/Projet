@@ -33,7 +33,7 @@
               <h3 class="masthead-brand">SchoolNotes</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="accueil">Accueil</a></li>
+                  <li class="active"><a href="c_index.php">Accueil</a></li>
                   <!-- <li><a href="v_contact.php">Contact</a></li> -->
                 </ul>
               </nav>
