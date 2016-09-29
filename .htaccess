@@ -3,10 +3,10 @@ Options +FollowSymlinks
 RewriteEngine On
 
 #Regles
-RewriteRule ^$ accueil [L]
-RewriteRule ^accueil$ controller/c_index.php [L]
-RewriteRule ^eleve$ controller/c_eleve.php [L]
-RewriteRule ^prof$ controller/c_prof.php [L]
-RewriteRule ^viescolaire$ controller/c_viescolaire.php [L]
-RewriteRule ^admin$ controller/c_admin.php [L]
-RewriteRule ^contact$ controller/c_contact.php [L]
+RewriteRule ^$ accueil
+RewriteRule ^accueil$ controller/c_index.php
+RewriteRule ^eleve$ controller/c_eleve.php
+RewriteRule ^prof$ controller/c_prof.php
+RewriteRule ^viescolaire$ controller/c_viescolaire.php
+RewriteRule ^admin$ controller/c_admin.php
+RewriteRule ^contact$ controller/c_contact.php
