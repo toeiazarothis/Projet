@@ -16,6 +16,7 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="../view/css/bootstrap.css" rel="stylesheet">
     <link  href="../view/css/connecter.css" rel="stylesheet">
 
@@ -24,7 +25,7 @@
   </head>
   <body id="top">
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -33,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">iSchool Notes</a>
+          <a class="navbar-brand" href="#top" class="js-scrollTo">iSchool Notes</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

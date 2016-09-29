@@ -16,6 +16,7 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="../view/css/bootstrap.css" rel="stylesheet">
     <link  href="../view/css/connecter.css" rel="stylesheet">
 
@@ -33,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">iSchool Notes</a>
+          <a class="navbar-brand" href="#top"  class="js-scrollTo">iSchool Notes</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

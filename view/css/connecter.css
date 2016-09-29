@@ -4,6 +4,16 @@
   background-color: #ffc107;
 }
 
+.navbar-brand{
+  font-family: "Lobster", Helvetica, Arial, cursive;
+}
+
+.navbar-custom.navbar-brand:hover,
+.navbar-custom.navbar-brand:focus,
+.navbar-custom.navbar-brand.active {
+  color: #0948ce;
+}
+
 header {
   background-image: url('../img/bgeleve1.jpg');
   background-repeat: no-repeat;
