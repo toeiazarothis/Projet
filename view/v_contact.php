@@ -16,8 +16,8 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
-    <link href="../view/css/bootstrap.css" rel="stylesheet">
-    <link  href="../view/css/cover.css" rel="stylesheet">
+    <link href="./view/css/bootstrap.css" rel="stylesheet">
+    <link  href="./view/css/cover.css" rel="stylesheet">
 
 
     <title>Prise de contact</title>

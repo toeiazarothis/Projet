@@ -16,9 +16,8 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="../view/css/bootstrap.css" rel="stylesheet">
-    <link  href="../view/css/connecter.css" rel="stylesheet">
+    <link href="./view/css/bootstrap.css" rel="stylesheet">
+    <link  href="./view/css/connecter.css" rel="stylesheet">
 
 
     <title>Professeur - iSchool Notes</title>
@@ -172,10 +171,10 @@
     <!-- Bootstrap core JavaScript ======================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../view/js/bootstrap.min.js"></script>
-    <script src="../view/jquery/jquery.min.js"></script>
-    <script src="../view/js/connecter.js"></script>
-    <script src="../view/jqBootstrapValidation.js"></script>
+    <script src="./view/js/bootstrap.min.js"></script>
+    <script src="./view/jquery/jquery.min.js"></script>
+    <script src="./view/js/connecter.js"></script>
+    <script src="./view/jqBootstrapValidation.js"></script>
     <script>
       $(document).ready(function() {
         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
