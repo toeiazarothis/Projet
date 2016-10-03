@@ -79,7 +79,7 @@
             </section>
             <select class="form-control">
 							<option value="par_default">Selectionner une classe</option>
-              <?php echo afficherListeClasse ();?>
+              <?php echo afficherListeClasseForProf ();?>
             </select>
 						<br>
 						<div id="list_eleve_for_note">
@@ -102,7 +102,7 @@
 						<h4>Liste des classes:</h4>
             <select class="form-control">
 							<option value="par_default">Selectionner une classe</option>
-              <?php echo afficherListeClasse ();?>
+              <?php echo afficherListeClasseForProf ();?>
             </select>
             <br>
             <textarea class="form-control" rows="3" placeholder="Resume du cours"></textarea><br>
@@ -126,7 +126,7 @@
 							<h4>Liste des classes:</h4>
 	            <select class="form-control">
 								<option value="par_default">Selectionner une classe</option>
-	              <?php echo afficherListeClasse ();?>
+	              <?php echo afficherListeClasseForProf ();?>
 	            </select>
               <br>
               <label class="checkbox-inline">
@@ -157,7 +157,7 @@
 						<h4>Liste des classes:</h4>
 	          <select class="form-control" id="liste_for_classe">
 							<option value="par_default">Selectionner une classe</option>
-	            <?php echo afficherListeClasse ();?>
+	            <?php echo afficherListeClasseForProf ();?>
 	          </select>
 						<br>
 						<form action="prof" method="post" id="for_appreciation">
