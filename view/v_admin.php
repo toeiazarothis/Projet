@@ -42,7 +42,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Éleve <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#ajoutEleve" class="js-scrollTo">Ajout</a></li>
-                <li><a href="#majEleve" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#majEleve" class="js-scrollTo">Mise à jour</a></li>
                 <li><a href="#deleteEleve" class="js-scrollTo">Suppression</a></li>
               </ul>
             </li>
@@ -58,7 +58,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Membre du personnel<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#ajoutPersonnel" class="js-scrollTo">Ajout</a></li>
-                <li><a href="#majPersonnel" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#majPersonnel" class="js-scrollTo">Mise à jour</a></li>
                 <li><a href="#deletePersonnel" class="js-scrollTo">Suppression</a></li>
               </ul>
             </li>
@@ -165,7 +165,7 @@
           <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
           <div class="input-group">
             <div class="input-group-addon">Nom</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
           </div>
         </div>
 
@@ -173,7 +173,7 @@
           <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
           <div class="input-group">
             <div class="input-group-addon">Prenom</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
           </div>
         </div>
 
@@ -181,7 +181,7 @@
           <label class="sr-only" for="exampleInputAmount">classe que gère le professeur</label>
           <div class="input-group">
             <div class="input-group-addon">Classe</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
           </div>
         </div>
       </div>
@@ -226,8 +226,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-          <h2 class="section-heading">Mise a jour du personnel </h2>
-          <h3 class="section-subheading text-muted">Mettre a jour un membre du personnel</h3>
+          <h2 class="section-heading">Mise à jour du personnel </h2>
+          <h3 class="section-subheading text-muted">Mettre à jour un membre du personnel</h3>
         </div>
       </div>
     </div>
@@ -244,7 +244,6 @@
   </section>
 </section>
     <!--Fin section personnel -->
-
 
     <!--Debut section classe -->
 <section id="classe">
