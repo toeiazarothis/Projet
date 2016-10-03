@@ -177,6 +177,7 @@
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Suppresion eleve </h2>
                 <h3 class="section-subheading text-muted">Supprimer un eleve</h3>
+                <input class="btn btn-default"type="submit" name="submit" value="Supprimer un eleve !">
               </div>
             </div>
           </div>
@@ -239,6 +240,7 @@
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Suppresion prof </h2>
                 <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
+                <input class="btn btn-default"type="submit" name="submit" value="Supprimer un professeur !">
               </div>
             </div>
           </div>
@@ -274,6 +276,7 @@
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Suppresion du personnel </h2>
                 <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+                <input class="btn btn-default"type="submit" name="submit" value="Supprimer un membre du personnel !">
               </div>
             </div>
           </div>
@@ -321,6 +324,14 @@
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Suppresion d'une classe </h2>
                 <h3 class="section-subheading text-muted">Supprimer une classe</h3>
+                <select class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                <input class="btn btn-default"type="submit" name="submit" value="Supprimer la classe !">
               </div>
             </div>
           </div>
