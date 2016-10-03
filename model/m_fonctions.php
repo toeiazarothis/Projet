@@ -154,17 +154,9 @@ function afficherListeEleveDansClassePourAppreciation ($classe) {
 	return $texte;
 }
 
-if (isset($_POST['eleve_appreciation'])) {
-  return $_SESSION['eleve_appreciation'] = $_POST['eleve_appreciation'];
-}
-
-if (isset($_SESSION['eleve_appreciation'], $_POST['appreciation'])) {
-	echo envoyerAppreciationEleve ($_POST['eleve_appreciation'], $_POST['appreciation']);
-}
-
 function envoyerAppreciationEleve ($eleve, $apreciation) {
 	$bdd = connectionDB();
-	$reponse = $bdd->query("UPDATE `eleves` SET `appreciation_eleve`= '$apreciation' WHERE id=3");
+	$reponse = $bdd->query('UPDATE `eleves` SET `appreciation_eleve`= "'.$apreciation.'" WHERE id='.$eleve.'');
 	if ($reponse == FALSE){
 		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
 	}

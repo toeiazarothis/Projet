@@ -16,7 +16,6 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="./view/css/bootstrap.css" rel="stylesheet">
     <link  href="./view/css/connecter.css" rel="stylesheet">
 
@@ -154,11 +153,11 @@
 	            <?php echo afficherListeClasse ();?>
 	          </select>
 						<br>
-	          <select class="form-control" id='list_eleve_for_apreciation'>
-							<option value="par_default">Liste des élèves</option>
-	          </select>
-						<br>
-						<form action="../model/m_fonctions.php" method="post" id="for_appreciation">
+						<form action="prof" method="post" id="for_appreciation">
+              <select class="form-control" id="list_eleve_for_apreciation" name="eleve_appreciation">
+                <option value="par_default">Liste des élèves</option>
+              </select>
+              <br>
 							<textarea name="appreciation" class="form-control" rows="3"></textarea>
 							<br>
 							<button class="btn btn-success" type="submit" id="valider_appreciation">Ajouter l'appréciation</button>
@@ -192,7 +191,7 @@
 		$( "#note > select" ).change(function () {
 			var classe = $('#note > select option:selected').val()
 			$.ajax({
-				url: '../model/m_fonctions.php',
+				url: './model/m_fonctions.php',
 				type: 'post',
 				data: { 'classe_note': classe },
 				success: function(response) { $("#list_eleve_for_note" ).html(response);}
@@ -204,7 +203,7 @@
 		$( "#appreciation > #liste_for_classe" ).change(function () {
 			var classe = $('#appreciation > #liste_for_classe option:selected').val()
 			$.ajax({
-				url: '../model/m_fonctions.php',
+				url: './model/m_fonctions.php',
 				type: 'post',
 				data: { 'classe_appreciation': classe },
 				success: function(response) { $( "#list_eleve_for_apreciation" ).html('<option value="par_default">Selectionner un élève</option>' + response);}
