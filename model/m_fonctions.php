@@ -117,23 +117,25 @@ if (isset($_POST['classe_note'])) {
 function afficherListeEleveDansClassePourNote ($classe) {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
-	$texte = '';
+	$texte = '<form class="form-inline" action="prof">';
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
 
-			$texte .= '<form class="form-inline">
-				<div class="form-group">
+			$texte .= '<div class="form-group">
 					<label class="sr-only" for="NoteScolaire">Note sur </label>
 					<div class="input-group">
 						<div class="input-group-addon">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</div>
-						<input type="text" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l\'eleve">
+						<input type="number" name="'.$donnees['id'].'" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l\'eleve">
 						<div class="input-group-addon">20</div>
 					</div>
-				</div>
-			</form>';
+				</div>';
 		}
 	}
+	$texte .= '
+	<br><br>
+	<button class="btn btn-success">Ajouter les notes</button>
+	</form>';
 	return $texte;
 }
 
