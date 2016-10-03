@@ -76,6 +76,8 @@
               <option>Français</<option>
               <option>Mathematique</<option>
               <option>Anglais</<option>
+            </section>
+            <select class="form-control">
 							<option value="par_default">Selectionner une classe</option>
               <?php echo afficherListeClasse ();?>
             </select>

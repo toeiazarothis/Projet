@@ -246,8 +246,81 @@
     </div>
   </section>
 
-  <section id="appreciation">
-
+  <section id="appreciation" class="bg-light-gray">
+    <div class="contenair">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Les Appreciation</h2>
+            <h3 class="section-subheading text-muted">Ici ce trouve les appreciation donnés par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-md-offset-1 text-center">
+          <div class="panel-group" id="accordion3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Français</a>
+                </h4>
+              </div>
+              <div id="collapse20" class="panel-collapse collapse">
+                <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse21">Histoire</a>
+                </h4>
+              </div>
+              <div id="collapse21" class="panel-collapse collapse">
+                <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse22">Mathematique</a>
+                </h4>
+              </div>
+              <div id="collapse22" class="panel-collapse collapse">
+                <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse23">EPS</a>
+                </h4>
+              </div>
+              <div id="collapse23" class="panel-collapse collapse">
+                <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse24">Science</a>
+                </h4>
+              </div>
+              <div id="collapse24" class="panel-collapse collapse">
+                <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse25">Anglais</a>
+                </h4>
+              </div>
+              <div id="collapse25" class="panel-collapse collapse">
+                <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
