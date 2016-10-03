@@ -77,6 +77,8 @@ function verifPassIsUser ($user, $pass) {
 }
 // fin de la parti sur le mot de passe de l'utilisateur
 // fin de la parti de la page dindex
+
+
 // debut de la partie eleve
 // pour l'affichage des note dans la parti eleve
 function matiereForEleve ($userID, $matiere) {
@@ -116,12 +118,19 @@ function appreciationForEleve ($userID) {
 }
 // fin de la parti permettant d'afficher l'appreciation de l'eleve
 // fin de la parti eleve
+
+
 // debut de la parti prof
 // debut parti permettant d'afficher la liste des classe dans la BDDD
+//condition pour verifier sur nous devons lancer la fonctions ou pas
+if (isset($_POST['matiere_for_note'])) {
+  echo afficherListeClasseForProf ();
+}
+
 function afficherListeClasseForProf () {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("SELECT id, nom FROM classe");
-	$texte = '';
+	$texte = '<option value="par_default">Selectionner une classe</option>';
 	while ($donnees = $reponse->fetch())
 	{
 		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
@@ -131,45 +140,14 @@ function afficherListeClasseForProf () {
 // fin de la parti permettant d'afficher les classe
 //debut de la parti pour lajout de note (a refaire)
 //condition pour verifier sur nous devons lancer la fonctions ou pas
-if (isset($_POST['classe_note'])) {
-  echo afficherListeEleveForNoteForProf($_POST['classe_note']);
-}
-//fonction permettant d'afficher la liste des eleve a partir d'une classe
-function afficherListeEleveForNoteForProf ($classe) {
-	$bdd = connectionDB();
-	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
-	$texte = '<form class="form-inline" action="prof">';
-	while ($donnees = $reponse->fetch())
-	{
-		if ($donnees['classe'] == $classe) {
-
-			$texte .= '<div class="form-group">
-					<label class="sr-only" for="NoteScolaire">Note sur </label>
-					<div class="input-group">
-						<div class="input-group-addon">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</div>
-						<input type="number" step="0.5" value="" min="0" max="20" name="'.$donnees['id'].'" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l\'eleve">
-						<div class="input-group-addon">20</div>
-					</div>
-				</div>';
-		}
-	}
-	$texte .= '
-	<br><br>
-	<button class="btn btn-success" >Ajouter les notes</button>
-	</form>';
-	return $texte;
-}
-//fin de la parti dajout de note
-// debut de la parti pour ajouter une appreciation
-//condition pour verifier sur nous devons lancer la fonctions ou pas
-if (isset($_POST['classe_appreciation'])) {
-  echo afficherListeEleveForAppreciationForProf($_POST['classe_appreciation']);
+if (isset($_POST['eleve_for_note'])) {
+  echo afficherListeEleveForProf($_POST['eleve_for_note']);
 }
 // fonction permettant d'afficher les eleve a parti d'une classe
-function afficherListeEleveForAppreciationForProf($classe) {
+function afficherListeEleveForProf($classe) {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
-	$texte = '';
+	$texte = '<option value="par_default">Selectionner un élève</option>';
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
@@ -177,6 +155,13 @@ function afficherListeEleveForAppreciationForProf($classe) {
 		}
 	}
 	return $texte;
+}
+//fin de la parti dajout de note
+
+// debut de la parti pour ajouter une appreciation
+//condition pour verifier sur nous devons lancer la fonctions ou pas
+if (isset($_POST['classe_appreciation'])) {
+  echo afficherListeEleveForAppreciationForProf($_POST['classe_appreciation']);
 }
 // fonction permettant de sauvegarder l'appreciation dans la BDD
 function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
@@ -188,4 +173,5 @@ function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
 	header('Location:prof');
 }
 //fin de la parti ajouter une appreciation
+//fin de la parti prof
 ?>

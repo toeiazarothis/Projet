@@ -68,22 +68,36 @@
               <h2 class="section-heading">Note</h2>
               <h3 class="section-subheading text-muted">Enregistrer rapidement les notes du dernier contrôle pour transmettre l'information à l'élève.</h3>
           </div>
-          <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center" id="note">
-						<h4>Liste des classes:</h4>
-            <select class="form-control">
-              <option value="par_default">Selectionner une matiere</<option>
-              <option>Histoire</<option>
-              <option>Français</<option>
-              <option>Mathematique</<option>
-              <option>Anglais</<option>
-            </section>
-            <select class="form-control">
-							<option value="par_default">Selectionner une classe</option>
-              <?php echo afficherListeClasseForProf ();?>
-            </select>
+          <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
+            <form class="" action="index.html" method="post">
+
+            </form>
+            <div id="for_matiere_for_note">
+              <select class="form-control" id="matiere_for_note">
+                <option value="par_default">Selectionner une matiere</<option>
+                <option>Histoire</<option>
+                <option>Français</<option>
+                <option>Mathematique</<option>
+                <option>Anglais</<option>
+              </select>
+            </div>
+            <br>
+            <div id="for_classe_for_note">
+              <select class="form-control" id="classe_for_note">
+              </select>
+            </div>
 						<br>
-						<div id="list_eleve_for_note">
-						</div>
+            <div id="for_eleve_for_note">
+              <select class="form-control" id="eleve_for_note">
+              </select>
+            </div>
+            <br>
+            <div id="for_saisir_note_for_note">
+
+            </div>
+            <div id="for_button_for_note">
+              <button class="btn btn-danger" href="#" id="ajout_note_for_prof">Ajouter la note</a>
+            </div>
 					</div>
         </div>
       </div>
@@ -182,7 +196,7 @@
     <script src="./view/jquery/jquery.min.js"></script>
     <script src="./view/js/connecter.js"></script>
     <script src="./view/jqBootstrapValidation.js"></script>
-    <script>
+    <script>for_saisir_note_for_note
       $(document).ready(function() {
         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
           var page = $(this).attr('href'); // Page cible
@@ -193,15 +207,36 @@
       });
     </script>
   </body>
-	<!-- Script pour afficher la liste eleve pour la parti Note -->
-	<script>
-		$( "#note > select" ).change(function () {
-			var classe = $('#note > select option:selected').val()
+  <!-- Script pour afficher la liste classe pour la parti Note -->
+  <script>
+		$( "#for_matiere_for_note > select" ).change(function () {
+			var classe = $('#for_matiere_for_note > select option:selected').val()
 			$.ajax({
 				url: './model/m_fonctions.php',
 				type: 'post',
-				data: { 'classe_note': classe },
-				success: function(response) { $("#list_eleve_for_note" ).html(response);}
+				data: { 'matiere_for_note': 1 },
+				success: function(response) { $("#classe_for_note" ).html(response);}
+			});
+		});
+	</script>
+  <!-- Script pour afficher la liste eleve pour la parti Note -->
+  <script>
+		$( "#for_classe_for_note > select" ).change(function () {
+			var eleve = $('#for_classe_for_note > select option:selected').val()
+			$.ajax({
+				url: './model/m_fonctions.php',
+				type: 'post',
+				data: { 'eleve_for_note': eleve },
+				success: function(response) { $("#eleve_for_note" ).html(response);}
+			});
+		});
+	</script>
+  <!-- Script pour afficher le champs note pour la parti Note -->
+  <script>
+		$( "#for_eleve_for_note > select" ).change(function () {
+			var eleve = $('#for_eleve_for_note > select option:selected').val()
+			$.ajax({
+				$("#for_saisir_note_for_note" ).html('<input type="number"');}
 			});
 		});
 	</script>
