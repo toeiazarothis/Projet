@@ -50,7 +50,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prof <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#ajoutProf" class="js-scrollTo">Ajout</a></li>
-                <li><a href="#majProf" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#majProf" class="js-scrollTo">Mise à jour</a></li>
                 <li><a href="#deleteProf" class="js-scrollTo">Suppression</a></li>
               </ul>
             </li>
@@ -66,7 +66,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Classe<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#ajoutClasse" class="js-scrollTo">Ajout</a></li>
-                <li><a href="#majClasse" class="js-scrollTo">Mise a jour</a></li>
+                <li><a href="#majClasse" class="js-scrollTo">Mise à jour</a></li>
                 <li><a href="#deleteClasse" class="js-scrollTo">Suppression</a></li>
               </ul>
             </li>
@@ -111,14 +111,14 @@
             <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
             <div class="input-group">
               <div class="input-group-addon">Classe</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'eleve">
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'élève">
             </div>
           </div>
           <div class="form-group">
             <label class="sr-only" for="exampleInputAmount">Adresse de l'élève</label>
             <div class="input-group">
               <div class="input-group-addon">Adresse</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
             </div>
           </div>
         </div>
@@ -129,8 +129,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-          <h2 class="section-heading">Mise a jour eleve </h2>
-          <h3 class="section-subheading text-muted">Mettre a jour d'un eleve</h3>
+          <h2 class="section-heading">Mise à jour d'élèves </h2>
+          <h3 class="section-subheading text-muted">Mettre à jour d'un élève</h3>
         </div>
       </div>
     </div>
@@ -139,8 +139,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-          <h2 class="section-heading">Suppresion eleve </h2>
-          <h3 class="section-subheading text-muted">Supprimer un eleve</h3>
+          <h2 class="section-heading">Suppresion d'élève </h2>
+          <h3 class="section-subheading text-muted">Supprimer un élève</h3>
         </div>
       </div>
     </div>
@@ -155,14 +155,14 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Ajout de professeur</h2>
-          <h3 class="section-subheading text-muted">Rajouter un prof</h3>
+          <h3 class="section-subheading text-muted">Rajouter un professeur</h3>
         </div>
       </div><br>
 
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
         <div class="form-group">
-          <label class="sr-only" for="exampleInputAmount">Nom du prof</label>
+          <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
           <div class="input-group">
             <div class="input-group-addon">Nom</div>
             <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
@@ -170,7 +170,7 @@
         </div>
 
         <div class="form-group">
-          <label class="sr-only" for="exampleInputAmount">Prenom du prof</label>
+          <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
           <div class="input-group">
             <div class="input-group-addon">Prenom</div>
             <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
@@ -178,7 +178,7 @@
         </div>
 
         <div class="form-group">
-          <label class="sr-only" for="exampleInputAmount">classe que gère le prof</label>
+          <label class="sr-only" for="exampleInputAmount">classe que gère le professeur</label>
           <div class="input-group">
             <div class="input-group-addon">Classe</div>
             <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
