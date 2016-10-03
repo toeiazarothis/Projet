@@ -87,7 +87,7 @@
                   </h4>
                 </div>
                 <div id="collapse10" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'francais') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'francais') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -97,7 +97,7 @@
                   </h4>
                 </div>
                 <div id="collapse11" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'histoire') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'histoire') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -107,7 +107,7 @@
                   </h4>
                 </div>
                 <div id="collapse12" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'mathematique') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'mathematique') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -117,7 +117,7 @@
                   </h4>
                 </div>
                 <div id="collapse13" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'eps') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'eps') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -127,7 +127,7 @@
                   </h4>
                 </div>
               <div id="collapse14" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'science') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'science') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -137,7 +137,7 @@
                   </h4>
                 </div>
                 <div id="collapse15" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiere ($_SESSION['userid'], 'anglais') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'anglais') ?></div>
                 </div>
               </div>
               <!-- <div class="panel panel-default">
@@ -176,7 +176,7 @@
                   </h4>
                 </div>
                 <div id="collapse1" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
+                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'francais') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -186,7 +186,7 @@
                   </h4>
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'histoire') ?></div>
+                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'histoire') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -196,7 +196,7 @@
                   </h4>
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'mathematique') ?></div>
+                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'mathematique') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -206,7 +206,7 @@
                   </h4>
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'eps') ?></div>
+                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'eps') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -216,7 +216,7 @@
                   </h4>
                 </div>
                 <div id="collapse5" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'science') ?></div>
+                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'science') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -226,7 +226,7 @@
                   </h4>
                 </div>
                 <div id="collapse6" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoir ($_SESSION['users'], $_SESSION['classe'], 'anglais') ?></div>
+                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'anglais') ?></div>
                 </div>
               </div>
               <!-- <div class="panel panel-default">
@@ -259,7 +259,7 @@
       <div class="row">
         <div class="col-lg-10 col-md-offset-1 text-center">
           <p>
-            Voici l'appreciation donné par le professeur principale.
+            <?php echo appreciationForEleve($_SESSION['userid']); ?>
           </p>
         </div>
       </div>

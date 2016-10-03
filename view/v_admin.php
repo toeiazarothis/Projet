@@ -24,7 +24,6 @@
     <title>Vie Scolaire - iSchool Notes</title>
   </head>
   <body id="top">
-
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -82,261 +81,215 @@
     </nav>
 
     <!--Debut section eleve -->
-      <section id="eleve">
-        <section id="ajoutEleve">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Ajout d'élève</h2>
-                <h3 class="section-subheading text-muted">Rajouter un élève</h3>
-              </div>
-            </div><br>
+<section id="eleve">
+  <section id="ajoutEleve">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Ajout d'élève</h2>
+          <h3 class="section-subheading text-muted">Rajouter un élève</h3>
+        </div>
+      </div><br>
 
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                <div class="form-group">
-                  <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
-                    <div class="input-group">
-                    <div class="input-group-addon">Nom de famille</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Prenom</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Classe</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'eleve">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Nom parent</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" name="name" value="" placeholder="Entrer le nom d'un parent">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Prenom d'un parent</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Prenom parent</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" name="name" value="" placeholder="Entrer le prenom d'un parent">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Profession des parents</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Profession parent</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" name="name" value="" placeholder="Entrer la profession d'un parent">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Adresse de l'élève</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Adresse</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">E-mail d'un parents</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">E-mail parent</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" name="name" value="" placeholder="Entrer l'e-mail d'un parent">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Telephone d'un parents</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">Tel parent</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" name="name" value="" placeholder="Entrer le telephone d'un parent">
-                  </div>
-                </div>
-              </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <div class="form-group">
+            <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
+              <div class="input-group">
+              <div class="input-group-addon">Nom de famille</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
             </div>
           </div>
-        </section>
-        <section id="majEleve">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Mise a jour eleve </h2>
-                <h3 class="section-subheading text-muted">Mettre a jour d'un eleve</h3>
-              </div>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
+            <div class="input-group">
+              <div class="input-group-addon">Prenom</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
             </div>
           </div>
-        </section>
-        <section id="deleteEleve">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Suppresion eleve </h2>
-                <h3 class="section-subheading text-muted">Supprimer un eleve</h3>
-                <input class="btn btn-default"type="submit" name="submit" value="Supprimer un eleve !">
-              </div>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
+            <div class="input-group">
+              <div class="input-group-addon">Classe</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'eleve">
             </div>
           </div>
-        </section>
-      </section>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Adresse de l'élève</label>
+            <div class="input-group">
+              <div class="input-group-addon">Adresse</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="majEleve">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Mise a jour eleve </h2>
+          <h3 class="section-subheading text-muted">Mettre a jour d'un eleve</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="deleteEleve">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Suppresion eleve </h2>
+          <h3 class="section-subheading text-muted">Supprimer un eleve</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
 
 
-          <!--Debut section prof -->
-      <section id="prof" class="bg bg-light-gray">
-        <section id="ajoutProf">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Ajout de professeur</h2>
-                <h3 class="section-subheading text-muted">Rajouter un prof</h3>
-              </div>
-            </div><br>
+    <!--Debut section prof -->
+<section id="prof">
+  <section id="ajoutProf" class="bg bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Ajout de professeur</h2>
+          <h3 class="section-subheading text-muted">Rajouter un prof</h3>
+        </div>
+      </div><br>
 
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">Nom du prof</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Nom</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                </div>
-              </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">Nom du prof</label>
+          <div class="input-group">
+            <div class="input-group-addon">Nom</div>
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+          </div>
+        </div>
 
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">Prenom du prof</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Prenom</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                </div>
-              </div>
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">Prenom du prof</label>
+          <div class="input-group">
+            <div class="input-group-addon">Prenom</div>
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+          </div>
+        </div>
 
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">classe que gère le prof</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Classe</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                </div>
-              </div>
-            </div>
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">classe que gère le prof</label>
+          <div class="input-group">
+            <div class="input-group-addon">Classe</div>
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
           </div>
-        </section>
-        <section id="majProf">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Mise a jour prof </h2>
-                <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="deleteProf">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Suppresion prof </h2>
-                <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
-                <input class="btn btn-default"type="submit" name="submit" value="Supprimer un professeur !">
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-
-
-          <!--Debut section personnel -->
-      <section id="personnel">
-        <section id="ajoutPersonnel">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Ajout </h2>
-                <h3 class="section-subheading text-muted">Rajouter un membre du personnel</h3>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="majPersonnel">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Mise a jour du personnel </h2>
-                <h3 class="section-subheading text-muted">Mettre a jour un membre du personnel</h3>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="deletePersonnel">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Suppresion du personnel </h2>
-                <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
-                <input class="btn btn-default"type="submit" name="submit" value="Supprimer un membre du personnel !">
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-          <!--Fin section personnel -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="majProf">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Mise a jour prof </h2>
+          <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="deleteProf">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Suppresion prof </h2>
+          <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
 
 
-          <!--Debut section classe -->
-      <section id="classe" class="bg bg-light-gray">
-        <section id="ajoutClasse">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Ajout d'une classe</h2>
-                <h3 class="section-subheading text-muted">Rajouter une classe</h3>
-              </div>
-            </div><br>
+    <!--Debut section personnel -->
+<section id="personnel">
+  <section id="ajoutPersonnel">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Ajout </h2>
+          <h3 class="section-subheading text-muted">Rajouter un membre du personnel</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="majPersonnel">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Mise a jour du personnel </h2>
+          <h3 class="section-subheading text-muted">Mettre a jour un membre du personnel</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="deletePersonnel">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Suppresion du personnel </h2>
+          <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+    <!--Fin section personnel -->
 
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">classe à rajouter</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Classe</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                </div>
-              </div>
-            </div>
+
+    <!--Debut section classe -->
+<section id="classe">
+  <section id="ajoutClasse">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Ajout d'une classe</h2>
+          <h3 class="section-subheading text-muted">Rajouter une classe</h3>
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">classe à rajouter</label>
+          <div class="input-group">
+            <div class="input-group-addon">Classe</div>
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
           </div>
-        </section>
-        <section id="majClasse">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Mise a jour classe </h2>
-                <h3 class="section-subheading text-muted">Mettre a jour une classe</h3>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="deleteClasse">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Suppresion d'une classe </h2>
-                <h3 class="section-subheading text-muted">Supprimer une classe</h3>
-                <select class="form-control">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-                <input class="btn btn-default"type="submit" name="submit" value="Supprimer la classe !">
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="majClasse">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Suppresion du personnel </h2>
+          <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="deleteClasse">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2 class="section-heading">Suppresion du personnel </h2>
+          <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
     <!--Fin section classe -->
 
 

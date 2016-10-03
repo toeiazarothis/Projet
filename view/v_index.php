@@ -42,15 +42,15 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">Bienvenue sur iSchool Notes</h1>
-            <p class="lead">Voici le premier ENT entièrement adaptatif et responsive design.</p>
+            <p class="lead">Voici le premier ENT entièrement adaptatif</p>
             <p class="lead">
             <div class="col-md-6 col-md-offset-3">
               <form class="form-signin" action="accueil" method="POST">
                 <h2 class="form-signin-heading">Connectez-vous</h2>
                 <label for="inputUsername" class="sr-only">Identifiant</label>
                 <input type="text" id="inputUsername" class="form-control" placeholder="Identifiant" name="users" required autofocus><br>
-                <label for="inputPassword" class="sr-only">Mot de passe</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" name="password" required><br>
+                <label for="inputPassword" class="sr-only">Mots de passe</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" name="password" required><br>
                 <!-- <div class="checkbox">
                   <label>
                     <input type="checkbox" value="remember-me"> Se souvenir de moi

@@ -16,8 +16,9 @@ if($_SESSION['stats'] != 'prof') {
 	}
 }
 if (isset($_POST['eleve_appreciation'], $_POST['appreciation'])) {
-	echo envoyerAppreciationEleve ($_POST['eleve_appreciation'], $_POST['appreciation']);
+	echo envoyerAppreciationEleveForProf ($_POST['eleve_appreciation'], $_POST['appreciation']);
 }
 include ('../view/v_prof.php');
 
+echo $_POST['button'];
 ?>
