@@ -51,11 +51,11 @@
                       <div class="row">
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Indiquer votre nom *" id="name" required data-validation-required-message="Veuillez nous indiquez votre Nom ( ça sera plus simple pour parler ensemble).">
+                                  <input type="text" class="form-control" placeholder="Indiquer votre nom *" id="name" required data-validation-required-message="Veuillez nous indiquer votre Nom (ça sera plus simple pour parler ensemble).">
                                   <p class="help-block text-danger"></p>
                               </div>
                               <div class="form-group">
-                                  <input type="email" class="form-control" placeholder="Votre adresse mail *" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail. Sinon ça risque d'etre dur de vous repondre.">
+                                  <input type="email" class="form-control" placeholder="Votre adresse mail *" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail. Sinon ça risque d'être dur de vous répondre.">
                                   <p class="help-block text-danger"></p>
                               </div>
                               <div class="form-group">
