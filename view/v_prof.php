@@ -77,6 +77,7 @@
 						<br>
 						<div id="list_eleve_for_note">
 						</div>
+            <input class="btn btn-default"type="submit" name="submit" value="ajout note !">
 					</div>
         </div>
       </div>
