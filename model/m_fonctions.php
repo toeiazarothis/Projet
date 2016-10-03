@@ -129,7 +129,7 @@ function afficherListeEleveDansClassePourNote ($classe) {
 						<input type="number" step="0,5" value="0" min="0" max="20" name="'.$donnees['id'].'" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l\'eleve">
 						<div class="input-group-addon">20</div>
 					</div>
-				</div>';
+				</div>'; /*tu es bete*/
 		}
 	}
 	$texte .= '
