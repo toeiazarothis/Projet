@@ -46,6 +46,7 @@
               <ul class="dropdown-menu">
                 <li><a href="#note" class="js-scrollTo">Note</a></li>
                 <li><a href="#devoir" class="js-scrollTo">Devoir</a></li>
+                <li><a href="#appreciation" class="js-scrollTo">Appreciation</a></li>
               </ul>
             </li>
             <!-- <li><a href="c_parent.php">Parent</a></li> -->
@@ -243,6 +244,10 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="appreciation">
+
   </section>
 
 

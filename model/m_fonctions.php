@@ -126,7 +126,7 @@ function afficherListeEleveDansClassePourNote ($classe) {
 					<label class="sr-only" for="NoteScolaire">Note sur </label>
 					<div class="input-group">
 						<div class="input-group-addon">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</div>
-						<input type="number" name="'.$donnees['id'].'" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l\'eleve">
+						<input type="number" step="0,5" value="0" min="0" max="20" name="'.$donnees['id'].'" class="form-control" id="NoteScolaire" placeholder="Entrer la note de l\'eleve">
 						<div class="input-group-addon">20</div>
 					</div>
 				</div>';
