@@ -258,9 +258,18 @@
       </div>
       <div class="row">
         <div class="col-lg-10 col-md-offset-1 text-center">
-          <p>
-            <?php echo appreciationForEleve($_SESSION['userid']); ?>
-          </p>
+          <div class="panel-group" id="accordion3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Appreciation General</a>
+                </h4>
+              </div>
+              <div id="collapse20" class="panel-collapse collapse in">
+                <div class="panel-body"><?php echo appreciationForEleve($_SESSION['userid']); ?></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
