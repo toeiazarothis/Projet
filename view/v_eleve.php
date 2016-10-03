@@ -248,16 +248,16 @@
   </section>
 
   <section id="appreciation" class="bg-light-gray">
-    <div class="contenair">
+    <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-              <h2 class="section-heading">Les Appreciation</h2>
+            <h2 class="section-heading">Les Appreciation</h2>
             <h3 class="section-subheading text-muted">Ici ce trouve les appreciation donnés par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
             <br><br>
-          </div>
+        </div>
       </div>
       <div class="row">
-        <div class="col-lg-10 col-md-offset-1 text-center">
+          <div class="col-lg-10 col-md-offset-1 text-center">
           <div class="panel-group" id="accordion3">
             <div class="panel panel-default">
               <div class="panel-heading">
