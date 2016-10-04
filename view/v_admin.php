@@ -73,7 +73,6 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="admin">Administration</a></li>
             <li><a href="accueil">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -131,6 +130,7 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Mise a jour eleve </h2>
           <h3 class="section-subheading text-muted">Mettre a jour d'un eleve</h3>
+          <input class="btn btn-success"type="submit" name="submit" value="Modifier un eleve !">
         </div>
       </div>
     </div>
@@ -141,6 +141,7 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion eleve </h2>
           <h3 class="section-subheading text-muted">Supprimer un eleve</h3>
+          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer l'eleve !">
         </div>
       </div>
     </div>
@@ -149,8 +150,8 @@
 
 
     <!--Debut section prof -->
-<section id="prof">
-  <section id="ajoutProf" class="bg bg-light-gray">
+<section id="prof" class="bg bg-light-gray">
+  <section id="ajoutProf">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
@@ -193,6 +194,7 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Mise a jour prof </h2>
           <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
+          <input class="btn btn-success"type="submit" name="submit" value="Modifier un membre de l'equipe !">
         </div>
       </div>
     </div>
@@ -203,6 +205,8 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion prof </h2>
           <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
+          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le professeur !">
+
         </div>
       </div>
     </div>
@@ -228,6 +232,7 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Mise a jour du personnel </h2>
           <h3 class="section-subheading text-muted">Mettre a jour un membre du personnel</h3>
+          <input class="btn btn-success"type="submit" name="submit" value="Modifier le membre du personnel">
         </div>
       </div>
     </div>
@@ -238,6 +243,8 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion du personnel </h2>
           <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le membre du personnel !">
+
         </div>
       </div>
     </div>
@@ -247,7 +254,7 @@
 
 
     <!--Debut section classe -->
-<section id="classe">
+<section id="classe" class="bg bg-light-gray">
   <section id="ajoutClasse">
     <div class="container">
       <div class="row">
@@ -273,8 +280,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-          <h2 class="section-heading">Suppresion du personnel </h2>
-          <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+          <h2 class="section-heading">Modification d'une classe </h2>
+          <h3 class="section-subheading text-muted">Mettez a jour le nom d'une classe</h3>
+          <input class="btn btn-success"type="submit" name="submit" value="Modifier la classe">
         </div>
       </div>
     </div>
@@ -284,7 +292,8 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion du personnel </h2>
-          <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+          <h3 class="section-subheading text-muted">Supprimer la classe</h3>
+          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer la classe">
         </div>
       </div>
     </div>
