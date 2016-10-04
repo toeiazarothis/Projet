@@ -58,7 +58,7 @@
             <h2 class="section-heading">Evénement</h2>
             <h3 class="section-subheading text-muted">Calendrier d'événement</h3>
             <p>
-              Afin de communiquer au mieux les informations sur les differents événements qui concernent l'école, nous avons mis en place un agenda virtuel qui vous permet à vous, parent, ainsi que vos enfants de voir les sorties prevues.
+              Afin de communiquer au mieux les informations sur les différents événements qui concernent l'école, nous avons mis en place un agenda virtuel qui vous permet à vous, parent, ainsi que vos enfants de voir les sorties prevues.
             </p>
             <a class="btn btn-warning" href="v_event.php" role="button">L'agenda !</a>
           </div>
@@ -85,7 +85,7 @@
                 <div id="collapse1" class="panel-collapse collapse">
                   <div class="panel-body">Liste des prof. absents</div>
                   <select class="form-control col-md-6">
-                    <option>Liste des prof. à mettre en absent</option>
+                    <option>Liste des professeurs à déclarer absent</option>
                   </select>
                   Déclarer le professeur absent ?<br>
                   <a class="btn btn-success" href="#" role="button">Oui</a>
@@ -117,7 +117,7 @@
                 <div id="collapse2" class="panel-collapse collapse">
                   <div class="panel-body">Liste des élèves absents.</div>
                     <select class="form-control">
-                      <option>Liste des élèves à mettre en absent</option>
+                      <option>Liste des élèves à déclarer absent</option>
                     </select>
                     <br>
                     Déclarer l'élève absent ?

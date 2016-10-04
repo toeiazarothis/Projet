@@ -33,7 +33,7 @@ $conn = null;
 <script type="text/javascript">
   function deleteme(delid)
   {
-    if (confirm("Vous allez supprimer le dossier de l\'élève !!fait attantion que vous ne pouvez pas annuler cette opération!"))
+    if (confirm("Vous allez supprimer le dossier de l\'élève !!! Faites attention, opération irréversible!"))
     {
        window.location.href='delete.php?del_id=' +delid+'';
       return true;

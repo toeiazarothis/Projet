@@ -42,14 +42,14 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">Bienvenue sur iSchool Notes</h1>
-            <p class="lead">Voici le premier ENT entièrement adaptatif</p>
+            <p class="lead">Voici la première plate-forme scolaire entièrement adaptatif</p>
             <p class="lead">
             <div class="col-md-6 col-md-offset-3">
               <form class="form-signin" action="accueil" method="POST">
                 <h2 class="form-signin-heading">Connectez-vous</h2>
                 <label for="inputUsername" class="sr-only">Identifiant</label>
                 <input type="text" id="inputUsername" class="form-control" placeholder="Identifiant" name="users" required autofocus><br>
-                <label for="inputPassword" class="sr-only">Mots de passe</label>
+                <label for="inputPassword" class="sr-only">Mot de passe</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" name="password" required><br>
                 <!-- <div class="checkbox">
                   <label>

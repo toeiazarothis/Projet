@@ -46,7 +46,7 @@
               <ul class="dropdown-menu">
                 <li><a href="#note" class="js-scrollTo">Note</a></li>
                 <li><a href="#devoir" class="js-scrollTo">Devoir</a></li>
-                <li><a href="#appreciation" class="js-scrollTo">Appreciation</a></li>
+                <li><a href="#appreciation" class="js-scrollTo">Appréciation</a></li>
               </ul>
             </li>
             <!-- <li><a href="c_parent.php">Parent</a></li> -->
@@ -73,7 +73,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Les Notes</h2>
-                <h3 class="section-subheading text-muted">Ici ce trouve les différentes notes.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+                <h3 class="section-subheading text-muted">Ici se trouve les différentes notes.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
                 <br><br><br>
             </div>
         </div>
@@ -162,7 +162,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Les Devoirs</h2>
-                <h3 class="section-subheading text-muted">Ici ce trouve le résumé du cours et les devoirs à effectuer.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+                <h3 class="section-subheading text-muted">Ici se trouve le résumé du cours et les devoirs à effectuer.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
                 <br><br><br>
             </div>
         </div>
@@ -251,8 +251,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Les Appreciation</h2>
-            <h3 class="section-subheading text-muted">Ici ce trouve les appreciation donnés par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+            <h2 class="section-heading">Les Appreciations</h2>
+            <h3 class="section-subheading text-muted">Ici se trouve les appréciations données par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
             <br><br>
         </div>
       </div>
