@@ -128,14 +128,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-<<<<<<< HEAD
-          <h2 class="section-heading">Mise a jour eleve </h2>
-          <h3 class="section-subheading text-muted">Mettre a jour d'un eleve</h3>
+          <h2 class="section-heading">Mise a jour d'élèves  </h2>
+          <h3 class="section-subheading text-muted">Mettre a jour le profil d'un élève</h3>
           <input class="btn btn-success"type="submit" name="submit" value="Modifier un eleve !">
-=======
-          <h2 class="section-heading">Mise à jour d'élèves </h2>
-          <h3 class="section-subheading text-muted">Mettre à jour d'un élève</h3>
->>>>>>> f562887a889f186e5c533615128207a0293a17ac
         </div>
       </div>
     </div>
@@ -144,14 +139,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-<<<<<<< HEAD
-          <h2 class="section-heading">Suppresion eleve </h2>
-          <h3 class="section-subheading text-muted">Supprimer un eleve</h3>
-          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer l'eleve !">
-=======
           <h2 class="section-heading">Suppresion d'élève </h2>
           <h3 class="section-subheading text-muted">Supprimer un élève</h3>
->>>>>>> f562887a889f186e5c533615128207a0293a17ac
+          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer l'eleve !">
         </div>
       </div>
     </div>
@@ -240,14 +230,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-<<<<<<< HEAD
-          <h2 class="section-heading">Mise a jour du personnel </h2>
-          <h3 class="section-subheading text-muted">Mettre a jour un membre du personnel</h3>
-          <input class="btn btn-success"type="submit" name="submit" value="Modifier le membre du personnel">
-=======
           <h2 class="section-heading">Mise à jour du personnel </h2>
           <h3 class="section-subheading text-muted">Mettre à jour un membre du personnel</h3>
->>>>>>> f562887a889f186e5c533615128207a0293a17ac
+          <input class="btn btn-success"type="submit" name="submit" value="Modifier le membre du personnel">
         </div>
       </div>
     </div>
