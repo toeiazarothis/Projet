@@ -55,7 +55,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contact">Contact</a></li>
-            <li><a href="accueil">Déconnexion</a></li>
+            <li><a href="accueil"><?php echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']); ?>  (Se déconnecter)</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

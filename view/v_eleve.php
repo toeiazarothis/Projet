@@ -52,7 +52,7 @@
             <!-- <li><a href="c_parent.php">Parent</a></li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="accueil">Déconnexion</a></li>
+            <li><a href="accueil"><?php echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']); ?>  (Se déconnecter)</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
