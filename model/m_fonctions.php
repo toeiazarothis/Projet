@@ -130,7 +130,6 @@ if (isset($_POST['matiere_for_note'])) {
 function afficherListeClasseForProf () {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("SELECT id, nom FROM classe");
-	$texte = '<option value="par_default">Selectionner une classe</option>';
 	while ($donnees = $reponse->fetch())
 	{
 		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
