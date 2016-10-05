@@ -69,36 +69,40 @@
               <h3 class="section-subheading text-muted">Enregistrer ici les notes du dernier contrôle pour transmettre l'information à l'élève.</h3>
           </div>
           <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
-            <form class="" action="index.html" method="post">
-
+            <form method="post" id="form_ajout_note">
+              <div id="for_matiere_for_note">
+                <select class="form-control" name="matiere" id="matiere_for_note">
+                  <option value="par_default">Sélectionner une matière</<option>
+                  <option value="francais">Français</<option>
+                  <option value="histoire">Histoire</<option>
+                  <option value="mathematique">Mathématique</<option>
+                  <option value="eps">EPS</<option>
+                  <option value="sciennce">Science</<option>
+                  <option value="anglais">Anglais</<option>
+                </select>
+              </div>
+              <br>
+              <div id="for_classe_for_note">
+                <select class="form-control" name="classe" id="classe_for_note">
+                </select>
+              </div>
+              <br>
+              <div id="for_eleve_for_note">
+                <select class="form-control" name="eleve" id="eleve_for_note">
+                </select>
+              </div>
+              <br>
+              <div id="for_saisir_note_for_note"></div>
+              <br>
+              <div id="for_button_for_note">
+                <!-- <button class="btn btn-success" id="ajout_note_for_prof">Ajouter la note</button> -->
+                <input class="btn btn-success" type="submit" value="Ajouter la note"/>
+              </div>
+              <br>
+              <div id="result_for_send_note">
+              </div>
             </form>
-            <div id="for_matiere_for_note">
-              <select class="form-control" id="matiere_for_note">
-                <option value="par_default">Sélectionner une matière</<option>
-                <option>Histoire</<option>
-                <option>Français</<option>
-                <option>Mathematique</<option>
-                <option>Anglais</<option>
-              </select>
-            </div>
-            <br>
-            <div id="for_classe_for_note">
-              <select class="form-control" id="classe_for_note">
-              </select>
-            </div>
-						<br>
-            <div id="for_eleve_for_note">
-              <select class="form-control" id="eleve_for_note">
-              </select>
-            </div>
-            <br>
-            <div id="for_saisir_note_for_note">
-              <input type="number" step="0,5" value="0" min="0" max="20" name="" class="form-control" placeholder="Entrer la note de l\'eleve">
-            </div><br>
-            <div id="for_button_for_note">
-              <button class="btn btn-danger" href="#" id="ajout_note_for_prof">Ajouter la note</a>
-            </div>
-					</div>
+          </div>
         </div>
       </div>
     </section>
@@ -112,26 +116,31 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
-            <div id="for_matiere_for_note">
-              <select class="form-control" id="matiere_for_note">
+          <form action="prof" method="post">
+            <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center" id="for_matiere_for_note">
+              <select class="form-control" name="matiere_for_cours_devoir" id="matiere_for_note">
                 <option value="par_default">Sélectionner une matière</<option>
-                <option>Histoire</<option>
-                <option>Français</<option>
-                <option>Mathematique</<option>
-                <option>Anglais</<option>
+                <option value="francais">Français</<option>
+                <option value="histoire">Histoire</<option>
+                <option value="mathematique">Mathématique</<option>
+                <option value="eps">EPS</<option>
+                <option value="sciennce">Science</<option>
+                <option value="anglais">Anglais</<option>
               </select>
             </div>
-            <br>
-            <select class="form-control">
-							<option value="par_default">Sélectionner une classe</option>
-              <?php echo afficherListeClasseForProf ();?>
-            </select>
-            <br>
-            <textarea class="form-control" rows="3" placeholder="Resume du cours"></textarea><br>
-            <textarea class="form-control" rows="3" placeholder="Devoir à faire"></textarea><br>
-            <a class="btn btn-success" href="#" role="button">Rajouter le devoir</a>
-          </div>
+            <br><br>
+            <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
+              <select class="form-control" name="classe_for_cours_devoir">
+                <?php echo afficherListeClasseForProf ();?>
+              </select>
+              <br>
+              <textarea name="cours_for_cours_devoir" class="form-control" rows="3" placeholder="Resume du cours" required></textarea>
+              <br>
+              <textarea name="devoir_for_cours_devoir" class="form-control" rows="3" placeholder="Devoir à faire"></textarea>
+              <br>
+              <button class="btn btn-success">Rajouter le devoir</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -148,7 +157,6 @@
           <div class="col-md-8 col-md-offset-2 text-center">
 							<h4>Liste des classes:</h4>
 	            <select class="form-control">
-								<option value="par_default">Sélectionner une classe</option>
 	              <?php echo afficherListeClasseForProf ();?>
 	            </select>
               <br>
@@ -179,7 +187,6 @@
           <div class="col-lg-10 col-md-offset-1 text-center" id="appreciation">
 						<h4>Liste des classes:</h4>
 	          <select class="form-control" id="liste_for_classe">
-							<option value="par_default">Sélectionner une classe</option>
 	            <?php echo afficherListeClasseForProf ();?>
 	          </select>
 						<br>
@@ -205,7 +212,7 @@
     <script src="./view/jquery/jquery.min.js"></script>
     <script src="./view/js/connecter.js"></script>
     <script src="./view/jqBootstrapValidation.js"></script>
-    <script>for_saisir_note_for_note
+    <script>
       $(document).ready(function() {
         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
           var page = $(this).attr('href'); // Page cible
@@ -219,11 +226,11 @@
   <!-- Script pour afficher la liste classe pour la parti Note -->
   <script>
 		$( "#for_matiere_for_note > select" ).change(function () {
-			var classe = $('#for_matiere_for_note > select option:selected').val()
+			var for_classe = $('#for_matiere_for_note > select option:selected').val()
 			$.ajax({
 				url: './model/m_fonctions.php',
 				type: 'post',
-				data: { 'matiere_for_note': 1 },
+				data: { 'matiere_for_note': for_classe },
 				success: function(response) { $("#classe_for_note" ).html(response);}
 			});
 		});
@@ -231,11 +238,11 @@
   <!-- Script pour afficher la liste eleve pour la parti Note -->
   <script>
 		$( "#for_classe_for_note > select" ).change(function () {
-			var eleve = $('#for_classe_for_note > select option:selected').val()
+			var for_eleve = $('#for_classe_for_note > select option:selected').val()
 			$.ajax({
 				url: './model/m_fonctions.php',
 				type: 'post',
-				data: { 'eleve_for_note': eleve },
+				data: { 'eleve_for_note': for_eleve },
 				success: function(response) { $("#eleve_for_note" ).html(response);}
 			});
 		});
@@ -243,12 +250,45 @@
   <!-- Script pour afficher le champs note pour la parti Note -->
   <script>
 		$( "#for_eleve_for_note > select" ).change(function () {
-			var eleve = $('#for_eleve_for_note > select option:selected').val()
-			$.ajax({
-				$("#for_saisir_note_for_note" ).html('<input type="number"');}
-			});
+			var for_number = $('#for_eleve_for_note > select option:selected').val()
+      $.ajax({
+        url: './model/m_fonctions.php',
+        type: 'post',
+        data: { 'input_number_for_note': for_number },
+        success: function(response) { $("#for_saisir_note_for_note" ).html(response);}
+      });
 		});
 	</script>
+  <!-- Script pour envoyer la note de l'eleve dans la BDD (parti note) -->
+  <!-- <script>
+    $( "#for_eleve_for_note > select" ).change(function () {
+      var eleve = $('#for_eleve_for_note > select option:selected').val()
+    });
+    $( "#for_matiere_for_note > select" ).change(function () {
+      var matiere = $('#for_matiere_for_note > select option:selected').val()
+    });
+    $( "#for_classe_for_note > select" ).change(function () {
+      var classe = $('#for_classe_for_note > select option:selected').val()
+    });
+    $( "#form_ajout_note" ).submit(function (event) {
+      event.preventDefault();
+      // var eleve = $('#eleve_for_part_note').val()
+      // var matiere = $('#matiere_for_part_note').val()
+      // var classe = $('#classe_for_part_note').val()
+      var note = $('#note_for_note').val()
+      $.ajax({
+        url: './model/m_fonctions.php',
+        type: 'post',
+        data: {
+          'matiere_for_part_note': matiere,
+          'classe_for_part_note': classe,
+          'eleve_for_part_note': eleve,
+          'note_for_part_note': note
+        },
+        success: function(response) { $("#result_for_send_note" ).html(response);}
+      });
+    });
+  </script> -->
 	<!-- Script pour affichage de la liste pour la parti Appreciation -->
 	<script>
 		$( "#appreciation > #liste_for_classe" ).change(function () {

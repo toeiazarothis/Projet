@@ -130,6 +130,7 @@ if (isset($_POST['matiere_for_note'])) {
 function afficherListeClasseForProf () {
 	$bdd = connectionDB();
 	$reponse = $bdd->query("SELECT id, nom FROM classe");
+	$texte = '<option value="par_default">Sélectionner une classe</option>';
 	while ($donnees = $reponse->fetch())
 	{
 		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
@@ -155,7 +156,48 @@ function afficherListeEleveForProf($classe) {
 	}
 	return $texte;
 }
+// condition permettant d'afficher un champs dans la parti note
+if (isset($_POST['input_number_for_note'])) {
+	$_SESSION['eleve_for_note'] = $_POST['input_number_for_note'];
+	echo '<input type="number" step="0.5" value="" min="0" max="20" name="note" class="form-control id="note_for_note"" placeholder="Entrer la note de l\'eleve" required>';
+}
+// condition permettant de preparer l'envoye de la note
+if (isset($_POST['eleve_for_part_note']) && isset($_POST['matiere_for_part_note']) && isset($_POST['classe_for_part_note']) && isset($_POST['note_for_part_note'])) {
+	echo sendNoteForProf ($_POST['eleve_for_part_note'], $_POST['matiere_for_part_note'], $_POST['classe_for_part_note'], $_POST['note_for_part_note']);
+}
+// fonction permettant d'envoyer la note dans la colonne note de la table Eleve de la BDD
+function sendNoteForProf ($eleve, $matiere, $classe, $note) {
+	$bdd = connectionDB();
+	$reponse = $bdd->exec('INSERT INTO `notes` (`eleve`, `matiere`, `classe`, `note`) VALUES ('.$eleve.', "'.$matiere.'", "'.$classe.'", '.$note.')');
+	if ($reponse == FALSE){
+		echo ('La note n\'as pas pus être ajouter!');
+	}
+	echo 'La note a bien été envoyer dans la BDD';
+}
 //fin de la parti dajout de note
+
+// debut de la parti pour ajouter les cours et devoir
+// function permettant d'envoyer les cours et devoir dans la BDD
+function sendCoursAndDevoirForProf ($matiere, $classe, $cours, $devoir){
+	$bdd = connectionDB();
+	$reponse = $bdd->query('SELECT `id`, `matiere`, `classe`, `contenu`, `devoir` FROM `cours_devoirs` WHERE classe="'.$classe.'"');
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['matiere'] == $matiere) {
+			$reponse2 = $bdd->exec('UPDATE `cours_devoirs` SET `contenu`="'.$cours.'",`devoir`="'.$devoir.'" WHERE id='.$donnees['id'].'');
+			if ($reponse2 == FALSE){
+				echo ('Les devoirs n\'ont pas pus être ajouter!');
+			}
+			return header('Location:prof');
+		}
+	}
+	$reponse = $bdd->exec('INSERT INTO `cours_devoirs`(`matiere`, `classe`, `contenu`, `devoir`) VALUES ("'.$matiere.'", "'.$classe.'", "'.$cours.'", "'.$devoir.'")');
+	if ($reponse == FALSE){
+		echo ('Les devoirs n\'ont pas pus être ajouter!');
+	}
+	header('Location:prof');
+}
+// fin de la parti pour ajouter les cours et devoir
 
 // debut de la parti pour ajouter une appreciation
 //condition pour verifier sur nous devons lancer la fonctions ou pas
@@ -165,7 +207,7 @@ if (isset($_POST['classe_appreciation'])) {
 // fonction permettant de sauvegarder l'appreciation dans la BDD
 function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
 	$bdd = connectionDB();
-	$reponse = $bdd->query('UPDATE `eleves` SET `appreciation_eleve`= "'.$apreciation.'" WHERE id='.$eleve.'');
+	$reponse = $bdd->exec('UPDATE `eleves` SET `appreciation_eleve`= "'.$apreciation.'" WHERE id='.$eleve.'');
 	if ($reponse == FALSE){
 		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
 	}

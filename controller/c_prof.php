@@ -15,6 +15,9 @@ if($_SESSION['stats'] != 'prof') {
 		return header('Location:parent');
 	}
 }
+if (isset($_POST['matiere_for_cours_devoir'], $_POST['classe_for_cours_devoir'], $_POST['cours_for_cours_devoir'], $_POST['devoir_for_cours_devoir'])) {
+	echo sendCoursAndDevoirForProf ($_POST['matiere_for_cours_devoir'], $_POST['classe_for_cours_devoir'], $_POST['cours_for_cours_devoir'], $_POST['devoir_for_cours_devoir']);
+}
 if (isset($_POST['eleve_appreciation'], $_POST['appreciation'])) {
 	echo envoyerAppreciationEleveForProf ($_POST['eleve_appreciation'], $_POST['appreciation']);
 }
