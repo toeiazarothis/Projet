@@ -93,8 +93,8 @@
             </div>
             <br>
             <div id="for_saisir_note_for_note">
-
-            </div>
+              <input type="number" step="0,5" value="0" min="0" max="20" name="" class="form-control" placeholder="Entrer la note de l\'eleve">
+            </div><br>
             <div id="for_button_for_note">
               <button class="btn btn-danger" href="#" id="ajout_note_for_prof">Ajouter la note</a>
             </div>
@@ -112,6 +112,16 @@
           </div>
         </div>
         <div class="row">
+          <div id="for_matiere_for_note">
+            <select class="form-control" id="matiere_for_note">
+              <option value="par_default">Sélectionner une matière</<option>
+              <option>Histoire</<option>
+              <option>Français</<option>
+              <option>Mathematique</<option>
+              <option>Anglais</<option>
+            </select>
+          </div>
+          <br>
           <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
 						<h4>Liste des classes:</h4>
             <select class="form-control">
