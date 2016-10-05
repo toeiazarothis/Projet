@@ -170,7 +170,7 @@
           <div class="col-lg-10 col-md-offset-1 text-center" id="appreciation">
 						<h4>Liste des classes:</h4>
 	          <select class="form-control" id="liste_for_classe">
-							<option value="par_default">Sélectionner un classe</option>
+							<option value="par_default">Sélectionner une classe</option>
 	            <?php echo afficherListeClasseForProf ();?>
 	          </select>
 						<br>
