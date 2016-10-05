@@ -112,18 +112,17 @@
           </div>
         </div>
         <div class="row">
-          <div id="for_matiere_for_note">
-            <select class="form-control" id="matiere_for_note">
-              <option value="par_default">Sélectionner une matière</<option>
-              <option>Histoire</<option>
-              <option>Français</<option>
-              <option>Mathematique</<option>
-              <option>Anglais</<option>
-            </select>
-          </div>
-          <br>
           <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
-						<h4>Liste des classes:</h4>
+            <div id="for_matiere_for_note">
+              <select class="form-control" id="matiere_for_note">
+                <option value="par_default">Sélectionner une matière</<option>
+                <option>Histoire</<option>
+                <option>Français</<option>
+                <option>Mathematique</<option>
+                <option>Anglais</<option>
+              </select>
+            </div>
+            <br>
             <select class="form-control">
 							<option value="par_default">Sélectionner une classe</option>
               <?php echo afficherListeClasseForProf ();?>
