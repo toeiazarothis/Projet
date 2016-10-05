@@ -107,7 +107,7 @@
                   </h4>
                 </div>
                 <div id="collapse12" class="panel-collapse collapse">
-                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'mathematique') ?></div>
+                  <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'mathématique') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -196,7 +196,7 @@
                   </h4>
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
-                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'mathematique') ?></div>
+                  <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'mathématique') ?></div>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -251,7 +251,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Les Appreciations</h2>
+            <h2 class="section-heading">Les Appréciations</h2>
             <h3 class="section-subheading text-muted">Ici se trouve les appréciations données par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
             <br><br>
         </div>
@@ -262,7 +262,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Appréciation General</a>
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Appréciation Générale</a>
                 </h4>
               </div>
               <div id="collapse20" class="panel-collapse collapse in">
