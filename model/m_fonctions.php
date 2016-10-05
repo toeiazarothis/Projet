@@ -1,8 +1,8 @@
 <?php
 include ('forMySQL.php');
 
-//condition pour verifier si nous devons lancer la fonctions ou pas
-// partie page index debut
+//condition pour verifier sur nous devons lancer la fonctions ou pas
+// partie page index debu
 // cette parti permet de verifier si l'utilisateur existe dans la BDD
 function verifUserIfExist ($user){
 	$bdd = connectionDB();
@@ -35,7 +35,7 @@ function verifUserIfExist ($user){
 			return $donnees['id'];
 		}
 	}
-	echo 'Cet utilisateur n\'a pas été trouvé!';
+	echo 'Cet utilisateur n a pas été trouvé!';
 }
 // fin de la parti verification de l'utilisateur
 // debut de la parti si le mot de passe de l'utilisateur est coreect
