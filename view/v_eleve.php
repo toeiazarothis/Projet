@@ -42,7 +42,7 @@
             <!-- <li><a href="#note" class="page-scroll">Note</a></li>
             <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eleve <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elève <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#note" class="js-scrollTo">Note</a></li>
                 <li><a href="#devoir" class="js-scrollTo">Devoir</a></li>
