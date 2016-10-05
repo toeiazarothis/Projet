@@ -103,7 +103,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Mathematique</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Mathématique</a>
                   </h4>
                 </div>
                 <div id="collapse12" class="panel-collapse collapse">
@@ -192,7 +192,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3">Mathematique</a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3">Mathématique</a>
                   </h4>
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
@@ -262,7 +262,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Appreciation General</a>
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Appréciation General</a>
                 </h4>
               </div>
               <div id="collapse20" class="panel-collapse collapse in">
