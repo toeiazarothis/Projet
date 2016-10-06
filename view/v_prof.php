@@ -160,17 +160,17 @@
 	              <?php echo afficherListeClasseForProf ();?>
 	            </select>
               <br>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox1" value="option1">élève 1
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox2" value="option2">élève 2
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="option3">élève 3
-              </label>
-              <br><br>
-              <a class="btn btn-danger" href="#" role="button">Absent</a>
+              <form action="prof" method="post">
+                <div id="eleve_for_absent">
+                  <!-- <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1">élève 1
+                  </label> -->
+                </div>
+                <br><br>
+                <input type="checkbox" id="inlineCheckbox1" name="validate_abs" value="valider">Confirmer les absence
+                <br>
+                <button class="btn btn-danger">Valider les absence</button>
+              </form>
           </div>
         </div>
         <br>
