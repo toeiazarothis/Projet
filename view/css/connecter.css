@@ -67,7 +67,10 @@ section {
 body {
   padding-top: 20px;
 }
-
+.navbar-brand{
+  font-family: "Lobster", Helvetica, Arial;
+  font-size: 30px;
+}
 .nav-justified {
   background-color: #eee;
   border: 1px solid #ccc;

@@ -120,6 +120,7 @@
               <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
             </div>
           </div>
+          <input class="btn btn-success"type="submit" name="submit" value="Ajouter un eleve !">
         </div>
       </div>
     </div>
