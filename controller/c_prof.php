@@ -19,6 +19,24 @@ if($_SESSION['stats'] != 'prof') {
 	}
 }
 
+if (isset($_POST['validate_note'], $_POST['classe_for_note'])) {
+	// $idEleve = prepareForSendAbsence ($_POST['classe_for_absent']);
+	$bdd = connectionDB();
+	$reponse = $bdd->query('SELECT MAX(id), classe FROM eleves WHERE classe="'.$_POST['classe_for_note'].'"');
+	$donnees = $reponse->fetch();
+	$idEleve = $donnees['MAX(id)'];
+	$id = 0;
+	while ($id <= $idEleve) {
+		if ($_POST["$id"] >= 1){
+			echo sendNoteForProf ($id, $_POST['matiere_for_note'], $_POST['classe_for_note'], $_POST["$id"]);
+		}
+		$id += 1;
+		if ($id > $idEleve) {
+			return header('Location:prof');
+		}
+	}
+}
+
 if (isset($_POST['matiere_for_cours_devoir'], $_POST['classe_for_cours_devoir'], $_POST['cours_for_cours_devoir'], $_POST['devoir_for_cours_devoir'])) {
 	echo sendCoursAndDevoirForProf ($_POST['matiere_for_cours_devoir'], $_POST['classe_for_cours_devoir'], $_POST['cours_for_cours_devoir'], $_POST['devoir_for_cours_devoir']);
 }
@@ -27,19 +45,22 @@ if (isset($_POST['eleve_appreciation'], $_POST['appreciation'])) {
 	echo envoyerAppreciationEleveForProf ($_POST['eleve_appreciation'], $_POST['appreciation']);
 }
 
-echo $_POST['validate_abs'].'<br>';
-echo $_POST['classe_for_absent'].'<br>';
-
 if (isset($_POST['validate_abs'], $_POST['classe_for_absent'])) {
-	$idEleve = prepareForSendAbsence ($_POST['classe_for_absent']);
-	while ($id >= $idEleve) {
-		// if (isset($_POST["id_$id"])){
-		// 	echo sendAbsenceEleveForProf ($id);
-		// }
-		echo $_POST[$id].'<br>';
+	// $idEleve = prepareForSendAbsence ($_POST['classe_for_absent']);
+	$bdd = connectionDB();
+	$reponse = $bdd->query('SELECT MAX(id), classe FROM eleves WHERE classe="'.$_POST['classe_for_absent'].'"');
+	$donnees = $reponse->fetch();
+	$idEleve = $donnees['MAX(id)'];
+	$id = 0;
+	while ($id <= $idEleve) {
+		if (isset($_POST["$id"])){
+			echo sendAbsenceEleveForProf ($id);
+		}
 		$id += 1;
+		if ($id > $idEleve) {
+			return header('Location:prof');
+		}
 	}
-	return header('Location:prof');
 }
 
 include ('../view/v_prof.php');

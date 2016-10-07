@@ -16,6 +16,7 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="./view/css/bootstrap.css" rel="stylesheet">
     <link  href="./view/css/connecter.css" rel="stylesheet">
@@ -72,7 +73,7 @@
           <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 text-center">
             <form method="post" id="form_ajout_note">
               <div id="for_matiere_for_note">
-                <select class="form-control" name="matiere" id="matiere_for_note">
+                <select class="form-control" name="matiere_for_note" id="matiere_for_note">
                   <option value="par_default">Sélectionner une matière</<option>
                   <option value="francais">Français</<option>
                   <option value="histoire">Histoire</<option>
@@ -84,20 +85,20 @@
               </div>
               <br>
               <div id="for_classe_for_note">
-                <select class="form-control" name="classe" id="classe_for_note">
+                <select class="form-control" name="classe_for_note" id="classe_for_note">
                 </select>
               </div>
               <br>
               <div id="for_eleve_for_note">
-                <select class="form-control" name="eleve" id="eleve_for_note">
-                </select>
               </div>
               <br>
               <div id="for_saisir_note_for_note"></div>
               <br>
               <div id="for_button_for_note">
-                <!-- <button class="btn btn-success" id="ajout_note_for_prof">Ajouter la note</button> -->
-                <input class="btn btn-success" type="submit" value="Ajouter la note"/>
+              <!-- <br><br> -->
+              <input type="checkbox" id="inlineCheckbox1" name="validate_note" value="yes">Confirmer l'ajout des notes
+              <br><br>
+              <button class="btn btn-success">Ajouter les notes</button>
               </div>
               <br>
               <div id="result_for_send_note">
@@ -246,7 +247,7 @@
 				url: './model/m_fonctions.php',
 				type: 'post',
 				data: { 'eleve_for_note': for_eleve },
-				success: function(response) { $("#eleve_for_note" ).html(response);}
+				success: function(response) { $("#for_eleve_for_note" ).html(response);}
 			});
 		});
 	</script>
@@ -262,36 +263,6 @@
       });
 		});
 	</script>
-  <!-- Script pour envoyer la note de l'eleve dans la BDD (parti note) -->
-  <!-- <script>
-    $( "#for_eleve_for_note > select" ).change(function () {
-      var eleve = $('#for_eleve_for_note > select option:selected').val()
-    });
-    $( "#for_matiere_for_note > select" ).change(function () {
-      var matiere = $('#for_matiere_for_note > select option:selected').val()
-    });
-    $( "#for_classe_for_note > select" ).change(function () {
-      var classe = $('#for_classe_for_note > select option:selected').val()
-    });
-    $( "#form_ajout_note" ).submit(function (event) {
-      event.preventDefault();
-      // var eleve = $('#eleve_for_part_note').val()
-      // var matiere = $('#matiere_for_part_note').val()
-      // var classe = $('#classe_for_part_note').val()
-      var note = $('#note_for_note').val()
-      $.ajax({
-        url: './model/m_fonctions.php',
-        type: 'post',
-        data: {
-          'matiere_for_part_note': matiere,
-          'classe_for_part_note': classe,
-          'eleve_for_part_note': eleve,
-          'note_for_part_note': note
-        },
-        success: function(response) { $("#result_for_send_note" ).html(response);}
-      });
-    });
-  </script> -->
   <!-- Script pour afficher les eleve celon la classe dans la parti ABSENCE -->
   <script>
 		$( "#classe_for_absent > select" ).change(function () {
@@ -312,7 +283,7 @@
 				url: './model/m_fonctions.php',
 				type: 'post',
 				data: { 'classe_appreciation': classe },
-				success: function(response) { $( "#list_eleve_for_apreciation" ).html('<option value="par_default">Selectionner un élève</option>' + response);}
+				success: function(response) { $( "#list_eleve_for_apreciation" ).html(response);}
 			});
 		});
 	</script>

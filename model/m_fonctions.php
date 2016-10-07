@@ -141,30 +141,27 @@ function afficherListeClasseForProf () {
 //debut de la parti pour lajout de note (a refaire)
 //condition pour verifier sur nous devons lancer la fonctions ou pas
 if (isset($_POST['eleve_for_note'])) {
-  echo afficherListeEleveForProf($_POST['eleve_for_note']);
+  echo afficherListeEleveDansClassePourNote($_POST['eleve_for_note']);
 }
-// fonction permettant d'afficher les eleve a parti d'une classe
-function afficherListeEleveForProf($classe) {
-	$bdd = connectionDB();
-	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
-	$texte = '<option value="par_default">Selectionner un élève</option>';
-	while ($donnees = $reponse->fetch())
-	{
-		if ($donnees['classe'] == $classe) {
-			$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</option>';
-		}
-	}
-	return $texte;
+function afficherListeEleveDansClassePourNote ($classe) {
+ 	$bdd = connectionDB();
+ 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+ 	$texte = '';
+ 	while ($donnees = $reponse->fetch())
+ 	{
+ 		if ($donnees['classe'] == $classe) {
+ 			$texte .= '<div class="form-group">
+ 					<div class="input-group">
+ 						<div class="input-group-addon">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</div>
+ 						<input type="number" class="form-control" id="NoteScolaire" name="'.$donnees['id'].'" step="0.5" value="" min="0" max="20" placeholder="Entrer la note de l\'eleve">
+ 						<div class="input-group-addon">20</div>
+ 					</div>
+ 				</div>';
+ 		}
+ 	}
+ 	return $texte;
 }
-// condition permettant d'afficher un champs dans la parti note
-if (isset($_POST['input_number_for_note'])) {
-	$_SESSION['eleve_for_note'] = $_POST['input_number_for_note'];
-	echo '<input type="number" step="0.5" value="" min="0" max="20" name="note" class="form-control id="note_for_note"" placeholder="Entrer la note de l\'eleve" required>';
-}
-// condition permettant de preparer l'envoye de la note
-if (isset($_POST['eleve_for_part_note']) && isset($_POST['matiere_for_part_note']) && isset($_POST['classe_for_part_note']) && isset($_POST['note_for_part_note'])) {
-	echo sendNoteForProf ($_POST['eleve_for_part_note'], $_POST['matiere_for_part_note'], $_POST['classe_for_part_note'], $_POST['note_for_part_note']);
-}
+
 // fonction permettant d'envoyer la note dans la colonne note de la table Eleve de la BDD
 function sendNoteForProf ($eleve, $matiere, $classe, $note) {
 	$bdd = connectionDB();
@@ -222,14 +219,12 @@ function showListEleveForAbsence ($classe) {
 // fonction permettant de preparer l'envoye des absences
 function prepareForSendAbsence ($classe) {
 	$bdd = connectionDB();
-	$reponse = $bdd->query('SELECT id, classe, prenom_eleve, nom_eleve FROM eleves WHERE classe="'.$_POST['classe_for_absent'].'"');
+	$reponse = $bdd->query('SELECT MAX(id), classe FROM eleves WHERE classe="'.$_POST['classe_for_absent'].'"');
 	$idEleve = 0;
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
-			if ($donnees['id'] > $idEleve) {
-				$idEleve = $donnees['id'];
-			}
+			$idEleve = $donnees['MAX(id)'];
 		}
 	}
 	return $idEleve;
@@ -247,7 +242,20 @@ function sendAbsenceEleveForProf ($idEleve) {
 // debut de la parti pour ajouter une appreciation
 //condition pour verifier sur nous devons lancer la fonctions ou pas
 if (isset($_POST['classe_appreciation'])) {
-  echo afficherListeEleveForAppreciationForProf($_POST['classe_appreciation']);
+  echo afficherListeEleveForProf($_POST['classe_appreciation']);
+}
+// fonction permettant d'afficher les eleve a parti d'une classe
+function afficherListeEleveForProf($classe) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+	$texte = '<option value="par_default">Selectionner un élève</option>';
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['classe'] == $classe) {
+			$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</option>';
+		}
+	}
+	return $texte;
 }
 // fonction permettant de sauvegarder l'appreciation dans la BDD
 function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
