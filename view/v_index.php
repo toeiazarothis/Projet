@@ -34,7 +34,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="accueil">Accueil</a></li>
-                  <!-- <li><a href="v_contact.php">Contact</a></li> -->
+                  <a href="contact">Contact</a></li>
                 </ul>
               </nav>
             </div>

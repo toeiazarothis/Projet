@@ -47,7 +47,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="contact.php">Contact</a></li> -->
-            <li><a href="accueil"><?php echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']); ?>  (Se déconnecter)</a></li>
+            <li><a href="accueil"><?php echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']); ?>  (Se déconnecter <i class="fa fa-power-off" aria-hidden="true"></i>)</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

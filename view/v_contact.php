@@ -16,8 +16,9 @@
     <meta property="og:image" content="image a mettre" />
 
     <!-- Link -->
-    <link href="./view/css/bootstrap.css" rel="stylesheet">
-    <link  href="./view/css/cover.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link  href="css/cover.css" rel="stylesheet">
 
 
     <title>Prise de contact</title>
@@ -41,46 +42,42 @@
           <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Contact</h2>
-                <h3>Grâce à ce formulaire, vous allez pouvoir nous contacter et avoir une réponse dans les plus brefs délais.</h3>
+                <h3>Grâce à ces informations, vous allez pouvoir contacter l'ecole ou notre support et avoir une réponse dans les plus brefs délais.</h3>
+            </div>
+          </div><br>
+          <div class="row text-center">
+              <div class="col-md-4 col-xs-6">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">03 25 71 22 22</h4>
+                  <h3 class="service-sub-heading"></h3>
+              </div>
+              <div class="col-md-4 col-xs-6">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">217 Avenue Pierre Brossolette</h4>
+                  <h3 class="service-sub-heading"></h3>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">Mikomi</h4>
+                  <h3 class="service-sub-heading"></h3>
+              </div>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Copyright &copy; Mikomi &trade; ,   All rights reserved .</p>
             </div>
           </div>
 
-          <div class="row">
-              <div class="col-lg-12">
-                  <form name="sentMessage" id="contactForm" novalidate>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Indiquer votre nom *" id="name" required data-validation-required-message="Veuillez nous indiquer votre Nom (ça sera plus simple pour parler ensemble).">
-                                  <p class="help-block text-danger"></p>
-                              </div>
-                              <div class="form-group">
-                                  <input type="email" class="form-control" placeholder="Votre adresse mail *" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail. Sinon ça risque d'être dur de vous répondre.">
-                                  <p class="help-block text-danger"></p>
-                              </div>
-                              <div class="form-group">
-                                  <input type="tel" class="form-control" placeholder="Votre numero de telephone *" id="phone" required data-validation-required-message="Veuillez entrer votre Numero pour vous recontacter.">
-                                  <p class="help-block text-danger"></p>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <textarea class="form-control" placeholder="Votre message *" id="message" required data-validation-required-message="Veuillez entrer votre message."></textarea>
-                                  <p class="help-block text-danger"></p>
-                              </div>
-                          </div>
-                          <div class="clearfix"></div>
-                          <div class="col-md-4 col-md-offset-2 text-center">
-                              <div id="success"></div>
-                              <button type="reset" class="btn btn-lg btn-default">Effacer votre Message</button>
-                          </div>
-                          <div class="col-md-4 text-center">
-                            <button type="submit" class="btn btn-lg btn-default">Envoyer votre Message</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-          </div>
         </div>
       </div>
     </div>
