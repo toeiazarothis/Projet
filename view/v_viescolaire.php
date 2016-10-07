@@ -51,7 +51,7 @@
     </nav>
 
 
-    <section id="evet" class="bg-light-gray">
+    <section id="event" class="bg-light-gray">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">

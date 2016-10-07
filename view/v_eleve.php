@@ -39,8 +39,6 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="#top" class="js-scrollTo">Accueil</a></li>
-            <!-- <li><a href="#note" class="page-scroll">Note</a></li>
-            <li><a href="#devoir" class="page-scroll">Devoir</a></li> -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elève <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -54,10 +52,12 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="accueil"><?php echo ucfirst($_SESSION['nom']).' '.ucfirst($_SESSION['prenom']); ?>  (Se déconnecter)</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
+    <!-- Navbar -->
 
+    <!-- Header avec image -->
 		<header>
 			<div class="container">
 				<div class="intro-text">
@@ -66,8 +66,9 @@
 				</div>
 			</div>
 		</header>
+    <!-- Fin header avec image -->
 
-
+    <!-- Liste des notes scolaires -->
     <section id="note" class="bg-light-gray">
       <div class="container">
         <div class="row">
@@ -140,23 +141,14 @@
                   <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'anglais') ?></div>
                 </div>
               </div>
-              <!-- <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">template</a>
-                  </h4>
-                </div>
-                <div id="collapse16" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.
-                  </div>
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Fin liste des notes scolaires -->
 
+    <!-- Liste des devoirs scolaires -->
 		<section id="devoir">
       <div class="container">
         <div class="row">
@@ -229,54 +221,41 @@
                   <div class="panel-body"><?php echo devoirForEleve ($_SESSION['users'], $_SESSION['classe'], 'anglais') ?></div>
                 </div>
               </div>
-              <!-- <div class="panel panel-default">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fin liste des devoirs scolaires -->
+    <!-- Appreciation donné par le prof principal -->
+    <section id="appreciation" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Les Appréciations</h2>
+              <h3 class="section-subheading text-muted">Ici se trouve les appréciations données par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+              <br><br>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-md-offset-1 text-center">
+            <div class="panel-group" id="accordion3">
+              <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse7">template</a>
+                    <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Appréciation Générale</a>
                   </h4>
                 </div>
-                <div id="collapse7" class="panel-collapse collapse">
-                  <div class="panel-body">Vous avez eu $note/20 à votre dernier control.
-                  </div>
+                <div id="collapse20" class="panel-collapse collapse in">
+                  <div class="panel-body"><?php echo appreciationForEleve($_SESSION['userid']); ?></div>
                 </div>
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="appreciation" class="bg-light-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center">
-            <h2 class="section-heading">Les Appréciations</h2>
-            <h3 class="section-subheading text-muted">Ici se trouve les appréciations données par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
-            <br><br>
-        </div>
-      </div>
-      <div class="row">
-          <div class="col-lg-10 col-md-offset-1 text-center">
-          <div class="panel-group" id="accordion3">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion3" href="#collapse20">Appréciation Générale</a>
-                </h4>
-              </div>
-              <div id="collapse20" class="panel-collapse collapse in">
-                <div class="panel-body"><?php echo appreciationForEleve($_SESSION['userid']); ?></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-
-
+    </section>
+    <!-- Fin appreciation donné par le prof principal -->
 
 
 

@@ -292,7 +292,9 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion du personnel </h2>
           <h3 class="section-subheading text-muted">Supprimer la classe</h3>
-          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer la classe">
+          <input class="btn btn-danger" type="submit" name="submit" value="Supprimer la classe">
+          <button>Click to fade in/out boxes</button><br><br>
+          <div id="div1" class="alert alert-danger" role="alert">Vous venez de supprimer une classe ... !</div>
         </div>
       </div>
     </div>
@@ -307,7 +309,13 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="./view/js/bootstrap.min.js"></script>
       <script src="./view/jquery/jquery.min.js"></script>
-
+      <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").fadeToogle();
+            });
+        });
+      </script>
       <script>
         $(document).ready(function() {
           $('.js-scrollTo').on('click', function() { // Au clic sur un élément
