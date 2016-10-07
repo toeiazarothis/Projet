@@ -129,13 +129,6 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Profession du parent</label>
-            <div class="input-group">
-              <div class="input-group-addon">Profession du parent</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la profession du parent">
-            </div>
-          </div>
-          <div class="form-group">
             <label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
             <div class="input-group">
               <div class="input-group-addon">Adresse</div>
