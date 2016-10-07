@@ -70,7 +70,7 @@
     </section>
     <!-- Liste d'evenement -->
 
-    Absence
+    <!-- Absence -->
     <section id="absProf">
       <div class="container">
         <div class="row">
@@ -101,7 +101,7 @@
           </div>
         </div>
       </section>
-
+      <!-- Fin absence -->
 
       <section id="absEleve" class="bg-light-gray">
         <div class="container">

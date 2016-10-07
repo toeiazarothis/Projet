@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta charset="utf-8">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="img/stylo.ico">
+    <link rel="shortcut icon" href="./view/img/stylo.ico">
     <meta property="og:title" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="Petit site des familles" />
@@ -156,7 +156,7 @@
               <input type="number" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent">
             </div>
           </div>
-          <input class="btn btn-warning" type="button" name="name" value="reset">
+          <input class="btn btn-warning" type="button" name="name" value="Effacer">
           <input class="btn btn-success" type="submit" name="submit" value="Ajouter un eleve !">
         </div>
       </div>
@@ -168,6 +168,17 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Mise a jour d'élèves  </h2>
           <h3 class="section-subheading text-muted">Mettre a jour le profil d'un élève</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <select class="form-control">
+            <option>Liste des eleves</option>
+          </select>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 text-center">
           <input class="btn btn-success"type="submit" name="submit" value="Modifier un eleve !">
         </div>
       </div>
@@ -179,77 +190,100 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion d'élève </h2>
           <h3 class="section-subheading text-muted">Supprimer un élève</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <select class="form-control">
+            <option>Liste des eleves</option>
+          </select>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
           <input class="btn btn-danger"type="submit" name="submit" value="Supprimer l'eleve !">
         </div>
       </div>
     </div>
   </section>
-</section>
 
 
     <!--Debut section prof -->
-<section id="prof" class="bg bg-light-gray">
-  <section id="ajoutProf">
-    <div class="container">
+  <section id="prof" class="bg bg-light-gray">
+    <section id="ajoutProf">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Ajout de professeur</h2>
+            <h3 class="section-subheading text-muted">Rajouter un professeur</h3>
+          </div>
+        </div><br>
+
       <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center">
-          <h2 class="section-heading">Ajout de professeur</h2>
-          <h3 class="section-subheading text-muted">Rajouter un professeur</h3>
-        </div>
-      </div><br>
-
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
-          <div class="input-group">
-            <div class="input-group-addon">Nom</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
+            <div class="input-group">
+              <div class="input-group-addon">Nom</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
-          <div class="input-group">
-            <div class="input-group-addon">Prenom</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
+            <div class="input-group">
+              <div class="input-group-addon">Prenom</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputAmount">classe que gère le professeur</label>
-          <div class="input-group">
-            <div class="input-group-addon">Classe</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">classe que gère le professeur</label>
+            <div class="input-group">
+              <div class="input-group-addon">Classe</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="majProf">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center">
-          <h2 class="section-heading">Mise a jour prof </h2>
-          <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
-          <input class="btn btn-success"type="submit" name="submit" value="Modifier un membre de l'equipe !">
+    </section>
+    <section id="majProf">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Mise a jour prof </h2>
+            <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <select class="form-control">
+              <option>Liste des professeur</option>
+            </select>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <input class="btn btn-success"type="submit" name="submit" value="Modifier un professeur!">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="deleteProf">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center">
-          <h2 class="section-heading">Suppresion prof </h2>
-          <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
-          <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le professeur !">
-
+    </section>
+    <section id="deleteProf">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Suppresion prof </h2>
+            <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
+            <select class="form-control col-md-6">
+              <option>Liste des professeurs</option>
+            </select>
+            <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le professeur !">
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
-</section>
 
 
     <!--Debut section personnel -->
@@ -270,6 +304,9 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Mise à jour du personnel </h2>
           <h3 class="section-subheading text-muted">Mettre à jour un membre du personnel</h3>
+          <select class="form-control col-md-6">
+            <option>Liste des membres du personnel</option>
+          </select>
           <input class="btn btn-success"type="submit" name="submit" value="Modifier le membre du personnel">
         </div>
       </div>
@@ -281,8 +318,10 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion du personnel </h2>
           <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+          <select class="form-control col-md-6">
+            <option>Liste des membres du personnel</option>
+          </select>
           <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le membre du personnel !">
-
         </div>
       </div>
     </div>
@@ -319,6 +358,9 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Modification d'une classe </h2>
           <h3 class="section-subheading text-muted">Mettez a jour le nom d'une classe</h3>
+          <select class="form-control col-md-6">
+            <option>Liste des classes</option>
+          </select>
           <input class="btn btn-success"type="submit" name="submit" value="Modifier la classe">
         </div>
       </div>
@@ -330,9 +372,10 @@
         <div class="col-md-10 col-md-offset-1 text-center">
           <h2 class="section-heading">Suppresion du personnel </h2>
           <h3 class="section-subheading text-muted">Supprimer la classe</h3>
+          <select class="form-control col-md-6">
+            <option>Liste des classes</option>
+          </select>
           <input class="btn btn-danger" type="submit" name="submit" value="Supprimer la classe">
-          <button>Click to fade in/out boxes</button><br><br>
-          <div id="div1" class="alert alert-danger" role="alert">Vous venez de supprimer une classe ... !</div>
         </div>
       </div>
     </div>
