@@ -38,7 +38,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#event" class="js-scrollTo">Evénement</a></li>
+            <!-- <li><a href="#event" class="js-scrollTo">Evénement</a></li> --> <!--Prochaine mise a jour-->
             <li><a href="#absProf" class="js-scrollTo">Absence professeur</a></li>
             <li><a href="#absEleve" class="js-scrollTo">Absence élève</a></li>
           </ul>
@@ -50,8 +50,9 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+    <!-- Navbar -->
 
-
+    <!--  -->
     <section id="event" class="bg-light-gray">
       <div class="container">
         <div class="row">
@@ -66,7 +67,9 @@
         </div>
       </div>
     </section>
+    <!-- Liste d'evenement -->
 
+    Absence
     <section id="absProf">
       <div class="container">
         <div class="row">

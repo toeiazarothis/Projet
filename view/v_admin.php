@@ -114,13 +114,49 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Adresse de l'élève</label>
+            <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
+            <div class="input-group">
+              <div class="input-group-addon">Nom d'un parent</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom d'un parent">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
+            <div class="input-group">
+              <div class="input-group-addon">Prenom du parent</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom du parent">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Profession du parent</label>
+            <div class="input-group">
+              <div class="input-group-addon">Profession du parent</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la profession du parent">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
             <div class="input-group">
               <div class="input-group-addon">Adresse</div>
               <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
             </div>
           </div>
-          <input class="btn btn-success"type="submit" name="submit" value="Ajouter un eleve !">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">E-mail</label>
+            <div class="input-group">
+              <div class="input-group-addon">Courriel du parent</div>
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
+            <div class="input-group">
+              <div class="input-group-addon">Numero de telephone du parent</div>
+              <input type="number" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent">
+            </div>
+          </div>
+          <input class="btn btn-warning" type="button" name="name" value="reset">
+          <input class="btn btn-success" type="submit" name="submit" value="Ajouter un eleve !">
         </div>
       </div>
     </div>
