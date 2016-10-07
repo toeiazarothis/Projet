@@ -96,58 +96,44 @@
           <div class="form-group">
             <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
               <div class="input-group">
-              <div class="input-group-addon">Nom de famille</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
-            <div class="input-group">
-              <div class="input-group-addon">Prenom</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
-            <div class="input-group">
-              <div class="input-group-addon">Classe</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'élève">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
-            <div class="input-group">
-              <div class="input-group-addon">Nom d'un parent</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom d'un parent">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
-            <div class="input-group">
-              <div class="input-group-addon">Prenom du parent</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom du parent">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
-            <div class="input-group">
-              <div class="input-group-addon">Adresse</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">E-mail</label>
-            <div class="input-group">
-              <div class="input-group-addon">Courriel du parent</div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
-            <div class="input-group">
-              <div class="input-group-addon">Numero de telephone du parent</div>
-              <input type="number" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent">
-            </div>
+                <div class="input-group-addon">Nom de famille</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
+              </div>
+              <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
+              <div class="input-group">
+                <div class="input-group-addon">Prenom</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
+              </div>
+              <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
+              <div class="input-group">
+                <div class="input-group-addon">Classe</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'élève">
+              </div>
+              <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
+              <div class="input-group">
+                <div class="input-group-addon">Nom d'un parent</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom d'un parent">
+              </div>
+              <label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
+              <div class="input-group">
+                <div class="input-group-addon">Prenom du parent</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom du parent">
+              </div>
+              <label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
+              <div class="input-group">
+                <div class="input-group-addon">Adresse</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+              </div>
+              <label class="sr-only" for="exampleInputAmount">E-mail</label>
+              <div class="input-group">
+                <div class="input-group-addon">Courriel du parent</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent">
+              </div>
+              <label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
+              <div class="input-group">
+                <div class="input-group-addon">Numero de telephone du parent</div>
+                <input type="number" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent">
+              </div>
           </div>
           <input class="btn btn-warning" type="button" name="name" value="Effacer">
           <input class="btn btn-success" type="submit" name="submit" value="Ajouter un eleve !">
