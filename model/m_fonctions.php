@@ -199,6 +199,51 @@ function sendCoursAndDevoirForProf ($matiere, $classe, $cours, $devoir){
 }
 // fin de la parti pour ajouter les cours et devoir
 
+// debut de la parti pour faire les absence
+// condition permettant de verfi si la function doit se lancer
+if (isset($_POST['eleve_for_absence'])) {
+	echo showListEleveForAbsence ($_POST['eleve_for_absence']);
+}
+// fonction pour afficher la liste des eleve en fonction de la classe.
+function showListEleveForAbsence ($classe) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+	$texte = '<h4>Liste des élèves:</h4>';
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['classe'] == $classe) {
+			$texte .= '<label class="checkbox-inline">
+				<input type="checkbox" id="inlineCheckbox1" name="'.$donnees['id'].'" value="yes">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'
+			</label>';
+		}
+	}
+	return $texte;
+}
+// fonction permettant de preparer l'envoye des absences
+function prepareForSendAbsence ($classe) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query('SELECT id, classe, prenom_eleve, nom_eleve FROM eleves WHERE classe="'.$_POST['classe_for_absent'].'"');
+	$idEleve = 0;
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['classe'] == $classe) {
+			if ($donnees['id'] > $idEleve) {
+				$idEleve = $donnees['id'];
+			}
+		}
+	}
+	return $idEleve;
+}
+// fonction permmettant d'envoyer l'absence dans la BDD
+function sendAbsenceEleveForProf ($idEleve) {
+	$bdd = connectionDB();
+	$reponse = $bdd->exec('INSERT INTO `absence`(`id_prof`, `id_eleve`, `date_debut`, `date_fin`, `motif`) VALUES (0, '.$idEleve.', "'.date('y-m-d').'", "'.date('y-m-d').'", "NO-CONFIG")');
+	if ($reponse == FALSE){
+		echo ('Les absences n\'ont pas pus être ajouter!');
+	}
+}
+// fin de la parti absence
+
 // debut de la parti pour ajouter une appreciation
 //condition pour verifier sur nous devons lancer la fonctions ou pas
 if (isset($_POST['classe_appreciation'])) {

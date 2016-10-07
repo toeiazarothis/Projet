@@ -157,20 +157,22 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
 							<h4>Liste des classes:</h4>
-	            <select class="form-control">
-	              <?php echo afficherListeClasseForProf ();?>
-	            </select>
-              <br>
               <form action="prof" method="post">
+                <div id="classe_for_absent">
+                  <select class="form-control" name="classe_for_absent">
+    	              <?php echo afficherListeClasseForProf ();?>
+    	            </select>
+                </div>
+                <br>
                 <div id="eleve_for_absent">
                   <!-- <label class="checkbox-inline">
                     <input type="checkbox" id="inlineCheckbox1" value="option1">élève 1
                   </label> -->
                 </div>
                 <br><br>
-                <input type="checkbox" id="inlineCheckbox1" name="validate_abs" value="valider">Confirmer les absence
-                <br>
-                <button class="btn btn-danger">Valider les absence</button>
+                <input type="checkbox" id="inlineCheckbox1" name="validate_abs" value="yes">Confirmer les absence
+                <br><br>
+                <button class="btn btn-success">Valider les absence</button>
               </form>
           </div>
         </div>
@@ -290,6 +292,18 @@
       });
     });
   </script> -->
+  <!-- Script pour afficher les eleve celon la classe dans la parti ABSENCE -->
+  <script>
+		$( "#classe_for_absent > select" ).change(function () {
+			var classe = $('#classe_for_absent > select option:selected').val()
+			$.ajax({
+				url: './model/m_fonctions.php',
+				type: 'post',
+				data: { 'eleve_for_absence': classe },
+				success: function(response) { $("#eleve_for_absent" ).html(response);}
+			});
+		});
+	</script>
 	<!-- Script pour affichage de la liste pour la parti Appreciation -->
 	<script>
 		$( "#appreciation > #liste_for_classe" ).change(function () {
