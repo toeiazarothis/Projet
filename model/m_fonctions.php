@@ -26,12 +26,13 @@ function verifUserIfExist ($user){
 			return $donnees['id'];
 		}
 	}
-	$reponse = $bdd->query('SELECT id, identifiant FROM vie_scolaire');
-	$donnees = $reponse->fetch();
+	$reponse = $bdd->query('SELECT id, identifiant, nom, prenom FROM vie_scolaire');
 	while ($donnees = $reponse->fetch())
 	{
 		if ($user == $donnees['identifiant']) {
 			$_SESSION['stats'] = 'viescolaire';
+			$_SESSION['prenom'] = $donnees['prenom'];
+			$_SESSION['nom'] = $donnees['nom'];
 			return $donnees['id'];
 		}
 	}
@@ -268,4 +269,38 @@ function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
 }
 //fin de la parti ajouter une appreciation
 //fin de la parti prof
+
+// debut de la parti page administration
+// fonction permettant de généré un identifiant
+function genereUsernameForAdmin ($nom, $prenom) {
+	$prenom1 = substr($prenom,0,1);
+	$prenom2 = $nom.'_'.$prenom1;
+	return $prenom2;
+}
+// fonction permettant de générer un mot de passe
+function generePasswordForAdmin($nb_car, $chaine = 'azertyuiopqsdfghjklmwxcvbn123456789')
+{
+    $nb_lettres = strlen($chaine) - 1;
+    $generation = '';
+    for($i=0; $i < $nb_car; $i++) {
+        $pos = mt_rand(0, $nb_lettres);
+        $car = $chaine[$pos];
+        $generation .= $car;
+    }
+    return $generation;
+}
+
+// fonction permettant d'ajouter un eleve
+function addEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $adresse_parent, $email_parent, $tel_parent) {
+	$bdd = connectionDB();
+
+  $identifiant = genereUsernameForAdmin($nom, $prenom);
+  $mdp = generePasswordForAdmin(6);
+
+	$reponse = $bdd->exec("INSERT INTO `eleves`(`nom_eleve`, `prenom_eleve`, `classe`, `identifiant`, `mot_de_passe`, `nom_parent`, `prenom_parent`, `adresse_parent`, `email_parent`, `tel_parent`, `appreciation_eleve`)
+	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation.')");
+
+	return header('Location:admin');
+}
+// fin de la parti page administration
 ?>
