@@ -20,7 +20,7 @@
     <link  href="./view/css/cover.css" rel="stylesheet">
 
 
-    <title>SchoolNotes</title>
+    <title>iSchool Notes.</title>
   </head>
   <body>
 

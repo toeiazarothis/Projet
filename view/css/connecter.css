@@ -60,6 +60,11 @@ section {
   padding: 100px 0;
 }
 
+.input-group-addon{
+  width: 50%;
+}
+
+
 .bg-light-gray {
   background-color: #eeeeee;
 }
