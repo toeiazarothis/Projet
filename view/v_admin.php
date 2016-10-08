@@ -94,7 +94,7 @@
           </div><br>
 
           <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="col-md-6 col-md-offset-4 text-center">
               <div class="form-group">
                 <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
                   <div class="input-group">
@@ -135,10 +135,12 @@
                   <div class="input-group">
                     <div class="input-group-addon">Numero de telephone</div>
                     <input type="number" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent">
+                  </div><br>
+                  <div class="row">
+                      <input class="btn btn-warning" type="button" name="name" value="Effacer">
+                      <input class="btn btn-success" type="submit" name="submit" value="Ajouter un eleve !">
                   </div>
               </div>
-              <input class="btn btn-warning" type="button" name="name" value="Effacer">
-              <input class="btn btn-success" type="submit" name="submit" value="Ajouter un eleve !">
             </div>
           </div>
           <!-- Fin du formulaire -->
