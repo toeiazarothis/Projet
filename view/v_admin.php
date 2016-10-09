@@ -200,7 +200,7 @@
       </section>
       <!-- Fin du menu supprimer un eleve -->
     </section>
-
+    <!-- Fin de la section eleve -->
 
     <!--Debut section prof -->
     <section id="prof" class="bg bg-light-gray">
@@ -234,180 +234,193 @@
               </div>
             </div>
           </div>
-        </section>
-        <!-- Fin du menu ajout de professeur -->
-        <!-- Menu mise a jour de professeur -->
-        <section id="majProf">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Mise a jour prof </h2>
-                <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
-              </div>
-            </div>
-            <!-- Liste deroulante des different professeur -->
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                <select class="form-control">
-                  <option>Liste des professeur</option>
-                </select>
-              </div>
-            </div>
-            <!-- Fin de la liste deroulante -->
-            <br>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <input class="btn btn-success"type="submit" name="submit" value="Modifier un professeur!">
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Fin du menu mettre a jour un professeur  -->
-        <!-- Menu supprimer un professeur -->
-        <section id="deleteProf">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Suppresion prof </h2>
-                <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
-              </div>
-            </div>
-            <!-- Liste deroulante des different professeur -->
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                <select class="form-control">
-                  <option>Liste des professeur</option>
-                </select>
-              </div>
-            </div>
-            <!-- Fin de la liste deroulante -->
-            <br>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le professeur !">
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Fin du menu supprimer un professeur  -->
+        </div>
       </section>
-      <!-- Fin de la parti professeur -->
+      <!-- Fin du menu ajout de professeur -->
+      <!-- Menu mise a jour de professeur -->
+      <section id="majProf">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Mise a jour prof </h2>
+              <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
+            </div>
+          </div>
+          <!-- Liste deroulante des different professeur -->
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <select class="form-control">
+                <option>Liste des professeur</option>
+              </select>
+            </div>
+          </div>
+          <!-- Fin de la liste deroulante -->
+          <br>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <input class="btn btn-success"type="submit" name="submit" value="Modifier un professeur!">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin du menu mettre a jour un professeur  -->
+      <!-- Menu supprimer un professeur -->
+      <section id="deleteProf">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Suppresion prof </h2>
+              <h3 class="section-subheading text-muted">Supprimer un Professeur</h3>
+            </div>
+          </div>
+          <!-- Liste deroulante des different professeur -->
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <select class="form-control">
+                <option>Liste des professeur</option>
+              </select>
+            </div>
+          </div>
+          <!-- Fin de la liste deroulante -->
+          <br>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le professeur !">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin du menu supprimer un professeur  -->
+    </section>
+    <!-- Fin de la section professeur -->
 
 
     <!--Debut section personnel -->
-      <section id="personnel">
-        <section id="ajoutPersonnel">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Ajout </h2>
-                <h3 class="section-subheading text-muted">Rajouter un membre du personnel</h3>
+    <section id="personnel">
+      <section id="ajoutPersonnel">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Ajout </h2>
+              <h3 class="section-subheading text-muted">Rajouter un membre du personnel</h3>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputAmount">Membre du personnel a rajouter</label>
+              <div class="input-group">
+                <div class="input-group-addon">Personnel educatif</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
               </div>
             </div>
           </div>
-        </section>
-        <section id="majPersonnel">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Mise à jour du personnel </h2>
-                <h3 class="section-subheading text-muted">Mettre à jour un membre du personnel</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des membres du personnel</option>
-                </select>
-                <input class="btn btn-success"type="submit" name="submit" value="Modifier le membre du personnel">
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="deletePersonnel">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Suppresion du personnel </h2>
-                <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des membres du personnel</option>
-                </select>
-                <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le membre du personnel !">
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
-      <!--Fin section personnel -->
-
-      <!--Debut section classe -->
-      <section id="classe" class="bg bg-light-gray">
-        <section id="ajoutClasse">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Ajout d'une classe</h2>
-                <h3 class="section-subheading text-muted">Rajouter une classe</h3>
-              </div>
-            </div><br>
-
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">classe à rajouter</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Classe</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                </div>
-              </div>
+      <section id="majPersonnel">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Mise à jour du personnel </h2>
+              <h3 class="section-subheading text-muted">Mettre à jour un membre du personnel</h3>
+              <select class="form-control col-md-6">
+                <option>Liste des membres du personnel</option>
+              </select>
+              <input class="btn btn-success"type="submit" name="submit" value="Modifier le membre du personnel">
             </div>
           </div>
-        </section>
-        <section id="majClasse">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Modification d'une classe </h2>
-                <h3 class="section-subheading text-muted">Mettez a jour le nom d'une classe</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des classes</option>
-                </select>
-                <input class="btn btn-success"type="submit" name="submit" value="Modifier la classe">
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="deleteClasse">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Suppresion d'une classe</h2>
-                <h3 class="section-subheading text-muted">Supprimer la classe</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des classes</option>
-                </select>
-                <input class="btn btn-danger" type="submit" name="submit" value="Supprimer la classe">
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
-      <!--Fin section classe -->
+      <section id="deletePersonnel">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Suppresion du personnel </h2>
+              <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+              <select class="form-control col-md-6">
+                <option>Liste des membres du personnel</option>
+              </select>
+              <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le membre du personnel !">
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!--Fin section personnel -->
+
+    <!--Debut section classe -->
+    <section id="classe" class="bg bg-light-gray">
+      <!-- Ajout d'une classe -->
+      <section id="ajoutClasse">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Ajout d'une classe</h2>
+              <h3 class="section-subheading text-muted">Rajouter une classe</h3>
+            </div>
+          </div><br>
+            <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputAmount">classe à rajouter</label>
+              <div class="input-group">
+                <div class="input-group-addon">Classe</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin menu ajout d'une classe -->
+      <!-- Menu modification d'une classe -->
+      <section id="majClasse">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Modification d'une classe </h2>
+              <h3 class="section-subheading text-muted">Mettez a jour le nom d'une classe</h3>
+              <select class="form-control col-md-6">
+                <option>Liste des classes</option>
+              </select>
+              <input class="btn btn-success"type="submit" name="submit" value="Modifier la classe">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin du menu modification classe -->
+      <!-- Menu supprimer une classe -->
+      <section id="deleteClasse">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 class="section-heading">Suppresion d'une classe</h2>
+              <h3 class="section-subheading text-muted">Supprimer la classe</h3>
+              <select class="form-control col-md-6">
+                <option>Liste des classes</option>
+              </select>
+              <input class="btn btn-danger" type="submit" name="submit" value="Supprimer la classe">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin du menu supprimer une classe -->
+    </section>
+    <!--Fin section classe -->
 
 
 
-      <!-- Bootstrap core JavaScript ======================================== -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="./view/js/bootstrap.min.js"></script>
-      <script src="./view/jquery/jquery.min.js"></script>
-      <!-- Effet de scroll -->
-      <script>
-        $(document).ready(function() {
-          $('.js-scrollTo').on('click', function() { // Au clic sur un élément
-            var page = $(this).attr('href'); // Page cible
-            var speed = 750; // Durée de l'animation (en ms)
-            $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-            return false;
-          });
+    <!-- Bootstrap core JavaScript ======================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./view/js/bootstrap.min.js"></script>
+    <script src="./view/jquery/jquery.min.js"></script>
+    <!-- Effet de scroll -->
+    <script>
+      $(document).ready(function() {
+        $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+          var page = $(this).attr('href'); // Page cible
+          var speed = 750; // Durée de l'animation (en ms)
+          $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+          return false;
         });
-      </script>
+      });
+    </script>
       <!-- Fin effet de scroll -->
     </body>
   </html>
