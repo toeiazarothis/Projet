@@ -129,7 +129,7 @@
                   <label class="sr-only" for="exampleInputAmount">E-mail</label>
                   <div class="input-group">
                     <div class="input-group-addon">Courriel du parent</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent">
+                    <input type="email" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent">
                   </div>
                   <label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
                   <div class="input-group">
@@ -216,20 +216,40 @@
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
               <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
+                <label class="sr-only" for="exampleInputAmount">Matiere</label>
                 <div class="input-group">
-                  <div class="input-group-addon">Nom</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
-                </div>
-                <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Prenom</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+                  <div class="input-group-addon">Matiere</div>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la matiere">
                 </div>
                 <label class="sr-only" for="exampleInputAmount">classe que gère le professeur</label>
                 <div class="input-group">
                   <div class="input-group-addon">Classe</div>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe que gere le professeur">
+                </div>
+                <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Nom</div>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom">
+                </div>
+                <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Prenom</div>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom">
+                </div>
+                <label class="sr-only" for="exampleInputAmount">Adresse postal du professeur</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Adresse</div>
                   <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+                </div>
+                <label class="sr-only" for="exampleInputAmount">Adresse email du professeur</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Courriel</div>
+                  <input type="email" class="form-control" id="exampleInputAmount" placeholder="Entrer le courriel">
+                </div>
+                <label class="sr-only" for="exampleInputAmount">Telephone du professeur</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Telephone</div>
+                  <input type="number" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone">
                 </div>
               </div>
             </div>
