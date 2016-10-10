@@ -52,6 +52,8 @@ function verifPassIsUser ($user, $pass) {
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
 		$_SESSION['classe'] = $donnees['classe'];
+		$_SESSION['moyenneGeneral'] = '';
+		$_SESSION['nbNoteMoyenneGeneral'] = '';
 		return header('Location:eleve');
 	}
 	else if ($_SESSION['stats'] == 'prof') {
@@ -93,6 +95,33 @@ function matiereForEleve ($userID, $matiere) {
 		}
 	}
 	return $texte;
+}
+// fonction pour afficher la moyenne de lamatiere X
+function moyenneForMatiereForEleve ($userID, $matiere) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query('SELECT eleve, note, matiere FROM notes ORDER BY id DESC');
+	$nbNote = 0;
+	$additionNote = 0;
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['eleve'] == $userID && $donnees['matiere'] == $matiere) {
+			$additionNote += $donnees['note'];
+			$nbNote += 1;
+		}
+	}
+	if ($additionNote > 1) {
+		$moyenneGeneral = $additionNote / $nbNote;
+		$_SESSION['moyenneGeneral'] += $moyenneGeneral;
+		$_SESSION['nbNoteMoyenneGeneral'] += 1;
+		return $moyenneGeneral;
+	}
+}
+// fonction pour afficher la moyenne general
+function moyenneForEleve () {
+	if (isset ($_SESSION['moyenneGeneral'], $_SESSION['nbNoteMoyenneGeneral'])) {
+		$moyenneGeneral = $_SESSION['moyenneGeneral'] / $_SESSION['nbNoteMoyenneGeneral'];
+	}
+	return $moyenneGeneral;
 }
 // fin de la parti d'affichage des note
 // debut de la parti permettant d'afficher les devoir et les cours dans la parti eleve
