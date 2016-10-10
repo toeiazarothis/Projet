@@ -172,58 +172,9 @@
               <h4>Liste des élèves</h4>
               <select class="form-control" id="list_eleve_for_maj">
               </select>
+              <br><br>
             </div>
-            <div class="col-md-6 col-md-offset-4 col-xs-12 text-center">
-              <form action="admin" method="post">
-                <div class="form-group">
-                  <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Nom de famille</div>
-                      <input type="text" name="nom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
-                    </div>
-                    <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Prenom</div>
-                      <input type="text" name="prenom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
-                    </div>
-                    <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Classe</div>
-                      <input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'élève">
-                    </div>
-                    <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Nom d'un parent</div>
-                      <input type="text" name="nom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom d'un parent">
-                    </div>
-                    <label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Prenom du parent</div>
-                      <input type="text" name="prenom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom du parent">
-                    </div>
-                    <label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Adresse</div>
-                      <input type="text" name="adresse_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
-                    </div>
-                    <label class="sr-only" for="exampleInputAmount">E-mail</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Courriel du parent</div>
-                      <input type="email" name="email_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent">
-                    </div>
-                    <label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">Numero de telephone</div>
-                      <input type="tel" name="tel_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent">
-                    </div><br>
-                    <div class="row">
-                      <div class="col-xs-6 col-xs-offset-3">
-                        <button class="btn btn-success">Modifier l'élève</button>
-                      </div>
-                        <!-- <input class="btn btn-warning" type="button" value="Effacer"> -->
-                    </div>
-                </div>
-              </form>
+            <div class="col-md-6 col-md-offset-4 col-xs-12 text-center" id="formulaire_eleve_for_maj">
             </div>
           </div><br>
           <!-- Fin du menu deroulant -->
@@ -484,6 +435,18 @@
     			});
     		});
     	</script>
+      <!-- Script pour afficher le formulaire pour la parti maj Eleve -->
+      <script>
+        $( "#list_eleve_for_maj > select" ).change(function () {
+          var eleve = $('#list_eleve_for_maj > select option:selected').val()
+          $.ajax({
+            url: './model/m_fonctions.php',
+            type: 'post',
+            data: { 'formulaire_eleve_for_maj': eleve },
+            success: function(response) { $("#formulaire_eleve_for_maj" ).html(response);}
+          });
+        });
+      </script>
       <!-- Script pour afficher la liste eleve pour la parti DEL Eleve -->
       <script>
     		$( "#list_classe_for_del > select" ).change(function () {
