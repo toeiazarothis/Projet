@@ -185,32 +185,36 @@
       <!-- Debut menu supprimer un eleve -->
       <section id="deleteEleve">
         <div class="container">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-              <h2 class="section-heading">Suppresion d'élève </h2>
-              <h3 class="section-subheading text-muted">Supprimer un élève</h3>
+          <form class="" action="admin" method="post">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-center">
+                <h2 class="section-heading">Suppresion d'élève </h2>
+                <h3 class="section-subheading text-muted">Supprimer un élève</h3>
+              </div>
             </div>
-          </div>
-          <!-- Menu deroulant liste des eleve -->
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center" id="list_classe_for_del">
-              <h4>Liste des classes</h4>
-              <select class="form-control">
-                <?php echo showListAllClassForAdmin(); ?>
-              </select>
+            <!-- Menu deroulant liste des eleve -->
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center" id="list_classe_for_del">
+                <h4>Liste des classes</h4>
+                <select class="form-control" name="classe_for_del_eleve">
+                  <?php echo showListAllClassForAdmin(); ?>
+                </select>
+              </div>
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <h4>Liste des élèves</h4>
+                <select class="form-control" name="eleve_for_del_eleve" id="list_eleve_for_del">
+                </select>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-center">
+                <input type="checkbox" name="confirm_del_eleve" value="yes"> Confirmer la suppression de l'élève</input>
+                <br><br>
+                <button class="btn btn-danger">Supprimer l'eleve !</button>
+              </div>
             </div>
-            <div class="col-md-6 col-md-offset-3 text-center">
-              <h4>Liste des élèves</h4>
-              <select class="form-control" id="list_eleve_for_del">
-              </select>
-            </div>
-          </div><br>
+          </form>
           <!-- Fin du menu deroulant -->
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-              <input class="btn btn-danger"type="submit" name="submit" value="Supprimer l'eleve !">
-            </div>
-          </div>
         </div>
       </section>
       <!-- Fin du menu supprimer un eleve -->

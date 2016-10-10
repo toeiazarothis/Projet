@@ -23,5 +23,9 @@ if (isset($_POST['nom_eleve'], $_POST['prenom_eleve'], $_POST['classe_eleve'], $
   return AddEleveForAdmin (strtolower($_POST['nom_eleve']), strtolower($_POST['prenom_eleve']), strtolower($_POST['classe_eleve']), strtolower($_POST['nom_parent']), strtolower($_POST['prenom_parent']), strtolower($_POST['adresse_parent']), strtolower($_POST['email_parent']), strtolower($_POST['tel_parent']));
 }
 
+if (isset ($_POST['classe_for_del_eleve'], $_POST['eleve_for_del_eleve'], $_POST['confirm_del_eleve'])) {
+	return delEleveForAdmin ($_POST['eleve_for_del_eleve']);
+}
+
 include ('../view/v_admin.php');
 ?>

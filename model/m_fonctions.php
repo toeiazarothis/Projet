@@ -215,7 +215,7 @@ function sendCoursAndDevoirForProf ($matiere, $classe, $cours, $devoir){
 			if ($reponse2 == FALSE){
 				echo ('Les devoirs n\'ont pas pus être ajouter!');
 			}
-			return header('Location:prof');
+			header('Location:prof');
 		}
 	}
 	$reponse = $bdd->exec('INSERT INTO `cours_devoirs`(`matiere`, `classe`, `contenu`, `devoir`) VALUES ("'.$matiere.'", "'.$classe.'", "'.$cours.'", "'.$devoir.'")');
@@ -332,13 +332,13 @@ function addEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $
 			$reponse = $bdd->exec('UPDATE `eleves` SET `classe`="'.$classe.'",`identifiant`="'.$identifiant.'",`nom_parent`="'.$nom_parent.'",`prenom_parent`="'.$prenom_parent.'",`adresse_parent`="'.$adresse_parent.'",`email_parent`="'.$email_parent.'",`tel_parent`="'.$tel_parent.'"
 			WHERE `id`='.$donnees['id'].'');
 
-			return header('Location:admin');
+			header('Location:admin');
 		}
 	}
 	$reponse = $bdd->exec("INSERT INTO `eleves`(`nom_eleve`, `prenom_eleve`, `classe`, `identifiant`, `mot_de_passe`, `nom_parent`, `prenom_parent`, `adresse_parent`, `email_parent`, `tel_parent`, `appreciation_eleve`)
 	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation.')");
 
-	return header('Location:admin');
+	header('Location:admin');
 }
 // fonction pour afficher la liste des classes
 function showListAllClassForAdmin () {
@@ -421,6 +421,15 @@ function showFormulaireForMajEleveForAdmin ($eleve) {
 		</div>
 	</form>';
 	return $texte;
+}
+// function permettant de supprimer un eleve
+function delEleveForAdmin ($eleve) {
+	$bdd = connectionDB ();
+	$reponse = $bdd->exec("DELETE FROM `eleves` WHERE `id`=$eleve");
+	if ($reponse == FALSE){
+		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
+	}
+	header('Location:admin');
 }
 // fin de la parti page administration
 ?>
