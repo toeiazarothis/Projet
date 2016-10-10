@@ -1,8 +1,67 @@
 <?php
 include ('forMySQL.php');
 
-//condition pour verifier sur nous devons lancer la fonctions ou pas
-// partie page index debu
+// parti pour erreur site
+function errorOrSuccesOnSite($errorOrSucces) {
+	$texte = '';
+	if($errorOrSucces == 1){//utilisateur inexistant
+		$texte .= '<div class="alert alert-danger" id="error" style="position:fixed; width:100%">Cette utilisateur est inexistant!</div>';
+	}
+	if($errorOrSucces == 2){//mot de passe incorrect
+		$texte .= '<div class="alert alert-warning" id="error" style="position:fixed; width:100%">Vous avez saisie un mauvais mot de passe!</div>';
+	}
+	if($errorOrSucces == 3){//note ajouter
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Vous avez ajouter la note avec succès!</div>';
+	}
+	if($errorOrSucces == 4){//cours & devoir mise a jour
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Devoir & Note mis à jour pour cette classe</div>';
+	}
+	if($errorOrSucces == 5){//absence effectuer
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les absences sont été éffectuer</div>';
+	}
+	if($errorOrSucces == 6){//appreciation mise a jour
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Apréciation mis à jour avec succès</div>';
+	}
+	if($errorOrSucces == 7){//ajout eleve
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette élève à bien été ajouter a la base de donnée</div>';
+	}
+	if($errorOrSucces == 8){//mise a jour eleve
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cette élève ont bien été mis à jour</div>';
+	}
+	if($errorOrSucces == 9){//suppression eleve
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette élève vient d\'être retirer de la base de donnée</div>';
+	}
+	if($errorOrSucces == 10){//ajout prof
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a bien été ajouter à la base de donnée</div>';
+	}
+	if($errorOrSucces == 11){//mise a jour prof
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce professeur ont bien été mis à jour</div>';
+	}
+	if($errorOrSucces == 12){//suppression prof
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a été retirer de la base de donnée/div>';
+	}
+	if($errorOrSucces == 13){//ajout personnel
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a bien été ajouter à la base de donnée</div>';
+	}
+	if($errorOrSucces == 14){//mise a jour personnel
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce membre du personnel ont bien été mis à jour</div>';
+	}
+	if($errorOrSucces == 15){//suppression personnel
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a été retirer de la base de donnée/div>';
+	}
+	if($errorOrSucces == 16){//ajout classe
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a bien été ajouter à la base de donnée</div>';
+	}
+	if($errorOrSucces == 17){//mise a jour classe
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cette classe ont bien été mis à jour</div>';
+	}
+	if($errorOrSucces == 18){//suppression classe
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a été retirer de la base de donnée/div>';
+	}
+	return $texte;
+}
+
+// debut de  la partie page index
 // cette parti permet de verifier si l'utilisateur existe dans la BDD
 function verifUserIfExist ($user){
 	$bdd = connectionDB();
@@ -36,7 +95,7 @@ function verifUserIfExist ($user){
 			return $donnees['id'];
 		}
 	}
-	echo 'Cet utilisateur n a pas été trouvé!';
+	return header('Location:accueil?error=1');
 }
 // fin de la parti verification de l'utilisateur
 // debut de la parti si le mot de passe de l'utilisateur est coreect
@@ -47,7 +106,7 @@ function verifPassIsUser ($user, $pass) {
 		$reponse = $bdd->query('SELECT mot_de_passe, classe FROM eleves WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
-			exit ('Mot de passe incorrect!');
+			return header('Location:accueil?error=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;

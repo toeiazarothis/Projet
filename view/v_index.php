@@ -49,12 +49,8 @@
                 <label for="inputUsername" class="sr-only">Identifiant</label>
                 <input type="text" id="inputUsername" class="form-control" placeholder="Identifiant" name="users" required autofocus><br>
                 <label for="inputPassword" class="sr-only">Mot de passe</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Mots de passe" name="password" required><br>
-                <!-- <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="remember-me"> Se souvenir de moi
-                  </label>
-                </div> -->
+                <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" name="password" required><br>
+                <?php  ?>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
               </form>
           </div>
@@ -75,6 +71,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./view/js/bootstrap.min.js"></script>
+    <script src="./view/jquery/jquery.min.js"></script>
+    <script>
+    	$(document).ready(function() {
+        $("#error:visible").each( function() { // On verifie si lelement est afficher
+          var hide = setTimeout('$("#error").fadeOut(500)', 2500);
+        });
+    	});
+    </script>
 
   </body>
 </html>
