@@ -165,19 +165,12 @@
             <div class="col-md-6 col-md-offset-3 text-center" id="list_classe_for_maj">
               <h4>Liste des classes</h4>
               <select class="form-control">
-<<<<<<< HEAD
-                <option>LIste classe</option>
-              </select>
-              <select class="form-control">
-                <option>Liste des eleves</option>
-=======
                 <?php echo showListAllClassForAdmin(); ?>
               </select>
             </div>
             <div class="col-md-6 col-md-offset-3 text-center">
               <h4>Liste des élèves</h4>
               <select class="form-control" id="list_eleve_for_maj">
->>>>>>> 6a69a07fce123914ad0b805160553ddac95b1537
               </select>
             </div>
             <div class="col-md-6 col-md-offset-4 col-xs-12 text-center">

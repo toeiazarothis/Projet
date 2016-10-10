@@ -243,7 +243,7 @@ function sendAbsenceEleveForProf ($idEleve) {
 // debut de la parti pour ajouter une appreciation
 //condition pour verifier sur nous devons lancer la fonctions ou pas
 if (isset($_POST['classe_appreciation'])) {
-  echo affichereEleveForProf($_POST['classe_appreciation']);
+  echo afficherListeEleveForProf($_POST['classe_appreciation']);
 }
 // fonction permettant d'afficher les eleve a parti d'une classe
 function afficherListeEleveForProf($classe) {
@@ -301,6 +301,38 @@ function addEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $
 	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation.')");
 
 	return header('Location:admin');
+}
+// fonction pour afficher la liste des classes
+function showListAllClassForAdmin () {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT nom FROM classe");
+	$texte = '<option value="par_default">Selectionner une classe</option>';
+	while ($donnees = $reponse->fetch())
+	{
+		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
+	}
+	return $texte;
+}
+// condition pour verifier si on lance la fonction showListEleveForAdmin
+if (isset($_POST['list_eleve_for_maj'])) {
+	echo showListEleveForAdmin ($_POST['list_eleve_for_maj']);
+}
+// condition pour verifier si on lance la fonction showListEleveForAdmin
+if (isset($_POST['list_eleve_for_del'])) {
+	echo showListEleveForAdmin ($_POST['list_eleve_for_del']);
+}
+// fonction pour afficher la liste des eleves
+function showListEleveForAdmin ($classe) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+	$texte = '<option value="par_default">Selectionner un élève</option>';
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['classe'] == $classe) {
+			$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</option>';
+		}
+	}
+	return $texte;
 }
 // fin de la parti page administration
 ?>
