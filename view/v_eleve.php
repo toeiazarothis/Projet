@@ -90,6 +90,8 @@
                 </div>
                 <div id="collapse10" class="panel-collapse collapse">
                   <div class="panel-body"><h3>Vos notes</h3><?php echo matiereForEleve ($_SESSION['userid'], 'francais') ?></div>
+                  <div class="panel-body"><h3>Votre Moyenne</h3><?php FOUS TON CODE ICI ?></div>
+
                 </div>
               </div>
               <div class="panel panel-default">
@@ -143,6 +145,13 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-center">
+                  <h2 class="section-heading">Votre moyenne generale</h2>
+                  <h3 class="section-subheading text-muted">Moyenne general a mettre ici moody</h3>
+                  <br><br><br>
+              </div>
           </div>
         </div>
       </div>
