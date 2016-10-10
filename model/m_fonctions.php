@@ -427,7 +427,7 @@ function delEleveForAdmin ($eleve) {
 	$bdd = connectionDB ();
 	$reponse = $bdd->exec("DELETE FROM `eleves` WHERE `id`=$eleve");
 	if ($reponse == FALSE){
-		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
+		return ('La suprresion de l\'élève n\'as pas pus être effectuer');
 	}
 	header('Location:admin');
 }
