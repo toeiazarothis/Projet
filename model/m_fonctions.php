@@ -326,6 +326,15 @@ function addEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $
   $identifiant = genereUsernameForAdmin($nom, $prenom);
   $mdp = generePasswordForAdmin(6);
 
+	$reponse = $bdd->query("SELECT id, nom_eleve, prenom_eleve FROM eleves");
+	while ($donnees = $reponse->fetch()) {
+		if ($donnees['nom_eleve'] == $nom && $donnees['prenom_eleve'] == $prenom) {
+			$reponse = $bdd->exec('UPDATE `eleves` SET `classe`="'.$classe.'",`identifiant`="'.$identifiant.'",`nom_parent`="'.$nom_parent.'",`prenom_parent`="'.$prenom_parent.'",`adresse_parent`="'.$adresse_parent.'",`email_parent`="'.$email_parent.'",`tel_parent`="'.$tel_parent.'"
+			WHERE `id`='.$donnees['id'].'');
+
+			return header('Location:admin');
+		}
+	}
 	$reponse = $bdd->exec("INSERT INTO `eleves`(`nom_eleve`, `prenom_eleve`, `classe`, `identifiant`, `mot_de_passe`, `nom_parent`, `prenom_parent`, `adresse_parent`, `email_parent`, `tel_parent`, `appreciation_eleve`)
 	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation.')");
 
@@ -374,51 +383,41 @@ function showFormulaireForMajEleveForAdmin ($eleve) {
 	$donnees = $reponse->fetch();
 	$texte = '<form action="admin" method="post">
 		<div class="form-group">
-			<label class="sr-only" for="nomDeFamille">Nom de famille de l\'élève</label>
-				<div class="input-group">
-					<div class="input-group-addon">Nom de famille</div>
-					<input type="text" name="nom_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['nom_eleve'].'">
+			<label class="sr-only" for="exampleInputAmount">Classe de l\'élève</label>
+			<div class="input-group">
+				<div class="input-group-addon">Classe</div>
+				<input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['classe'].'">
+			</div>
+			<label class="sr-only" for="exampleInputAmount">Nom d\'un parent</label>
+			<div class="input-group">
+				<div class="input-group-addon">Nom d\'un parent</div>
+				<input type="text" name="nom_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['nom_parent'].'">
+			</div>
+			<label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
+			<div class="input-group">
+				<div class="input-group-addon">Prenom du parent</div>
+				<input type="text" name="prenom_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['prenom_parent'].'">
+			</div>
+			<label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
+			<div class="input-group">
+				<div class="input-group-addon">Adresse</div>
+				<input type="text" name="adresse_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['adresse_parent'].'">
+			</div>
+			<label class="sr-only" for="exampleInputAmount">E-mail</label>
+			<div class="input-group">
+				<div class="input-group-addon">Courriel du parent</div>
+				<input type="email" name="email_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['email_parent'].'">
+			</div>
+			<label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
+			<div class="input-group">
+				<div class="input-group-addon">Numero de telephone</div>
+				<input type="tel" name="tel_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['tel_parent'].'">
+			</div><br>
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<button class="btn btn-success">Modifier l\'élève</button>
 				</div>
-				<label class="sr-only" for="exampleInputAmount">Prenom de l\'élève</label>
-				<div class="input-group">
-					<div class="input-group-addon">Prenom</div>
-					<input type="text" name="prenom_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['prenom_eleve'].'">
-				</div>
-				<label class="sr-only" for="exampleInputAmount">Classe de l\'élève</label>
-				<div class="input-group">
-					<div class="input-group-addon">Classe</div>
-					<input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['classe'].'">
-				</div>
-				<label class="sr-only" for="exampleInputAmount">Nom d\'un parent</label>
-				<div class="input-group">
-					<div class="input-group-addon">Nom d\'un parent</div>
-					<input type="text" name="nom_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['nom_parent'].'">
-				</div>
-				<label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
-				<div class="input-group">
-					<div class="input-group-addon">Prenom du parent</div>
-					<input type="text" name="prenom_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['prenom_parent'].'">
-				</div>
-				<label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
-				<div class="input-group">
-					<div class="input-group-addon">Adresse</div>
-					<input type="text" name="adresse_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['adresse_parent'].'">
-				</div>
-				<label class="sr-only" for="exampleInputAmount">E-mail</label>
-				<div class="input-group">
-					<div class="input-group-addon">Courriel du parent</div>
-					<input type="email" name="email_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['email_parent'].'">
-				</div>
-				<label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
-				<div class="input-group">
-					<div class="input-group-addon">Numero de telephone</div>
-					<input type="tel" name="tel_parent" class="form-control" id="exampleInputAmount" value="'.$donnees['tel_parent'].'">
-				</div><br>
-				<div class="row">
-					<div class="col-xs-6 col-xs-offset-3">
-						<button class="btn btn-success">Modifier l\'élève</button>
-					</div>
-				</div>
+			</div>
 		</div>
 	</form>';
 	return $texte;
