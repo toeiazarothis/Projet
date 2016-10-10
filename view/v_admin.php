@@ -169,7 +169,7 @@
                 <?php echo showListAllClassForAdmin(); ?>
               </select>
             </div>
-            <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="col-md-6 col-md-offset-3 text-center" id="for_list_eleve_for_maj">
               <h4>Liste des élèves</h4>
               <select class="form-control" id="list_eleve_for_maj">
               </select>
@@ -438,8 +438,8 @@
     	</script>
       <!-- Script pour afficher le formulaire pour la parti maj Eleve -->
       <script>
-        $( "#list_eleve_for_maj > select" ).change(function () {
-          var eleve = $('#list_eleve_for_maj > select option:selected').val()
+        $( "#for_list_eleve_for_maj > select" ).change(function () {
+          var eleve = $('#for_list_eleve_for_maj > select option:selected').val()
           $.ajax({
             url: './model/m_fonctions.php',
             type: 'post',
