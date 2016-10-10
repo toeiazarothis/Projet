@@ -162,12 +162,22 @@
           </div>
           <!-- Menu deroulant liste des eleve -->
           <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="col-md-6 col-md-offset-3 text-center" id="list_classe_for_maj">
+              <h4>Liste des classes</h4>
               <select class="form-control">
+<<<<<<< HEAD
                 <option>LIste classe</option>
               </select>
               <select class="form-control">
                 <option>Liste des eleves</option>
+=======
+                <?php echo showListAllClassForAdmin(); ?>
+              </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <h4>Liste des élèves</h4>
+              <select class="form-control" id="list_eleve_for_maj">
+>>>>>>> 6a69a07fce123914ad0b805160553ddac95b1537
               </select>
             </div>
             <div class="col-md-6 col-md-offset-4 col-xs-12 text-center">
@@ -238,9 +248,15 @@
           </div>
           <!-- Menu deroulant liste des eleve -->
           <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="col-md-6 col-md-offset-3 text-center" id="list_classe_for_del">
+              <h4>Liste des classes</h4>
               <select class="form-control">
-                <option>Liste des eleves</option>
+                <?php echo showListAllClassForAdmin(); ?>
+              </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <h4>Liste des élèves</h4>
+              <select class="form-control" id="list_eleve_for_del">
               </select>
             </div>
           </div><br>
@@ -463,5 +479,29 @@
         });
       </script>
       <!-- Fin effet de scroll -->
+      <!-- Script pour afficher la liste eleve pour la parti MAJ Eleve -->
+      <script>
+    		$( "#list_classe_for_maj > select" ).change(function () {
+    			var classe = $('#list_classe_for_maj > select option:selected').val()
+    			$.ajax({
+    				url: './model/m_fonctions.php',
+    				type: 'post',
+    				data: { 'list_eleve_for_maj': classe },
+    				success: function(response) { $("#list_eleve_for_maj" ).html(response);}
+    			});
+    		});
+    	</script>
+      <!-- Script pour afficher la liste eleve pour la parti DEL Eleve -->
+      <script>
+    		$( "#list_classe_for_del > select" ).change(function () {
+    			var classe = $('#list_classe_for_del > select option:selected').val()
+    			$.ajax({
+    				url: './model/m_fonctions.php',
+    				type: 'post',
+    				data: { 'list_eleve_for_del': classe },
+    				success: function(response) { $("#list_eleve_for_del" ).html(response);}
+    			});
+    		});
+    	</script>
     </body>
   </html>

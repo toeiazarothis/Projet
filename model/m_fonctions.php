@@ -302,5 +302,37 @@ function addEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $
 
 	return header('Location:admin');
 }
+// fonction pour afficher la liste des classes
+function showListAllClassForAdmin () {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT nom FROM classe");
+	$texte = '<option value="par_default">Selectionner une classe</option>';
+	while ($donnees = $reponse->fetch())
+	{
+		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
+	}
+	return $texte;
+}
+// condition pour verifier si on lance la fonction showListEleveForAdmin
+if (isset($_POST['list_eleve_for_maj'])) {
+	echo showListEleveForAdmin ($_POST['list_eleve_for_maj']);
+}
+// condition pour verifier si on lance la fonction showListEleveForAdmin
+if (isset($_POST['list_eleve_for_del'])) {
+	echo showListEleveForAdmin ($_POST['list_eleve_for_del']);
+}
+// fonction pour afficher la liste des eleves
+function showListEleveForAdmin ($classe) {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+	$texte = '<option value="par_default">Selectionner un élève</option>';
+	while ($donnees = $reponse->fetch())
+	{
+		if ($donnees['classe'] == $classe) {
+			$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</option>';
+		}
+	}
+	return $texte;
+}
 // fin de la parti page administration
 ?>
