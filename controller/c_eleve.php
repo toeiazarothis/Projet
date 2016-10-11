@@ -6,7 +6,7 @@ if(!isset($_SESSION['users'], $_SESSION['userid'])) {
 }
 if($_SESSION['stats'] != 'eleve') {
 	if($_SESSION['stats'] == 'prof') {
-		return header('Location:accueil');
+		return header('Location:prof');
 	}
 	if($_SESSION['stats'] == 'viescolaire') {
 		return header('Location:viescolaire');
