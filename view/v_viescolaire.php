@@ -40,8 +40,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <!-- <li><a href="#event" class="js-scrollTo">Evénement</a></li> --> <!--Prochaine mise a jour-->
-            <li><a href="#absProf" class="js-scrollTo">Absence professeur</a></li>
             <li><a href="#absEleve" class="js-scrollTo">Absence élève</a></li>
+            <li><a href="#absProf" class="js-scrollTo">Absence professeur</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -53,8 +53,8 @@
     </nav>
     <!-- Navbar -->
 
-    <!--  -->
-    <section id="event" class="bg-light-gray">
+    <!-- Page agenda pour lister les evenement crée par openagenda -->
+    <!-- <section id="event" class="bg-light-gray">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
@@ -67,10 +67,46 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- Liste d'evenement -->
+    </section> -->
+    <!-- FIn de la liste d'evenement -->
 
-    <!-- Absence -->
+    <!-- Absence d'un eleve -->
+    <section id="absEleve" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h2 class="section-heading">Absence d'élève</h2>
+            <h3 class="section-subheading text-muted">Déclarer l'absence d'un élève</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Absence</a>
+                </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">Liste des élèves absents.</div>
+                  <select class="form-control">
+                    <option>Liste des élèves à déclarer absent</option>
+                  </select>
+                  <br>
+                  Déclarer l'élève absent ?
+                  <br>
+                  <a class="btn btn-success" href="#" role="button">Oui</a>
+                  <a class="btn btn-danger" href="#" role="button">Non</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fin absence d'eleve -->
+
+    <!-- Absence d'un professeur-->
     <section id="absProf">
       <div class="container">
         <div class="row">
@@ -101,43 +137,7 @@
           </div>
         </div>
       </section>
-      <!-- Fin absence -->
-
-      <section id="absEleve" class="bg-light-gray">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-              <h2 class="section-heading">Absence d'élève</h2>
-              <h3 class="section-subheading text-muted">Déclarer l'absence d'un élève</h3>
-            </div>
-          </div>
-          <div class="row text-center">
-            <div class="panel-group" id="accordion">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Absence</a>
-                  </h4>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse">
-                  <div class="panel-body">Liste des élèves absents.</div>
-                    <select class="form-control">
-                      <option>Liste des élèves à déclarer absent</option>
-                    </select>
-                    <br>
-                    Déclarer l'élève absent ?
-                    <br>
-                    <a class="btn btn-success" href="#" role="button">Oui</a>
-                    <a class="btn btn-danger" href="#" role="button">Non</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
+    <!-- Fin absence de professeur -->
 
     <!-- Bootstrap core JavaScript ======================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
