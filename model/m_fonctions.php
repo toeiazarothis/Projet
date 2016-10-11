@@ -366,7 +366,7 @@ function genereUsernameForAdmin ($nom, $prenom) {
 	return $prenom2;
 }
 // fonction permettant de générer un mot de passe
-function generePasswordForAdmin($nb_car, $chaine = 'azertyuiopqsdfghjklmwxcvbn123456789')
+function generePasswordForAdmin($nb_car, $chaine = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')
 {
     $nb_lettres = strlen($chaine) - 1;
     $generation = '';
