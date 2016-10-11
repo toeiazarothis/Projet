@@ -119,7 +119,7 @@ function verifPassIsUser ($user, $pass) {
 		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM professeurs WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
-			exit ('Mot de passe incorrect!');
+			return header('Location:accueil?error=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
@@ -130,7 +130,7 @@ function verifPassIsUser ($user, $pass) {
 		$reponse = $bdd->query('SELECT mot_de_passe FROM vie_scolaire WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
-			exit ('Mot de passe incorrect!');
+			return header('Location:accueil?error=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
