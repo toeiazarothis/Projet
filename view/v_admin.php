@@ -111,7 +111,10 @@
                     <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
                     <div class="input-group">
                       <div class="input-group-addon">Classe</div>
-                      <input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'élève">
+                      <!-- <input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'élève"> -->
+                      <select class="" name="classe_eleve">
+                        <?php echo showListAllClassForAdmin (); ?>
+                      </select>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
                     <div class="input-group">
@@ -233,25 +236,42 @@
             </div>
           </div><br>
           <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Nom</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
-                </div>
-                <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Prenom</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
-                </div>
-                <label class="sr-only" for="exampleInputAmount">classe que gère le professeur</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Classe</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+            <form action="admin" method="post">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="form-group">
+                  <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">Nom</div>
+                    <input type="text" class="form-control" name="nom_prof" id="exampleInputAmount" placeholder="Entrer le nom">
+                  </div>
+                  <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">Prenom</div>
+                    <input type="text" class="form-control" name="prenom_prof" id="exampleInputAmount" placeholder="Entrer le prénom">
+                  </div>
+                  <label class="sr-only" for="exampleInputAmount">la matiere du professeur</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">Matière</div>
+                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
+                    <select class="form-control" name="matiere_prof" id="matiere_for_note">
+                      <option value="par_default">Sélectionner une matière</<option>
+                      <option value="francais">Français</<option>
+                      <option value="histoire">Histoire</<option>
+                      <option value="mathematique">Mathématique</<option>
+                      <option value="eps">EPS</<option>
+                      <option value="science">Science</<option>
+                      <option value="anglais">Anglais</<option>
+                    </select>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      <button class="btn btn-success">Ajouter le professeur</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </section>
         <!-- Fin du menu ajout de professeur -->
@@ -265,20 +285,40 @@
               </div>
             </div>
             <!-- Liste deroulante des different professeur -->
-            <div class="row">
+            <form action="admin" method="post">
               <div class="col-md-6 col-md-offset-3 text-center">
-                <select class="form-control">
-                  <option>Liste des professeur</option>
-                </select>
+                <div class="row">
+                  <div class="col-md-6 col-md-offset-3 text-center">
+                    <div class="input-group">
+                      <div class="input-group-addon">Professeur</div>
+                      <select class="form-control" name="prof_selected">
+                        <?php echo showListProfForAdmin (); ?>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">Matière</div>
+                  <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
+                  <select class="form-control" name="matiere_prof" id="matiere_for_note">
+                    <option value="par_default">Sélectionner une matière</<option>
+                    <option value="francais">Français</<option>
+                    <option value="histoire">Histoire</<option>
+                    <option value="mathematique">Mathématique</<option>
+                    <option value="eps">EPS</<option>
+                    <option value="science">Science</<option>
+                    <option value="anglais">Anglais</<option>
+                  </select>
+                </div>
               </div>
-            </div>
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                  <br>
+                  <button class="btn btn-success">Modifier un professeur!</button>
+                </div>
+              </div>
+            </form>
             <!-- Fin de la liste deroulante -->
-            <br>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <input class="btn btn-success"type="submit" name="submit" value="Modifier un professeur!">
-              </div>
-            </div>
           </div>
         </section>
         <!-- Fin du menu mettre a jour un professeur  -->
@@ -292,20 +332,25 @@
               </div>
             </div>
             <!-- Liste deroulante des different professeur -->
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                <select class="form-control">
-                  <option>Liste des professeur</option>
-                </select>
+            <form action="admin" method="post">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                  <h4>Liste des professeurs</h4>
+                  <select class="form-control" name="prof_for_del">
+                    <?php echo showListProfForAdmin (); ?>
+                  </select>
+                </div>
               </div>
-            </div>
-            <!-- Fin de la liste deroulante -->
-            <br>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le professeur !">
+              <!-- Fin de la liste deroulante -->
+              <br>
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                  <input type="checkbox" name="del_prof" value="yes"> Confirmer la suppression du professeurs</input>
+                  <br><br>
+                  <button class="btn btn-danger">Supprimer le professeur !</button>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </section>
         <!-- Fin du menu supprimer un professeur  -->

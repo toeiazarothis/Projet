@@ -79,7 +79,7 @@
                   <option value="histoire">Histoire</<option>
                   <option value="mathematique">Mathématique</<option>
                   <option value="eps">EPS</<option>
-                  <option value="sciennce">Science</<option>
+                  <option value="science">Science</<option>
                   <option value="anglais">Anglais</<option>
                 </select>
               </div>
@@ -126,7 +126,7 @@
                 <option value="histoire">Histoire</<option>
                 <option value="mathematique">Mathématique</<option>
                 <option value="eps">EPS</<option>
-                <option value="sciennce">Science</<option>
+                <option value="science">Science</<option>
                 <option value="anglais">Anglais</<option>
               </select>
             </div>

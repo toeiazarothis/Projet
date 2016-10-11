@@ -378,8 +378,8 @@ function generePasswordForAdmin($nb_car, $chaine = 'azertyuiopqsdfghjklmwxcvbn12
     return $generation;
 }
 
-// fonction permettant d'ajouter un eleve
-function addEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $adresse_parent, $email_parent, $tel_parent) {
+// fonction permettant d'ajouter ou modifier un eleve
+function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $adresse_parent, $email_parent, $tel_parent) {
 	$bdd = connectionDB();
 
   $identifiant = genereUsernameForAdmin($nom, $prenom);
@@ -487,6 +487,49 @@ function delEleveForAdmin ($eleve) {
 	$reponse = $bdd->exec("DELETE FROM `eleves` WHERE `id`=$eleve");
 	if ($reponse == FALSE){
 		return ('La suprresion de l\'élève n\'as pas pus être effectuer');
+	}
+	header('Location:admin');
+}
+
+
+// fonction permettant d'ajouter un prof
+function addProfForAdmin($nom, $prenom, $matiere) {
+	$bdd = connectionDB();
+
+  $identifiant = genereUsernameForAdmin($nom, $prenom);
+  $mdp = generePasswordForAdmin(6);
+
+	$reponse = $bdd->exec("INSERT INTO `professeurs`(`nom`, `prenom`, `matiere`, `identifiant`, `mot_de_passe`)
+	VALUES ('$nom', '$prenom', '$matiere', '$identifiant', '$mdp')");
+
+	header('Location:admin');
+}
+// fonction permettant modifier un prof
+function modifyProfForAdmin($profID, $matiere) {
+	$bdd = connectionDB();
+
+	$reponse = $bdd->exec('UPDATE `professeurs` SET `matiere`="'.$matiere.'"
+	WHERE `id`='.$profID.'');
+
+	header('Location:admin');
+}
+// fonction pour afficher la liste des eleves
+function showListProfForAdmin () {
+	$bdd = connectionDB();
+	$reponse = $bdd->query("SELECT id, matiere, prenom, nom FROM professeurs");
+	$texte = '<option value="par_default">Selectionner un professeur</option>';
+	while ($donnees = $reponse->fetch())
+	{
+		$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom']).' '.strtoupper($donnees['nom']).'</option>';
+	}
+	return $texte;
+}
+// function permettant de supprimer un prof
+function delProfForAdmin ($prof) {
+	$bdd = connectionDB ();
+	$reponse = $bdd->exec("DELETE FROM `professeurs` WHERE `id`=$prof");
+	if ($reponse == FALSE){
+		return ('La suprresion du professeur n\'as pas pus être effectuer');
 	}
 	header('Location:admin');
 }

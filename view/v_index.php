@@ -72,6 +72,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./view/js/bootstrap.min.js"></script>
     <script src="./view/jquery/jquery.min.js"></script>
+    <!-- Script pour message error or success -->
     <script>
     	$(document).ready(function() {
         $("#error:visible").each( function() { // On verifie si lelement est afficher
