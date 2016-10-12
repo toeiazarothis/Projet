@@ -101,12 +101,12 @@
                   <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
                     <div class="input-group">
                       <div class="input-group-addon">Nom de famille</div>
-                      <input type="text" name="nom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
+                      <input type="text" name="nom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom" required>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
                     <div class="input-group">
                       <div class="input-group-addon">Prenom</div>
-                      <input type="text" name="prenom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
+                      <input type="text" name="prenom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom" required>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
                     <div class="input-group">
@@ -116,27 +116,27 @@
                     <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
                     <div class="input-group">
                       <div class="input-group-addon">Nom d'un parent</div>
-                      <input type="text" name="nom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom d'un parent">
+                      <input type="text" name="nom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom d'un parent" required>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
                     <div class="input-group">
                       <div class="input-group-addon">Prenom du parent</div>
-                      <input type="text" name="prenom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom du parent">
+                      <input type="text" name="prenom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom du parent" required>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
                     <div class="input-group">
                       <div class="input-group-addon">Adresse</div>
-                      <input type="text" name="adresse_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale">
+                      <input type="text" name="adresse_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale" required>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">E-mail</label>
                     <div class="input-group">
                       <div class="input-group-addon">Courriel du parent</div>
-                      <input type="email" name="email_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent">
+                      <input type="email" name="email_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent" required>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
                     <div class="input-group">
                       <div class="input-group-addon">Numero de telephone</div>
-                      <input type="tel" name="tel_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent">
+                      <input type="tel" name="tel_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent" required>
                     </div><br>
                     <div class="row">
                       <div class="col-xs-6 col-xs-offset-3">
@@ -236,19 +236,57 @@
                   <label class="sr-only" for="exampleInputAmount">Nom du professeur</label>
                   <div class="input-group">
                     <div class="input-group-addon">Nom</div>
-                    <input type="text" class="form-control" name="nom_prof" id="exampleInputAmount" placeholder="Entrer le nom">
+                    <input type="text" class="form-control" name="nom_prof" id="exampleInputAmount" placeholder="Entrer le nom" required>
                   </div>
                   <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
                   <div class="input-group">
                     <div class="input-group-addon">Prenom</div>
-                    <input type="text" class="form-control" name="prenom_prof" id="exampleInputAmount" placeholder="Entrer le prénom">
+                    <input type="text" class="form-control" name="prenom_prof" id="exampleInputAmount" placeholder="Entrer le prénom" required>
                   </div>
-                  <label class="sr-only" for="exampleInputAmount">la matiere du professeur</label>
                   <div class="input-group">
-                    <div class="input-group-addon">Matière</div>
+                    <div class="input-group-addon">Téléphone</div>
+                    <input type="tel" class="form-control" name="tel_prof" id="exampleInputAmount" placeholder="Entrer le numéro de téléphone" required>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-addon">Adresse</div>
+                    <input type="text" class="form-control" name="adresse_prof" id="exampleInputAmount" placeholder="Entrer l'adresse postal" required>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-addon">Email</div>
+                    <input type="text" class="form-control" name="email_prof" id="exampleInputAmount" placeholder="Entrer l'email" required>
+                  </div>
+                  <label class="sr-only" for="exampleInputAmount">La matiére du professeur</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">Matière n°1</div>
                     <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
-                    <select class="form-control" name="matiere_prof" id="matiere_for_note">
-                      <option value="par_default">Sélectionner une matière</<option>
+                    <select class="form-control" name="matiere_1_prof" id="matiere_for_note">
+                      <option value="aucune">Sélectionner une matière</<option>
+                      <option value="francais">Français</<option>
+                      <option value="histoire">Histoire</<option>
+                      <option value="mathematique">Mathématique</<option>
+                      <option value="eps">EPS</<option>
+                      <option value="science">Science</<option>
+                      <option value="anglais">Anglais</<option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-addon">Matière n°2</div>
+                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
+                    <select class="form-control" name="matiere_2_prof" id="matiere_for_note">
+                      <option value="aucune">Sélectionner une matière</<option>
+                      <option value="francais">Français</<option>
+                      <option value="histoire">Histoire</<option>
+                      <option value="mathematique">Mathématique</<option>
+                      <option value="eps">EPS</<option>
+                      <option value="science">Science</<option>
+                      <option value="anglais">Anglais</<option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-addon">Matière n°3</div>
+                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
+                    <select class="form-control" name="matiere_3_prof" id="matiere_for_note">
+                      <option value="aucune">Sélectionner une matière</<option>
                       <option value="francais">Français</<option>
                       <option value="histoire">Histoire</<option>
                       <option value="mathematique">Mathématique</<option>
@@ -287,10 +325,36 @@
                     <select class="form-control" name="prof_selected"><?php echo showListProfForAdmin (); ?></select>
                   </div>
                   <div class="input-group">
-                    <div class="input-group-addon">Matière</div>
+                    <div class="input-group-addon">Matière n°1</div>
                     <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
-                    <select class="form-control" name="matiere_prof" id="matiere_for_note">
-                      <option value="par_default">Sélectionner une matière</<option>
+                    <select class="form-control" name="matiere_1_prof" id="matiere_for_note">
+                      <option value="aucune">Sélectionner une matière</<option>
+                      <option value="francais">Français</<option>
+                      <option value="histoire">Histoire</<option>
+                      <option value="mathematique">Mathématique</<option>
+                      <option value="eps">EPS</<option>
+                      <option value="science">Science</<option>
+                      <option value="anglais">Anglais</<option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-addon">Matière n°2</div>
+                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
+                    <select class="form-control" name="matiere_2_prof" id="matiere_for_note">
+                      <option value="aucune">Sélectionner une matière</<option>
+                      <option value="francais">Français</<option>
+                      <option value="histoire">Histoire</<option>
+                      <option value="mathematique">Mathématique</<option>
+                      <option value="eps">EPS</<option>
+                      <option value="science">Science</<option>
+                      <option value="anglais">Anglais</<option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-addon">Matière n°3</div>
+                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
+                    <select class="form-control" name="matiere_3_prof" id="matiere_for_note">
+                      <option value="aucune">Sélectionner une matière</<option>
                       <option value="francais">Français</<option>
                       <option value="histoire">Histoire</<option>
                       <option value="mathematique">Mathématique</<option>
@@ -364,11 +428,11 @@
                   <div class="form-horizontal">
                     <div class="input-group">
                       <div class="input-group-addon">Nom</div>
-                      <input type="text" name="nom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
+                      <input type="text" name="nom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom" required>
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Prenom</div>
-                      <input type="text" name="prenom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
+                      <input type="text" name="prenom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom" required>
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Niveau d'Administration</div>
@@ -468,7 +532,7 @@
                     <label class="sr-only" for="exampleInputAmount">Classe à ajouter</label>
                     <div class="input-group">
                       <div class="input-group-addon">Classe</div>
-                      <input type="text" class="form-control" id="exampleInputAmount" name="nom_classe" placeholder="Entrer la classe">
+                      <input type="text" class="form-control" id="exampleInputAmount" name="nom_classe" placeholder="Entrer la classe" required>
                     </div>
                   </div><br>
                   <div class="row">

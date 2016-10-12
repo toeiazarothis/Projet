@@ -584,14 +584,14 @@ function delEleveForAdmin ($eleve) {
 
 
 // fonction permettant d'ajouter un prof
-function addProfForAdmin($nom, $prenom, $matiere) {
+function addProfForAdmin($nom, $prenom, $matiere1, $matiere2, $matiere3, $tel, $adresse, $email) {
 	$bdd = connectionDB();
 
   $identifiant = genereUsernameForAdmin($nom, $prenom);
   $mdp = generePasswordForAdmin(6);
 
-	$reponse = $bdd->exec("INSERT INTO `professeurs`(`nom`, `prenom`, `matiere`, `identifiant`, `mot_de_passe`)
-	VALUES ('$nom', '$prenom', '$matiere', '$identifiant', '$mdp')");
+	$reponse = $bdd->exec("INSERT INTO `professeurs`(`nom`, `prenom`, `identifiant`, `mot_de_passe`, `tel`, `adresse`, `email`, `matiere1`, `matiere2`, `matiere3`)
+	VALUES ('$nom', '$prenom', '$identifiant', '$mdp', $tel, '$adresse', '$email' '$matiere1',  '$matiere2',  '$matiere3')");
 
 	if ($reponse == FALSE){
 		return ('L\'ajout du professeurs n\'as pas pus être effectuer!');
@@ -600,10 +600,10 @@ function addProfForAdmin($nom, $prenom, $matiere) {
 	header('Location:admin');
 }
 // fonction permettant modifier un prof
-function modifyProfForAdmin($profID, $matiere) {
+function modifyProfForAdmin($profID, $matiere1, $matiere2, $matiere3, $tel, $adresse, $email) {
 	$bdd = connectionDB();
 
-	$reponse = $bdd->exec('UPDATE `professeurs` SET `matiere`="'.$matiere.'"
+	$reponse = $bdd->exec('UPDATE `professeurs` SET `tel`='.$tel.', `adresse`="'.$adresse.'", `email`="'.$email.'", `matiere1`="'.$matiere1.'", `matiere2`="'.$matiere2.'", `matiere3`="'.$matiere3.'"
 	WHERE `id`='.$profID.'');
 
 	if ($reponse == FALSE){
@@ -616,7 +616,7 @@ function modifyProfForAdmin($profID, $matiere) {
 function showListProfForAdmin () {
 	$bdd = connectionDB();
 
-	$reponse = $bdd->query("SELECT id, matiere, prenom, nom FROM professeurs");
+	$reponse = $bdd->query("SELECT id, prenom, nom FROM professeurs");
 
 	$texte = '<option value="">Selectionner un professeur</option>';
 
@@ -640,7 +640,7 @@ function delProfForAdmin ($prof) {
 	header('Location:admin');
 }
 // function permettant d'ajouter ou modifier un membre du personnel
-function addMemberForAdmin ($nom, $prenom, $niveauAdmin) {
+function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel) {
 	$bdd = connectionDB ();
 
   $identifiant = genereUsernameForAdmin($nom, $prenom);
@@ -654,8 +654,8 @@ function addMemberForAdmin ($nom, $prenom, $niveauAdmin) {
 		}
 	}
 
-	$reponse = $bdd->exec("INSERT INTO `vie_scolaire`(`identifiant`, `nom`, `prenom`, `mot_de_passe`, `niveau_admin`)
-	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', $niveauAdmin)");
+	$reponse = $bdd->exec("INSERT INTO `vie_scolaire`(`identifiant`, `nom`, `prenom`, `mot_de_passe`, `niveau_admin`, `adresse`, `email`, `tel`)
+	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', $niveauAdmin, '$adresse', '$email', '$tel')");
 
 	if ($reponse == FALSE){
 		return ('L\'ajout d\'un membre du personnel n\'as pas pus être effectuer!');
@@ -679,10 +679,10 @@ function showListMemberForAdmin () {
 	return $texte;
 }
 //function permettant de modifier un member du personnel
-function modifyMemberForAdmin ($membre, $niveauAdmin) {
+function modifyMemberForAdmin ($membre, $niveauAdmin, $adresse, $email, $tel) {
 	$bdd = connectionDB ();
 
-	$reponse = $bdd->exec('UPDATE `vie_scolaire` SET `niveau_admin`="'.$niveauAdmin.'"
+	$reponse = $bdd->exec('UPDATE `vie_scolaire` SET `niveau_admin`="'.$niveauAdmin.'", `adresse`="'.$adresse.'", `email`="'.$email.'", `tel`="'.$tel.'"
 	WHERE `id`='.$membre.'');
 
 	if ($reponse == FALSE){
@@ -715,7 +715,7 @@ function addClasseForAdmin ($classe) {
 		}
 	}
 
-	$reponse = $bdd->exec("INSERT INTO `classe` (`nom`, `eleve`, `emploi_du_temps`, `moyenne`) VALUES ('$classe', 0, 'NO-CONFIG', 0)");
+	$reponse = $bdd->exec("INSERT INTO `classe` (`nom`, `emploi_du_temps`, `moyenne`) VALUES ('$classe', 'NO-CONFIG', 0)");
 
 	if ($reponse == FALSE) {
 		return ('L\'ajout de la classe a échoué!');
