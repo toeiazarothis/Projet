@@ -42,7 +42,7 @@
           <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Contact</h2>
-                <h3>Grâce à ces informations, vous allez pouvoir contacter l'ecole ou notre support et avoir une réponse dans les plus brefs délais.</h3>
+                <h3>Grâce à ces informations, vous allez pouvoir contacter l'école ou notre support et avoir une réponse dans les plus brefs délais.</h3>
             </div>
           </div><br>
           <div class="row text-center">
