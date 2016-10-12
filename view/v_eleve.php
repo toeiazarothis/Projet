@@ -242,13 +242,18 @@
       </div>
     </section>
     <!-- Fin liste des devoirs scolaires -->
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
     <!-- Appreciation donné par le prof principal -->
     <section id="appreciation" class="bg-light-gray">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
+            <br><br><br>
               <h2 class="section-heading">Les Appréciations</h2>
               <h3 class="section-subheading text-muted">Ici se trouve les appréciations données par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+            <br><br><br>
               <br><br>
           </div>
         </div>
@@ -268,6 +273,7 @@
             </div>
           </div>
         </div>
+        <br><br><br>
       </div>
     </section>
     <!-- Fin appreciation donné par le prof principal -->
