@@ -152,7 +152,7 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
               <h2 class="section-heading">Déclaration d'abscence</h2>
-              <h3 class="section-subheading text-muted">Pour déclarer l'absence d'un élève, il vous suffit de choisir son nom et de cliquer dessus, pour ensuite envoyer l'information au parent et dans l'espace vie scolaire</h3>
+              <h3 class="section-subheading text-muted">Pour déclarer l'absence d'un élève, il vous suffit de choisir son nom et de cliquer dessus pour ensuite envoyer l'information au parent et dans l'espace vie scolaire</h3>
           </div>
         </div>
         <div class="row">
@@ -171,9 +171,9 @@
                   </label> -->
                 </div>
                 <br><br>
-                <input type="checkbox" id="inlineCheckbox1" name="validate_abs" value="yes">Confirmer les absence
+                <input type="checkbox" id="inlineCheckbox1" name="validate_abs" value="yes">Confirmer les absences
                 <br><br>
-                <button class="btn btn-success">Valider les absence</button>
+                <button class="btn btn-success">Valider les absences</button>
               </form>
           </div>
         </div>
