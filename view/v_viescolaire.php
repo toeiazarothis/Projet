@@ -74,35 +74,36 @@
     <section id="absEleve" class="bg-light-gray">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 col-md-offset-1 text-center">
+          <div class="col-md-6 col-md-offset-3 text-center">
             <h2 class="section-heading">Absence d'élève</h2>
             <h3 class="section-subheading text-muted">Déclarer l'absence d'un élève</h3>
           </div>
         </div>
         <div class="row text-center">
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Absence</a>
-                </h4>
-              </div>
-              <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">Liste des élèves absents.</div>
-                  <select class="form-control">
-                    <option>Liste des élèves à déclarer absent</option>
-                  </select>
-                  <br>
-                  Déclarer l'élève absent ?
-                  <br>
-                  <a class="btn btn-success" href="#" role="button">Oui</a>
-                  <a class="btn btn-danger" href="#" role="button">Non</a>
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Absence</a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">Liste des élèves absents.</div>
+                    <select class="form-control">
+                      <option>Liste des élèves à déclarer absent</option>
+                    </select>
+                    <br>
+                    Déclarer l'élève absent ?
+                    <br>
+                    <a class="btn btn-success" href="#" role="button">Oui</a>
+                    <a class="btn btn-danger" href="#" role="button">Non</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
     <!-- Fin absence d'eleve -->
 
@@ -110,12 +111,13 @@
     <section id="absProf">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 col-md-offset-1 text-center">
+          <div class="col-md-8 col-md-offset-2 text-center">
             <h2 class="section-heading">Absence de professeur</h2>
             <h3 class="section-subheading text-muted">Déclarer l'absence d'un professeur</h3>
           </div>
         </div>
-          <div class="row text-center">
+        <div class="row text-center">
+          <div class="col-md-6 col-md-offset-3 text-center">
             <div class="panel-group" id="accordion">
               <div class="panel panel-default">
                 <div class="panel-heading">
