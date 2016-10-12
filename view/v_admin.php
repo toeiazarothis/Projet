@@ -433,6 +433,8 @@
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Suppresion du personnel </h2>
                 <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
+              </div>
+              <div class="col-md-6 col-md-offset-3 text-center">
                 <form action="admin" method="post">
                   <select class="form-control col-md-6" name="list_member_for_del">
                     <?php echo showListMemberForAdmin (); ?>
@@ -476,22 +478,9 @@
                   </div>
                 </form>
               </div>
-          </div>
-        </section>
-        <!-- <section id="majClasse">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Modification d'une classe </h2>
-                <h3 class="section-subheading text-muted">Mettez a jour le nom d'une classe</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des classes</option>
-                </select>
-                <input class="btn btn-success"type="submit" name="submit" value="Modifier la classe">
-              </div>
             </div>
           </div>
-        </section> -->
+        </section>
         <section id="deleteClasse">
           <div class="container">
             <div class="row">
@@ -499,6 +488,8 @@
                 <h2 class="section-heading">Suppresion d'une classe</h2>
                 <h3 class="section-subheading text-muted">Supprimer la classe</h3>
                 <br>
+              </div>
+              <div class="col-md-6 col-md-offset-3 text-center">
                 <form action="admin" method="post">
                   <select class="form-control col-md-6" name="classe_select_for_del">
                     <?php echo showListAllClassForAdmin(); ?>
