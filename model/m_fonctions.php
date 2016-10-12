@@ -58,6 +58,9 @@ function errorOrSuccesOnSite($errorOrSucces) {
 	if($errorOrSucces == 18){//suppression classe
 		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a été retirer de la base de donnée/div>';
 	}
+	if($errorOrSucces == 19) { //erreur ajout classe
+		$texte.= '<div class="alert alert-danger" style="position:fixed; width:100%">Cette classe existe déjà</div>';
+	}
 	return $texte;
 }
 
@@ -127,13 +130,14 @@ function verifPassIsUser ($user, $pass) {
 		return header('Location:prof');
 	}
 	else if ($_SESSION['stats'] == 'viescolaire') {
-		$reponse = $bdd->query('SELECT mot_de_passe FROM vie_scolaire WHERE id='.$id.'');
+		$reponse = $bdd->query('SELECT mot_de_passe, niveau_admin FROM vie_scolaire WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
 			return header('Location:accueil?error=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
+		$_SESSION['niveau_admin'] = $donnees['niveau_admin'];
 		return header('Location:viescolaire');
 	}
 }
@@ -145,22 +149,30 @@ function verifPassIsUser ($user, $pass) {
 // pour l'affichage des note dans la parti eleve
 function matiereForEleve ($userID, $matiere) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query('SELECT eleve, note, matiere FROM notes ORDER BY id DESC');
+
 	$texte = '';
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['eleve'] == $userID && $donnees['matiere'] == $matiere) {
 			$texte .= $donnees['note'].'/20 ';
 		}
 	}
+
 	return $texte;
 }
 // fonction pour afficher la moyenne de lamatiere X
 function moyenneForMatiereForEleve ($userID, $matiere) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query('SELECT eleve, note, matiere FROM notes ORDER BY id DESC');
+
 	$nbNote = 0;
+
 	$additionNote = 0;
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['eleve'] == $userID && $donnees['matiere'] == $matiere) {
@@ -168,6 +180,7 @@ function moyenneForMatiereForEleve ($userID, $matiere) {
 			$nbNote += 1;
 		}
 	}
+
 	if ($additionNote > 1) {
 		$moyenneGeneral = $additionNote / $nbNote;
 		$_SESSION['moyenneGeneral'] += $moyenneGeneral;
@@ -180,14 +193,18 @@ function moyenneForEleve () {
 	if (isset ($_SESSION['moyenneGeneral'], $_SESSION['nbNoteMoyenneGeneral'])) {
 		$moyenneGeneral = $_SESSION['moyenneGeneral'] / $_SESSION['nbNoteMoyenneGeneral'];
 	}
+
 	return $moyenneGeneral;
 }
 // fin de la parti d'affichage des note
 // debut de la parti permettant d'afficher les devoir et les cours dans la parti eleve
 function devoirForEleve ($userID, $classe, $matiere) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT matiere, contenu, devoir FROM cours_devoirs WHERE classe='$classe' ORDER BY id DESC");
+
 	$texte = '';
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['matiere'] == $matiere) {
@@ -195,14 +212,18 @@ function devoirForEleve ($userID, $classe, $matiere) {
 			$texte .= '<h3>Les devoirs</h3><p>'.$donnees['devoir'].'</p>';
 		}
 	}
+
 	return $texte;
 }
 // fin de la parti permmetrant dafficher les devoir et les cours d'un eleve
 // debut de la parti permettant d'afficher l'appreciation de l'eleve
 function appreciationForEleve ($userID) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT id, appreciation_eleve FROM eleves WHERE id=$userID");
+
 	$donnees = $reponse->fetch();
+
 	return $donnees['appreciation_eleve'];
 }
 // fin de la parti permettant d'afficher l'appreciation de l'eleve
@@ -218,12 +239,16 @@ if (isset($_POST['matiere_for_note'])) {
 
 function afficherListeClasseForProf () {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT id, nom FROM classe");
-	$texte = '<option value="par_default">Sélectionner une classe</option>';
+
+	$texte = '<option value="">Sélectionner une classe</option>';
+
 	while ($donnees = $reponse->fetch())
 	{
 		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
 	}
+
 	return $texte;
 }
 // fin de la parti permettant d'afficher les classe
@@ -232,10 +257,14 @@ function afficherListeClasseForProf () {
 if (isset($_POST['eleve_for_note'])) {
   echo afficherListeEleveDansClassePourNote($_POST['eleve_for_note']);
 }
+
 function afficherListeEleveDansClassePourNote ($classe) {
  	$bdd = connectionDB();
+
  	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+
  	$texte = '';
+
  	while ($donnees = $reponse->fetch())
  	{
  		if ($donnees['classe'] == $classe) {
@@ -248,16 +277,20 @@ function afficherListeEleveDansClassePourNote ($classe) {
  				</div>';
  		}
  	}
+
  	return $texte;
 }
 
 // fonction permettant d'envoyer la note dans la colonne note de la table Eleve de la BDD
 function sendNoteForProf ($eleve, $matiere, $classe, $note) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->exec('INSERT INTO `notes` (`eleve`, `matiere`, `classe`, `note`) VALUES ('.$eleve.', "'.$matiere.'", "'.$classe.'", '.$note.')');
+
 	if ($reponse == FALSE){
 		echo ('La note n\'as pas pus être ajouter!');
 	}
+
 	echo 'La note a bien été envoyer dans la BDD';
 }
 //fin de la parti dajout de note
@@ -266,7 +299,9 @@ function sendNoteForProf ($eleve, $matiere, $classe, $note) {
 // function permettant d'envoyer les cours et devoir dans la BDD
 function sendCoursAndDevoirForProf ($matiere, $classe, $cours, $devoir){
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query('SELECT `id`, `matiere`, `classe`, `contenu`, `devoir` FROM `cours_devoirs` WHERE classe="'.$classe.'"');
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['matiere'] == $matiere) {
@@ -277,10 +312,13 @@ function sendCoursAndDevoirForProf ($matiere, $classe, $cours, $devoir){
 			header('Location:prof');
 		}
 	}
+
 	$reponse = $bdd->exec('INSERT INTO `cours_devoirs`(`matiere`, `classe`, `contenu`, `devoir`) VALUES ("'.$matiere.'", "'.$classe.'", "'.$cours.'", "'.$devoir.'")');
+
 	if ($reponse == FALSE){
 		echo ('Les devoirs n\'ont pas pus être ajouter!');
 	}
+
 	header('Location:prof');
 }
 // fin de la parti pour ajouter les cours et devoir
@@ -293,8 +331,11 @@ if (isset($_POST['eleve_for_absence'])) {
 // fonction pour afficher la liste des eleve en fonction de la classe.
 function showListEleveForAbsence ($classe) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
+
 	$texte = '<h4>Liste des élèves:</h4>';
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
@@ -303,25 +344,32 @@ function showListEleveForAbsence ($classe) {
 			</label>';
 		}
 	}
+
 	return $texte;
 }
 // fonction permettant de preparer l'envoye des absences
 function prepareForSendAbsence ($classe) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query('SELECT MAX(id), classe FROM eleves WHERE classe="'.$_POST['classe_for_absent'].'"');
+
 	$idEleve = 0;
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
 			$idEleve = $donnees['MAX(id)'];
 		}
 	}
+
 	return $idEleve;
 }
 // fonction permmettant d'envoyer l'absence dans la BDD
 function sendAbsenceEleveForProf ($idEleve) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->exec('INSERT INTO `absence`(`id_prof`, `id_eleve`, `date_debut`, `date_fin`, `motif`) VALUES (0, '.$idEleve.', "'.date('y-m-d').'", "'.date('y-m-d').'", "NO-CONFIG")');
+
 	if ($reponse == FALSE){
 		echo ('Les absences n\'ont pas pus être ajouter!');
 	}
@@ -336,23 +384,30 @@ if (isset($_POST['classe_appreciation'])) {
 // fonction permettant d'afficher les eleve a parti d'une classe
 function afficherListeEleveForProf($classe) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
-	$texte = '<option value="par_default">Selectionner un élève</option>';
+
+	$texte = '<option value="">Selectionner un élève</option>';
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
 			$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</option>';
 		}
 	}
+
 	return $texte;
 }
 // fonction permettant de sauvegarder l'appreciation dans la BDD
 function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->exec('UPDATE `eleves` SET `appreciation_eleve`= "'.$apreciation.'" WHERE id='.$eleve.'');
+
 	if ($reponse == FALSE){
 		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
 	}
+
 	header('Location:prof');
 }
 //fin de la parti ajouter une appreciation
@@ -386,28 +441,42 @@ function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_
   $mdp = generePasswordForAdmin(6);
 
 	$reponse = $bdd->query("SELECT id, nom_eleve, prenom_eleve FROM eleves");
+
 	while ($donnees = $reponse->fetch()) {
 		if ($donnees['nom_eleve'] == $nom && $donnees['prenom_eleve'] == $prenom) {
 			$reponse = $bdd->exec('UPDATE `eleves` SET `classe`="'.$classe.'",`identifiant`="'.$identifiant.'",`nom_parent`="'.$nom_parent.'",`prenom_parent`="'.$prenom_parent.'",`adresse_parent`="'.$adresse_parent.'",`email_parent`="'.$email_parent.'",`tel_parent`="'.$tel_parent.'"
 			WHERE `id`='.$donnees['id'].'');
 
+			if ($reponse == FALSE){
+				return ('La mise à jour de l\'élève n\'as pas pus être effectuer!');
+			}
+
 			header('Location:admin');
 		}
 	}
+
 	$reponse = $bdd->exec("INSERT INTO `eleves`(`nom_eleve`, `prenom_eleve`, `classe`, `identifiant`, `mot_de_passe`, `nom_parent`, `prenom_parent`, `adresse_parent`, `email_parent`, `tel_parent`, `appreciation_eleve`)
 	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation.')");
+
+	if ($reponse == FALSE){
+		return ('L\'ajout de l\'élève n\'as pas pus être effectuer!');
+	}
 
 	header('Location:admin');
 }
 // fonction pour afficher la liste des classes
 function showListAllClassForAdmin () {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT nom FROM classe");
-	$texte = '<option value="par_default">Selectionner une classe</option>';
+
+	$texte = '<option value="">Selectionner une classe</option>';
+
 	while ($donnees = $reponse->fetch())
 	{
 		$texte .= '<option value="'.$donnees['nom'].'">'.$donnees['nom'].'</option>';
 	}
+
 	return $texte;
 }
 // condition pour verifier si on lance la fonction showListEleveForAdmin
@@ -421,14 +490,18 @@ if (isset($_POST['list_eleve_for_del'])) {
 // fonction pour afficher la liste des eleves
 function showListEleveForAdmin ($classe) {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve FROM eleves");
-	$texte = '<option value="par_default">Selectionner un élève</option>';
+
+	$texte = '<option value="">Selectionner un élève</option>';
+
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['classe'] == $classe) {
 			$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</option>';
 		}
 	}
+
 	return $texte;
 }
 // condition permettant de lancer la fonction showFormulaireForMajEleveForAdmin
@@ -438,8 +511,11 @@ if (isset ($_POST['formulaire_eleve_for_maj'])) {
 // fonction permettant d'afficher le formulaire pour la MAJ eleve
 function showFormulaireForMajEleveForAdmin ($eleve) {
 	$bdd = connectionDB ();
+
 	$reponse = $bdd->query("SELECT id, classe, prenom_eleve, nom_eleve, nom_parent, prenom_parent, adresse_parent, email_parent, tel_parent FROM eleves WHERE id=$eleve");
+
 	$donnees = $reponse->fetch();
+
 	$texte = '<form action="admin" method="post">
 		<div class="form-group">
 		<fieldset disabled>
@@ -496,10 +572,13 @@ function showFormulaireForMajEleveForAdmin ($eleve) {
 // function permettant de supprimer un eleve
 function delEleveForAdmin ($eleve) {
 	$bdd = connectionDB ();
+
 	$reponse = $bdd->exec("DELETE FROM `eleves` WHERE `id`=$eleve");
+
 	if ($reponse == FALSE){
 		return ('La suprresion de l\'élève n\'as pas pus être effectuer');
 	}
+
 	header('Location:admin');
 }
 
@@ -514,6 +593,10 @@ function addProfForAdmin($nom, $prenom, $matiere) {
 	$reponse = $bdd->exec("INSERT INTO `professeurs`(`nom`, `prenom`, `matiere`, `identifiant`, `mot_de_passe`)
 	VALUES ('$nom', '$prenom', '$matiere', '$identifiant', '$mdp')");
 
+	if ($reponse == FALSE){
+		return ('L\'ajout du professeurs n\'as pas pus être effectuer!');
+	}
+
 	header('Location:admin');
 }
 // fonction permettant modifier un prof
@@ -523,26 +606,133 @@ function modifyProfForAdmin($profID, $matiere) {
 	$reponse = $bdd->exec('UPDATE `professeurs` SET `matiere`="'.$matiere.'"
 	WHERE `id`='.$profID.'');
 
+	if ($reponse == FALSE){
+		return ('La mise à jour du professeur n\'as pas pus être effectuer!');
+	}
+
 	header('Location:admin');
 }
 // fonction pour afficher la liste des eleves
 function showListProfForAdmin () {
 	$bdd = connectionDB();
+
 	$reponse = $bdd->query("SELECT id, matiere, prenom, nom FROM professeurs");
-	$texte = '<option value="par_default">Selectionner un professeur</option>';
+
+	$texte = '<option value="">Selectionner un professeur</option>';
+
 	while ($donnees = $reponse->fetch())
 	{
 		$texte .= '<option value="'.$donnees['id'].'">'.ucfirst($donnees['prenom']).' '.strtoupper($donnees['nom']).'</option>';
 	}
+
 	return $texte;
 }
 // function permettant de supprimer un prof
 function delProfForAdmin ($prof) {
 	$bdd = connectionDB ();
+
 	$reponse = $bdd->exec("DELETE FROM `professeurs` WHERE `id`=$prof");
+
 	if ($reponse == FALSE){
-		return ('La suprresion du professeur n\'as pas pus être effectuer');
+		return ('La suppresion du professeur n\'as pas pus être effectuer');
 	}
+
+	header('Location:admin');
+}
+// function permettant d'ajouter ou modifier un membre du personnel
+function addMemberForAdmin ($nom, $prenom, $niveauAdmin) {
+	$bdd = connectionDB ();
+
+  $identifiant = genereUsernameForAdmin($nom, $prenom);
+  $mdp = generePasswordForAdmin(6);
+
+	$reponse = $bdd->query("SELECT id, nom, prenom, identifiant FROM vie_scolaire");
+
+	while ($donnees = $reponse->fetch()) {
+		if ($donnees['nom'] == $nom && $donnees['prenom'] == $prenom) {
+			return header('Location:admin?error=20');//utilsateur existe deja
+		}
+	}
+
+	$reponse = $bdd->exec("INSERT INTO `vie_scolaire`(`identifiant`, `nom`, `prenom`, `mot_de_passe`, `niveau_admin`)
+	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', $niveauAdmin)");
+
+	if ($reponse == FALSE){
+		return ('L\'ajout d\'un membre du personnel n\'as pas pus être effectuer!');
+	}
+
+	header('Location:admin');
+}
+// function permettant d'afficher la liste des membre du personnel
+function showListMemberForAdmin () {
+	$bdd = connectionDB();
+
+	$reponse = $bdd->query("SELECT id, prenom, nom FROM vie_scolaire");
+
+	$texte = '<option value="">Selectionner un membre du personnel</option>';
+
+	while ($donnees = $reponse->fetch())
+	{
+		$texte .= '<option value="'.$donnees['id'].'">'.strtoupper($donnees['nom']).' '.ucfirst($donnees['prenom']).'</option>';
+	}
+
+	return $texte;
+}
+//function permettant de modifier un member du personnel
+function modifyMemberForAdmin ($membre, $niveauAdmin) {
+	$bdd = connectionDB ();
+
+	$reponse = $bdd->exec('UPDATE `vie_scolaire` SET `niveau_admin`="'.$niveauAdmin.'"
+	WHERE `id`='.$membre.'');
+
+	if ($reponse == FALSE){
+		return ('La mise à jour du membre du personnel n\'as pas pus être effectuer!');
+	}
+
+	header('Location:admin');
+}
+// function permettant de supprimer un membre du personnel
+function delMemberForAdmin ($member) {
+	$bdd = connectionDB ();
+
+	$reponse = $bdd->exec("DELETE FROM `vie_scolaire` WHERE `id`=$member");
+
+	if ($reponse == FALSE){
+		return ('La suppresion du membre du personnel n\'as pas pus être effectuer');
+	}
+
+	header('Location:admin');
+}
+// function permettant d'ajouter une classe
+function addClasseForAdmin ($classe) {
+	$bdd = connectionDB ();
+
+	$reponse = $bdd->query("SELECT id, nom FROM classe");
+
+	while ($donnees = $reponse->fetch()) {
+		if ($donnees['nom'] == $classe) {
+			return header('Location:admin?error=19');
+		}
+	}
+
+	$reponse = $bdd->exec("INSERT INTO `classe` (`nom`, `eleve`, `emploi_du_temps`, `moyenne`) VALUES ('$classe', 0, 'NO-CONFIG', 0)");
+
+	if ($reponse == FALSE) {
+		return ('L\'ajout de la classe a échoué!');
+	}
+
+	header('Location:admin');
+}
+// function permettant de supprimer une classe
+function delClasseForAdmin ($classe) {
+	$bdd = connectionDB ();
+
+	$reponse = $bdd->exec("DELETE FROM `classe` WHERE `nom`='$classe'");
+
+	if ($reponse == FALSE) {
+		return ('La suppresion de la classe n\'as pas pus être effectuer');
+	}
+
 	header('Location:admin');
 }
 // fin de la parti page administration

@@ -68,7 +68,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Classe<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#ajoutClasse" class="js-scrollTo">Ajout</a></li>
-                <li><a href="#majClasse" class="js-scrollTo">Mise à jour</a></li>
+                <!-- <li><a href="#majClasse" class="js-scrollTo">Mise à jour</a></li> -->
                 <li><a href="#deleteClasse" class="js-scrollTo">Suppression</a></li>
               </ul>
             </li>
@@ -165,7 +165,7 @@
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center" id="list_classe_for_maj">
               <h4>Liste des classes</h4>
-              <select class="form-control"><?php echo showListAllClassForAdmin(); ?></select>
+              <select class="form-control"><?php echo showListAllClassForAdmin (); ?></select>
             </div>
             <div class="col-md-6 col-md-offset-3 text-center" id="for_list_eleve_for_maj">
               <h4>Liste des élèves</h4>
@@ -354,10 +354,39 @@
           <div class="container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Ajout </h2>
-                <h3 class="section-subheading text-muted">Rajouter un membre du personnel</h3>
+                <h2 class="section-heading">Ajout d'un membre du personnel</h2>
+                <h3 class="section-subheading text-muted">Ajouter un membre du personnel</h3>
               </div>
-            </div>
+            </div><br>
+            <form action="admin" method="post">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
+                  <div class="form-horizontal">
+                    <div class="input-group">
+                      <div class="input-group-addon">Nom</div>
+                      <input type="text" name="nom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Prenom</div>
+                      <input type="text" name="prenom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Niveau d'Administration</div>
+                      <select class="form-control" name="niveau_d_admin">
+                        <option value="0">Pas accès au panel d'Administration</option>
+                        <option value="1">Accès limité au panel d'Administration</option>
+                        <option value="2">Accès total au panel d'Administration</option>
+                      </select>
+                    </div><br>
+                    <div class="row">
+                      <div class="col-xs-6 col-xs-offset-3">
+                        <button class="btn btn-success">Ajouter le membre du personnel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </section>
         <section id="majPersonnel">
@@ -366,10 +395,34 @@
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Mise à jour du personnel </h2>
                 <h3 class="section-subheading text-muted">Mettre à jour un membre du personnel</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des membres du personnel</option>
-                </select>
-                <input class="btn btn-success"type="submit" name="submit" value="Modifier le membre du personnel">
+                <br>
+                <form action="admin" method="post">
+                  <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
+                      <div class="form-horizontal">
+                        <div class="input-group">
+                          <div class="input-group-addon">Membre</div>
+                          <select class="form-control col-md-6" name="list_member_for_modify">
+                            <?php echo showListMemberForAdmin (); ?>
+                          </select><br>
+                        </div>
+                        <div class="input-group">
+                          <div class="input-group-addon">Niveau d'Administration</div>
+                          <select class="form-control" name="niveau_d_admin_for_modify">
+                            <option value="0">Pas accès au panel d'Administration</option>
+                            <option value="1">Accès limité au panel d'Administration</option>
+                            <option value="2">Accès total au panel d'Administration</option>
+                          </select>
+                        </div><br>
+                        <div class="row">
+                          <div class="col-xs-6 col-xs-offset-3">
+                            <button class="btn btn-success">Modifier le membre du personnel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -380,10 +433,15 @@
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Suppresion du personnel </h2>
                 <h3 class="section-subheading text-muted">Supprimer un membre du personnel</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des membres du personnel</option>
-                </select>
-                <input class="btn btn-danger"type="submit" name="submit" value="Supprimer le membre du personnel !">
+                <form action="admin" method="post">
+                  <select class="form-control col-md-6" name="list_member_for_del">
+                    <?php echo showListMemberForAdmin (); ?>
+                  </select>
+                  <br><br>
+                  <input type="checkbox" name="confim_del_member" value="yes"> Confirmer la suppression du membre du personnel</input>
+                  <br><br>
+                  <button class="btn btn-danger">Supprimer le membre du personnel !</button>
+                </form>
               </div>
             </div>
           </div>
@@ -398,23 +456,29 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Ajout d'une classe</h2>
-                <h3 class="section-subheading text-muted">Rajouter une classe</h3>
+                <h3 class="section-subheading text-muted">Ajouter une classe</h3>
               </div>
             </div><br>
-
             <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">classe à rajouter</label>
-                <div class="input-group">
-                  <div class="input-group-addon">Classe</div>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postal">
-                </div>
+                <form action="admin" method="post">
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputAmount">Classe à ajouter</label>
+                    <div class="input-group">
+                      <div class="input-group-addon">Classe</div>
+                      <input type="text" class="form-control" id="exampleInputAmount" name="nom_classe" placeholder="Entrer la classe">
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                      <button class="btn btn-success">Ajouter la classe</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-            </div>
           </div>
         </section>
-        <section id="majClasse">
+        <!-- <section id="majClasse">
           <div class="container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1 text-center">
@@ -427,17 +491,27 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <section id="deleteClasse">
           <div class="container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1 text-center">
                 <h2 class="section-heading">Suppresion d'une classe</h2>
                 <h3 class="section-subheading text-muted">Supprimer la classe</h3>
-                <select class="form-control col-md-6">
-                  <option>Liste des classes</option>
-                </select>
-                <input class="btn btn-danger" type="submit" name="submit" value="Supprimer la classe">
+                <br>
+                <form action="admin" method="post">
+                  <select class="form-control col-md-6" name="classe_select_for_del">
+                    <?php echo showListAllClassForAdmin(); ?>
+                  </select>
+                  <br><br>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      <input type="checkbox" name="del_classe" value="yes"> Confirmer la suppression de la classe</input>
+                      <br><br>
+                      <button class="btn btn-danger">Supprimer le classe !</button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

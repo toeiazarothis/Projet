@@ -19,6 +19,10 @@ if($_SESSION['stats'] != 'viescolaire') {
 	}
 }
 
+if($_SESSION['niveau_admin'] < 1){
+	return header('Location:viescolaire');
+}
+
 if (isset($_POST['nom_eleve'], $_POST['prenom_eleve'], $_POST['classe_eleve'], $_POST['nom_parent'], $_POST['prenom_parent'], $_POST['adresse_parent'], $_POST['email_parent'], $_POST['tel_parent'])) {
   return addAndModifyEleveForAdmin (strtolower($_POST['nom_eleve']), strtolower($_POST['prenom_eleve']), strtolower($_POST['classe_eleve']), strtolower($_POST['nom_parent']), strtolower($_POST['prenom_parent']), strtolower($_POST['adresse_parent']), strtolower($_POST['email_parent']), strtolower($_POST['tel_parent']));
 }
@@ -36,10 +40,28 @@ if (isset ($_POST['prof_selected'], $_POST['matiere_prof'])) {
 }
 
 if (isset ($_POST['prof_for_del'], $_POST['del_prof'])) {
-	return delProfForAdmin ($_POST['prof_for_del']);
+	return delProfForAdmin (strtolower($_POST['prof_for_del']));
 }
 
+if (isset ($_POST['nom_member'], $_POST['prenom_member'], $_POST['niveau_d_admin'])) {
+	return addMemberForAdmin (strtolower($_POST['nom_member']), strtolower($_POST['prenom_member']), strtolower($_POST['niveau_d_admin']));
+}
 
+if (isset ($_POST['list_member_for_modify'], $_POST['niveau_d_admin_for_modify'])) {
+	return modifyMemberForAdmin (strtolower($_POST['list_member_for_modify']), strtolower($_POST['niveau_d_admin_for_modify']));
+}
+
+if (isset ($_POST['list_member_for_del'], $_POST['confim_del_member'])) {
+	return delMemberForAdmin (strtolower($_POST['list_member_for_del']));
+}
+
+if (isset ($_POST['nom_classe'])) {
+	return addClasseForAdmin (strtolower($_POST['nom_classe']));
+}
+
+if (isset ($_POST['classe_select_for_del'], $_POST['del_classe'])) {
+	return delClasseForAdmin (strtolower($_POST['classe_select_for_del']));
+}
 
 include ('../view/v_admin.php');
 ?>
