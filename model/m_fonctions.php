@@ -119,14 +119,16 @@ function verifPassIsUser ($user, $pass) {
 		return header('Location:eleve');
 	}
 	else if ($_SESSION['stats'] == 'prof') {
-		$reponse = $bdd->query('SELECT mot_de_passe, matiere FROM professeurs WHERE id='.$id.'');
+		$reponse = $bdd->query('SELECT mot_de_passe, matiere1, matiere2, matiere3 FROM professeurs WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
 			return header('Location:accueil?error=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
-		$_SESSION['p_matiere'] = $donnees['matiere'];
+		$_SESSION['p_matiere_1'] = $donnees['matiere1'];
+		$_SESSION['p_matiere_2'] = $donnees['matiere2'];
+		$_SESSION['p_matiere_3'] = $donnees['matiere3'];
 		return header('Location:prof');
 	}
 	else if ($_SESSION['stats'] == 'viescolaire') {
@@ -444,7 +446,7 @@ function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_
 
 	while ($donnees = $reponse->fetch()) {
 		if ($donnees['nom_eleve'] == $nom && $donnees['prenom_eleve'] == $prenom) {
-			$reponse = $bdd->exec('UPDATE `eleves` SET `classe`="'.$classe.'",`identifiant`="'.$identifiant.'",`nom_parent`="'.$nom_parent.'",`prenom_parent`="'.$prenom_parent.'",`adresse_parent`="'.$adresse_parent.'",`email_parent`="'.$email_parent.'",`tel_parent`="'.$tel_parent.'"
+			$reponse = $bdd->exec('UPDATE `eleves` SET `classe`="'.$classe.'",`nom_parent`="'.$nom_parent.'",`prenom_parent`="'.$prenom_parent.'",`adresse_parent`="'.$adresse_parent.'",`email_parent`="'.$email_parent.'",`tel_parent`="'.$tel_parent.'"
 			WHERE `id`='.$donnees['id'].'');
 
 			if ($reponse == FALSE){
@@ -591,13 +593,77 @@ function addProfForAdmin($nom, $prenom, $matiere1, $matiere2, $matiere3, $tel, $
   $mdp = generePasswordForAdmin(6);
 
 	$reponse = $bdd->exec("INSERT INTO `professeurs`(`nom`, `prenom`, `identifiant`, `mot_de_passe`, `tel`, `adresse`, `email`, `matiere1`, `matiere2`, `matiere3`)
-	VALUES ('$nom', '$prenom', '$identifiant', '$mdp', $tel, '$adresse', '$email' '$matiere1',  '$matiere2',  '$matiere3')");
+	VALUES
+	('$nom', '$prenom', '$identifiant', '$mdp', '$tel', '$adresse', '$email', '$matiere1', '$matiere2', '$matiere3')");
 
 	if ($reponse == FALSE){
 		return ('L\'ajout du professeurs n\'as pas pus être effectuer!');
 	}
 
 	header('Location:admin');
+}
+// condition permettant de lancer la fonction showFormulaireProfForAdmin
+if (isset ($_POST['formulaire_for_modify_prof'])) {
+	echo showFormulaireProfForAdmin ($_POST['formulaire_for_modify_prof']);
+}
+// fonction permettant d'afficher des information d'un prof
+function showFormulaireProfForAdmin ($prof) {
+	$bdd = connectionDB ();
+
+	$reponse = $bdd->query("SELECT id, adresse, email, tel FROM professeurs WHERE id=$prof");
+
+	$donnees = $reponse->fetch();
+
+	$texte = '<div class="input-group">
+		<div class="input-group-addon">Téléphone</div>
+		<input type="tel" class="form-control" name="tel_prof" id="exampleInputAmount" value="'.$donnees['tel'].'" required>
+	</div>
+	<div class="input-group">
+		<div class="input-group-addon">Adresse</div>
+		<input type="text" class="form-control" name="adresse_prof" id="exampleInputAmount" value="'.$donnees['adresse'].'" required>
+	</div>
+	<div class="input-group">
+		<div class="input-group-addon">Email</div>
+		<input type="text" class="form-control" name="email_prof" id="exampleInputAmount" value="'.$donnees['email'].'" required>
+	</div>
+	<div class="input-group">
+		<div class="input-group-addon">Matière n°1</div>
+		<select class="form-control" name="matiere_1_prof" id="matiere_for_note">
+			<option value="aucune">Sélectionner une matière</<option>
+			<option value="francais">Français</<option>
+			<option value="histoire">Histoire</<option>
+			<option value="mathematique">Mathématique</<option>
+			<option value="eps">EPS</<option>
+			<option value="science">Science</<option>
+			<option value="anglais">Anglais</<option>
+		</select>
+	</div>
+	<div class="input-group">
+		<div class="input-group-addon">Matière n°2</div>
+		<select class="form-control" name="matiere_2_prof" id="matiere_for_note">
+			<option value="aucune">Sélectionner une matière</<option>
+			<option value="francais">Français</<option>
+			<option value="histoire">Histoire</<option>
+			<option value="mathematique">Mathématique</<option>
+			<option value="eps">EPS</<option>
+			<option value="science">Science</<option>
+			<option value="anglais">Anglais</<option>
+		</select>
+	</div>
+	<div class="input-group">
+		<div class="input-group-addon">Matière n°3</div>
+		<select class="form-control" name="matiere_3_prof" id="matiere_for_note">
+			<option value="aucune">Sélectionner une matière</<option>
+			<option value="francais">Français</<option>
+			<option value="histoire">Histoire</<option>
+			<option value="mathematique">Mathématique</<option>
+			<option value="eps">EPS</<option>
+			<option value="science">Science</<option>
+			<option value="anglais">Anglais</<option>
+		</select>
+	</div>';
+
+	return $texte;
 }
 // fonction permettant modifier un prof
 function modifyProfForAdmin($profID, $matiere1, $matiere2, $matiere3, $tel, $adresse, $email) {

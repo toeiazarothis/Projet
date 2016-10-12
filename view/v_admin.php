@@ -226,7 +226,7 @@
           <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
               <h2 class="section-heading">Ajout de professeur</h2>
-              <h3 class="section-subheading text-muted">Rajouter un professeur</h3>
+              <h3 class="section-subheading text-muted">Ajouter un professeur</h3>
             </div>
           </div><br>
           <div class="row">
@@ -320,48 +320,12 @@
             <form action="admin" method="post">
               <div class="col-md-6 col-md-offset-3 text-center">
                 <div class="row">
-                  <div class="input-group">
+                  <div class="input-group" id="for_prof_selected">
                     <div class="input-group-addon">Professeur</div>
                     <select class="form-control" name="prof_selected"><?php echo showListProfForAdmin (); ?></select>
                   </div>
-                  <div class="input-group">
-                    <div class="input-group-addon">Matière n°1</div>
-                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
-                    <select class="form-control" name="matiere_1_prof" id="matiere_for_note">
-                      <option value="aucune">Sélectionner une matière</<option>
-                      <option value="francais">Français</<option>
-                      <option value="histoire">Histoire</<option>
-                      <option value="mathematique">Mathématique</<option>
-                      <option value="eps">EPS</<option>
-                      <option value="science">Science</<option>
-                      <option value="anglais">Anglais</<option>
-                    </select>
-                  </div>
-                  <div class="input-group">
-                    <div class="input-group-addon">Matière n°2</div>
-                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
-                    <select class="form-control" name="matiere_2_prof" id="matiere_for_note">
-                      <option value="aucune">Sélectionner une matière</<option>
-                      <option value="francais">Français</<option>
-                      <option value="histoire">Histoire</<option>
-                      <option value="mathematique">Mathématique</<option>
-                      <option value="eps">EPS</<option>
-                      <option value="science">Science</<option>
-                      <option value="anglais">Anglais</<option>
-                    </select>
-                  </div>
-                  <div class="input-group">
-                    <div class="input-group-addon">Matière n°3</div>
-                    <!-- <input type="text" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse postale"> -->
-                    <select class="form-control" name="matiere_3_prof" id="matiere_for_note">
-                      <option value="aucune">Sélectionner une matière</<option>
-                      <option value="francais">Français</<option>
-                      <option value="histoire">Histoire</<option>
-                      <option value="mathematique">Mathématique</<option>
-                      <option value="eps">EPS</<option>
-                      <option value="science">Science</<option>
-                      <option value="anglais">Anglais</<option>
-                    </select>
+                  <div id="formulaire_for_modify_prof">
+
                   </div>
                 </div>
               </div>
@@ -628,5 +592,17 @@
     			});
     		});
     	</script>
+      <!-- Script pour afficher le formulaire pour la parti maj Prof  -->
+      <script>
+        $( "#for_prof_selected > select" ).change(function () {
+          var prof = $('#for_prof_selected > select option:selected').val()
+          $.ajax({
+            url: './model/m_fonctions.php',
+            type: 'post',
+            data: { 'formulaire_for_modify_prof': prof },
+            success: function(response) { $("#formulaire_for_modify_prof" ).html(response);}
+          });
+        });
+      </script>
     </body>
   </html>

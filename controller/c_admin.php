@@ -35,7 +35,7 @@ if (isset($_POST['nom_prof'], $_POST['prenom_prof'], $_POST['matiere_1_prof'], $
   return addProfForAdmin (strtolower($_POST['nom_prof']), strtolower($_POST['prenom_prof']), strtolower($_POST['matiere_1_prof']), strtolower($_POST['matiere_2_prof']), strtolower($_POST['matiere_3_prof']), strtolower($_POST['tel_prof']), strtolower($_POST['adresse_prof']), strtolower($_POST['email_prof']));
 }
 
-if (isset ($_POST['prof_selected'], $_POST['matiere_1_prof'], $_POST['matiere_2_prof'], $_POST['matiere_3_prof'])) {
+if (isset ($_POST['prof_selected'], $_POST['matiere_1_prof'], $_POST['matiere_2_prof'], $_POST['matiere_3_prof'], $_POST['tel_prof'], $_POST['adresse_prof'], $_POST['email_prof'])) {
 	return modifyProfForAdmin (strtolower($_POST['prof_selected']), strtolower($_POST['matiere_1_prof']),strtolower($_POST['matiere_2_prof']), strtolower($_POST['matiere_3_prof']), strtolower($_POST['tel_prof']), strtolower($_POST['adresse_prof']), strtolower($_POST['email_prof']));
 }
 
