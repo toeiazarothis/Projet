@@ -14,7 +14,7 @@ $conn =	new PDO("mysql:host=localhost;dbname=u240317083_notes", USER, PWD);
 <tr>
 <td><b>ID</b></td>
 <td><b>Nom de élève</b></td>
-<td><b>Prenom de élève</b></td>
+<td><b>Prénom de élève</b></td>
 <td></td>
 </tr>
 <?php
