@@ -721,7 +721,7 @@ function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel)
 	}
 
 	$reponse = $bdd->exec("INSERT INTO `vie_scolaire`(`identifiant`, `nom`, `prenom`, `mot_de_passe`, `niveau_admin`, `adresse`, `email`, `tel`)
-	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', $niveauAdmin, '$adresse', '$email', '$tel')");
+	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', '$niveauAdmin', '$adresse', '$email', '$tel')");
 
 	if ($reponse == FALSE){
 		return ('L\'ajout d\'un membre du personnel n\'as pas pus être effectuer!');
