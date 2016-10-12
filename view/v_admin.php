@@ -406,6 +406,18 @@
                         <option value="2">Accès total au panel d'Administration</option>
                       </select>
                     </div><br>
+                    <div class="input-group">
+                      <div class="input-group-addon">Adresse</div>
+                      <input type="text" name="adresse_member" class="form-control" id="exampleInputAmount" placeholder="Entrer une adresse postal" required>
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Email</div>
+                      <input type="text" name="email_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un email" required>
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Téléphone</div>
+                      <input type="tel" name="tel_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un numéro de téléphone" required>
+                    </div>
                     <div class="row">
                       <div class="col-xs-6 col-xs-offset-3">
                         <button class="btn btn-success">Ajouter le membre du personnel</button>
