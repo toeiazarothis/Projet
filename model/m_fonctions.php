@@ -1,62 +1,62 @@
 <?php
 include ('forMySQL.php');
 
-// parti pour erreur site
+// partie pour erreur site
 function errorOrSuccesOnSite($errorOrSucces) {
 	$texte = '';
 	if($errorOrSucces == 1){//utilisateur inexistant
-		$texte .= '<div class="alert alert-danger" id="error" style="position:fixed; width:100%">Cette utilisateur est inexistant!</div>';
+		$texte .= '<div class="alert alert-danger" id="error" style="position:fixed; width:100%">Cet utilisateur est inexistant!</div>';
 	}
 	if($errorOrSucces == 2){//mot de passe incorrect
 		$texte .= '<div class="alert alert-warning" id="error" style="position:fixed; width:100%">Vous avez saisie un mauvais mot de passe!</div>';
 	}
 	if($errorOrSucces == 3){//note ajouter
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Vous avez ajouter la note avec succès!</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Vous avez ajouté la note avec succès!</div>';
 	}
 	if($errorOrSucces == 4){//cours & devoir mise a jour
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Devoir & Note mis à jour pour cette classe</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Devoir & Note mise à jour pour cette classe</div>';
 	}
 	if($errorOrSucces == 5){//absence effectuer
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les absences sont été éffectuer</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les absences ont été éffectués</div>';
 	}
 	if($errorOrSucces == 6){//appreciation mise a jour
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Apréciation mis à jour avec succès</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Apréciation mise à jour avec succès</div>';
 	}
 	if($errorOrSucces == 7){//ajout eleve
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette élève à bien été ajouter a la base de donnée</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cet élève a bien été ajouté à la base de données</div>';
 	}
 	if($errorOrSucces == 8){//mise a jour eleve
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cette élève ont bien été mis à jour</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cet élève ont bien été mises à jour</div>';
 	}
 	if($errorOrSucces == 9){//suppression eleve
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette élève vient d\'être retirer de la base de donnée</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cet élève vient d\'être retiré de la base de données</div>';
 	}
 	if($errorOrSucces == 10){//ajout prof
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a bien été ajouter à la base de donnée</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a bien été ajouté à la base de données</div>';
 	}
 	if($errorOrSucces == 11){//mise a jour prof
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce professeur ont bien été mis à jour</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce professeur ont bien été mises à jour</div>';
 	}
 	if($errorOrSucces == 12){//suppression prof
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a été retirer de la base de donnée/div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a été retiré de la base de données/div>';
 	}
 	if($errorOrSucces == 13){//ajout personnel
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a bien été ajouter à la base de donnée</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a bien été ajouté à la base de données</div>';
 	}
 	if($errorOrSucces == 14){//mise a jour personnel
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce membre du personnel ont bien été mis à jour</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce membre du personnel ont bien été mises à jour</div>';
 	}
 	if($errorOrSucces == 15){//suppression personnel
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a été retirer de la base de donnée/div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a été retiré de la base de données/div>';
 	}
 	if($errorOrSucces == 16){//ajout classe
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a bien été ajouter à la base de donnée</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a bien été ajouté à la base de données</div>';
 	}
 	if($errorOrSucces == 17){//mise a jour classe
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cette classe ont bien été mis à jour</div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cette classe ont bien été mises à jour</div>';
 	}
 	if($errorOrSucces == 18){//suppression classe
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a été retirer de la base de donnée/div>';
+		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a été retiré de la base de données</div>';
 	}
 	if($errorOrSucces == 19) { //erreur ajout classe
 		$texte.= '<div class="alert alert-danger" style="position:fixed; width:100%">Cette classe existe déjà</div>';
@@ -65,7 +65,7 @@ function errorOrSuccesOnSite($errorOrSucces) {
 }
 
 // debut de  la partie page index
-// cette parti permet de verifier si l'utilisateur existe dans la BDD
+// cette partie permet de verifier si l'utilisateur existe dans la BDD
 function verifUserIfExist ($user){
 	$bdd = connectionDB();
 	$reponse = $bdd->query('SELECT id, identifiant, nom_eleve, prenom_eleve FROM eleves');
@@ -273,7 +273,7 @@ function afficherListeEleveDansClassePourNote ($classe) {
  			$texte .= '<div class="form-group">
  					<div class="input-group">
  						<div class="input-group-addon">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</div>
- 						<input type="number" class="form-control" id="NoteScolaire" name="'.$donnees['id'].'" step="0.5" value="" min="0" max="20" placeholder="Entrer la note de l\'eleve">
+ 						<input type="number" class="form-control" id="NoteScolaire" name="'.$donnees['id'].'" step="0.5" value="" min="0" max="20" placeholder="Entrer la note de l\'élève">
  						<div class="input-group-addon">20</div>
  					</div>
  				</div>';
@@ -290,10 +290,10 @@ function sendNoteForProf ($eleve, $matiere, $classe, $note) {
 	$reponse = $bdd->exec('INSERT INTO `notes` (`eleve`, `matiere`, `classe`, `note`) VALUES ('.$eleve.', "'.$matiere.'", "'.$classe.'", '.$note.')');
 
 	if ($reponse == FALSE){
-		echo ('La note n\'as pas pus être ajouter!');
+		echo ('La note n\'a pas pu être ajouté!');
 	}
 
-	echo 'La note a bien été envoyer dans la BDD';
+	echo 'La note a bien été envoyé dans la BDD';
 }
 //fin de la parti dajout de note
 
@@ -318,7 +318,7 @@ function sendCoursAndDevoirForProf ($matiere, $classe, $cours, $devoir){
 	$reponse = $bdd->exec('INSERT INTO `cours_devoirs`(`matiere`, `classe`, `contenu`, `devoir`) VALUES ("'.$matiere.'", "'.$classe.'", "'.$cours.'", "'.$devoir.'")');
 
 	if ($reponse == FALSE){
-		echo ('Les devoirs n\'ont pas pus être ajouter!');
+		echo ('Les devoirs n\'ont pas pu être ajouté!');
 	}
 
 	header('Location:prof');
@@ -373,7 +373,7 @@ function sendAbsenceEleveForProf ($idEleve) {
 	$reponse = $bdd->exec('INSERT INTO `absence`(`id_prof`, `id_eleve`, `date_debut`, `date_fin`, `motif`) VALUES (0, '.$idEleve.', "'.date('y-m-d').'", "'.date('y-m-d').'", "NO-CONFIG")');
 
 	if ($reponse == FALSE){
-		echo ('Les absences n\'ont pas pus être ajouter!');
+		echo ('Les absences n\'ont pas pu être ajouté!');
 	}
 }
 // fin de la parti absence
@@ -407,7 +407,7 @@ function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
 	$reponse = $bdd->exec('UPDATE `eleves` SET `appreciation_eleve`= "'.$apreciation.'" WHERE id='.$eleve.'');
 
 	if ($reponse == FALSE){
-		return ('La mise à jour de l\'appreciation de l\'eleve n\'as pas pus être effectuer!');
+		return ('La mise à jour de l\'appréciation de l\'élève n\'a pas pu être effectué!');
 	}
 
 	header('Location:prof');
@@ -435,7 +435,7 @@ function generePasswordForAdmin($nb_car, $chaine = 'abcdefghijklmnopqrstuvwxyzAB
     return $generation;
 }
 
-// fonction permettant d'ajouter ou modifier un eleve
+// fonction permettant d'ajouter ou modifier un élève
 function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_parent, $adresse_parent, $email_parent, $tel_parent) {
 	$bdd = connectionDB();
 
@@ -450,7 +450,7 @@ function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_
 			WHERE `id`='.$donnees['id'].'');
 
 			if ($reponse == FALSE){
-				return ('La mise à jour de l\'élève n\'as pas pus être effectuer!');
+				return ('La mise à jour de l\'élève n\'a pas pu être effectué!');
 			}
 
 			header('Location:admin');
@@ -461,7 +461,7 @@ function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_
 	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation.')");
 
 	if ($reponse == FALSE){
-		return ('L\'ajout de l\'élève n\'as pas pus être effectuer!');
+		return ('L\'ajout de l\'élève n\'a pas pu être effectué!');
 	}
 
 	header('Location:admin');
@@ -489,7 +489,7 @@ if (isset($_POST['list_eleve_for_maj'])) {
 if (isset($_POST['list_eleve_for_del'])) {
 	echo showListEleveForAdmin ($_POST['list_eleve_for_del']);
 }
-// fonction pour afficher la liste des eleves
+// fonction pour afficher la liste des élèves
 function showListEleveForAdmin ($classe) {
 	$bdd = connectionDB();
 
@@ -510,7 +510,7 @@ function showListEleveForAdmin ($classe) {
 if (isset ($_POST['formulaire_eleve_for_maj'])) {
 	echo showFormulaireForMajEleveForAdmin ($_POST['formulaire_eleve_for_maj']);
 }
-// fonction permettant d'afficher le formulaire pour la MAJ eleve
+// fonction permettant d'afficher le formulaire pour la MAJ élève
 function showFormulaireForMajEleveForAdmin ($eleve) {
 	$bdd = connectionDB ();
 
@@ -526,7 +526,7 @@ function showFormulaireForMajEleveForAdmin ($eleve) {
 			<div class="input-group-addon">Nom</div>
 			<input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['nom_eleve'].'">
 		</div>
-		<label class="sr-only" for="exampleInputAmount">Preno de l\'élève</label>
+		<label class="sr-only" for="exampleInputAmount">Prénom de l\'élève</label>
 		<div class="input-group">
 			<div class="input-group-addon">Prenom</div>
 			<input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['prenom_eleve'].'">
@@ -571,7 +571,7 @@ function showFormulaireForMajEleveForAdmin ($eleve) {
 	</form>';
 	return $texte;
 }
-// function permettant de supprimer un eleve
+// function permettant de supprimer un élève
 function delEleveForAdmin ($eleve) {
 	$bdd = connectionDB ();
 
@@ -597,7 +597,7 @@ function addProfForAdmin($nom, $prenom, $matiere1, $matiere2, $matiere3, $tel, $
 	('$nom', '$prenom', '$identifiant', '$mdp', '$tel', '$adresse', '$email', '$matiere1', '$matiere2', '$matiere3')");
 
 	if ($reponse == FALSE){
-		return ('L\'ajout du professeurs n\'as pas pus être effectuer!');
+		return ('L\'ajout du professeurs n\'a pas pu être effectué!');
 	}
 
 	header('Location:admin');
@@ -673,7 +673,7 @@ function modifyProfForAdmin($profID, $matiere1, $matiere2, $matiere3, $tel, $adr
 	WHERE `id`='.$profID.'');
 
 	if ($reponse == FALSE){
-		return ('La mise à jour du professeur n\'as pas pus être effectuer!');
+		return ('La mise à jour du professeur n\'a pas pu être effectué!');
 	}
 
 	header('Location:admin');
@@ -700,7 +700,7 @@ function delProfForAdmin ($prof) {
 	$reponse = $bdd->exec("DELETE FROM `professeurs` WHERE `id`=$prof");
 
 	if ($reponse == FALSE){
-		return ('La suppresion du professeur n\'as pas pus être effectuer');
+		return ('La suppresion du professeur n\'a pas pu être effectué');
 	}
 
 	header('Location:admin');
@@ -724,7 +724,7 @@ function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel)
 	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', '$niveauAdmin', '$adresse', '$email', '$tel')");
 
 	if ($reponse == FALSE){
-		return ('L\'ajout d\'un membre du personnel n\'as pas pus être effectuer!');
+		return ('L\'ajout d\'un membre du personnel n\'a pas pu être effectué!');
 	}
 
 	header('Location:admin');
@@ -752,7 +752,7 @@ function modifyMemberForAdmin ($membre, $niveauAdmin, $adresse, $email, $tel) {
 	WHERE `id`='.$membre.'');
 
 	if ($reponse == FALSE){
-		return ('La mise à jour du membre du personnel n\'as pas pus être effectuer!');
+		return ('La mise à jour du membre du personnel n\'a pas pu être effectué!');
 	}
 
 	header('Location:admin');
@@ -764,7 +764,7 @@ function delMemberForAdmin ($member) {
 	$reponse = $bdd->exec("DELETE FROM `vie_scolaire` WHERE `id`=$member");
 
 	if ($reponse == FALSE){
-		return ('La suppresion du membre du personnel n\'as pas pus être effectuer');
+		return ('La suppresion du membre du personnel n\'a pas pu être effectué');
 	}
 
 	header('Location:admin');
@@ -796,7 +796,7 @@ function delClasseForAdmin ($classe) {
 	$reponse = $bdd->exec("DELETE FROM `classe` WHERE `nom`='$classe'");
 
 	if ($reponse == FALSE) {
-		return ('La suppresion de la classe n\'as pas pus être effectuer');
+		return ('La suppresion de la classe n\'a pas pu être effectué');
 	}
 
 	header('Location:admin');
