@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="./view/css/bootstrap.css" rel="stylesheet">
     <link href="./view/css/connecter.css" rel="stylesheet">
-    <link href="./view/css/formulaire.css" rel="stylesheet">
+    <!-- <link href="./view/css/formulaire.css" rel="stylesheet"> -->
 
 
     <title>Vie Scolaire - iSchool Notes</title>
@@ -95,9 +95,9 @@
           </div><br>
 
           <div class="row">
-            <div class="col-md-6 col-md-offset-4 col-xs-12 text-center">
+            <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
               <form action="admin" method="post">
-                <div class="form-group">
+                <div class="form-horizontal">
                   <label class="sr-only" for="nomDeFamille">Nom de famille de l'élève</label>
                     <div class="input-group">
                       <div class="input-group-addon">Nom de famille</div>
@@ -111,8 +111,7 @@
                     <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
                     <div class="input-group">
                       <div class="input-group-addon">Classe</div>
-                      <!-- <input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer la classe de l'élève"> -->
-                      <select class="" name="classe_eleve">
+                      <select class="form-control" name="classe_eleve">
                         <?php echo showListAllClassForAdmin (); ?>
                       </select>
                     </div>

@@ -46,15 +46,23 @@
             </div>
           </div><br>
           <div class="row text-center">
-              <div class="col-md-4 col-xs-6">
+              <div class="col-md-3 col-xs-6">
                   <span class="fa-stack fa-4x">
                       <i class="fa fa-circle fa-stack-2x text-primary"></i>
                       <i class="fa fa-home fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h4 class="service-heading">03 25 71 22 22</h4>
+                  <h4 class="service-heading">ESC Troyes</h4>
                   <h3 class="service-sub-heading"></h3>
               </div>
-              <div class="col-md-4 col-xs-6">
+                  <div class="col-md-3 col-xs-6">
+                      <span class="fa-stack fa-4x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                      </span>
+                      <h4 class="service-heading">03 25 71 22 22</h4>
+                      <h3 class="service-sub-heading"></h3>
+                  </div>
+              <div class="col-md-3 col-xs-6">
                   <span class="fa-stack fa-4x">
                       <i class="fa fa-circle fa-stack-2x text-primary"></i>
                       <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
@@ -62,7 +70,7 @@
                   <h4 class="service-heading">217 Avenue Pierre Brossolette</h4>
                   <h3 class="service-sub-heading"></h3>
               </div>
-              <div class="col-md-4 col-xs-12">
+              <div class="col-md-3 col-xs-12">
                   <span class="fa-stack fa-4x">
                       <i class="fa fa-circle fa-stack-2x text-primary"></i>
                       <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
