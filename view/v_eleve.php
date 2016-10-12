@@ -153,7 +153,7 @@
           </div>
           <div class="row">
               <div class="col-md-10 col-md-offset-1 text-center">
-                  <h2 class="section-heading">Votre moyenne generale</h2>
+                  <h2 class="section-heading">Votre moyenne générale</h2>
                   <h3 class="section-subheading text-muted"><?php echo moyenneForEleve (); ?></h3>
                   <br><br><br>
               </div>
@@ -252,7 +252,7 @@
           <div class="col-md-10 col-md-offset-1 text-center">
             <br><br><br>
               <h2 class="section-heading">Les Appréciations</h2>
-              <h3 class="section-subheading text-muted">Ici se trouve les appréciations données par les professeurs.<br>Afin de les consulter, il vous suffit simplement de cliquer sur la matière concernée</h3>
+              <h3 class="section-subheading text-muted">Ici se trouve les appréciations données par le professeur principal.<br>Afin de les consulter, il vous suffit simplement de cliquer ci-dessous</h3>
             <br><br><br>
               <br><br>
           </div>
