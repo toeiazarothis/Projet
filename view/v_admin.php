@@ -103,7 +103,7 @@
                       <div class="input-group-addon">Nom de famille</div>
                       <input type="text" name="nom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom" required>
                     </div>
-                    <label class="sr-only" for="exampleInputAmount">Prenom de l'élève</label>
+                    <label class="sr-only" for="exampleInputAmount">Prénom de l'élève</label>
                     <div class="input-group">
                       <div class="input-group-addon">Prenom</div>
                       <input type="text" name="prenom_eleve" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom" required>
@@ -118,9 +118,9 @@
                       <div class="input-group-addon">Nom d'un parent</div>
                       <input type="text" name="nom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le nom d'un parent" required>
                     </div>
-                    <label class="sr-only" for="exampleInputAmount">Prenom du parent</label>
+                    <label class="sr-only" for="exampleInputAmount">Prénom du parent</label>
                     <div class="input-group">
-                      <div class="input-group-addon">Prenom du parent</div>
+                      <div class="input-group-addon">Prénom du parent</div>
                       <input type="text" name="prenom_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le prenom du parent" required>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Adresse du domicile</label>
@@ -133,9 +133,9 @@
                       <div class="input-group-addon">Courriel du parent</div>
                       <input type="email" name="email_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer l'adresse courriel du parent" required>
                     </div>
-                    <label class="sr-only" for="exampleInputAmount">Numero de telephone</label>
+                    <label class="sr-only" for="exampleInputAmount">Numéro de téléphone</label>
                     <div class="input-group">
-                      <div class="input-group-addon">Numero de telephone</div>
+                      <div class="input-group-addon">Numéro de téléphone</div>
                       <input type="tel" name="tel_parent" class="form-control" id="exampleInputAmount" placeholder="Entrer le numero de telephone du parent" required>
                     </div><br>
                     <div class="row">
@@ -157,8 +157,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
-              <h2 class="section-heading">Mise a jour d'élèves  </h2>
-              <h3 class="section-subheading text-muted">Mettre a jour le profil d'un élève</h3>
+              <h2 class="section-heading">Mise à jour d'élèves  </h2>
+              <h3 class="section-subheading text-muted">Mettre à jour le profil d'un élève</h3>
             </div>
           </div>
           <!-- Menu deroulant liste des eleve -->
@@ -238,7 +238,7 @@
                     <div class="input-group-addon">Nom</div>
                     <input type="text" class="form-control" name="nom_prof" id="exampleInputAmount" placeholder="Entrer le nom" required>
                   </div>
-                  <label class="sr-only" for="exampleInputAmount">Prenom du professeur</label>
+                  <label class="sr-only" for="exampleInputAmount">Prénom du professeur</label>
                   <div class="input-group">
                     <div class="input-group-addon">Prenom</div>
                     <input type="text" class="form-control" name="prenom_prof" id="exampleInputAmount" placeholder="Entrer le prénom" required>
@@ -312,8 +312,8 @@
           <div class="container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1 text-center">
-                <h2 class="section-heading">Mise a jour prof </h2>
-                <h3 class="section-subheading text-muted">Mettre a jour un membre de l'equipe enseignante</h3>
+                <h2 class="section-heading">Mise à jour prof </h2>
+                <h3 class="section-subheading text-muted">Mettre à jour un membre de l'équipe enseignante</h3>
               </div>
             </div>
             <!-- Liste deroulante des different professeur -->
@@ -395,7 +395,7 @@
                       <input type="text" name="nom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un nom" required>
                     </div>
                     <div class="input-group">
-                      <div class="input-group-addon">Prenom</div>
+                      <div class="input-group-addon">Prénom</div>
                       <input type="text" name="prenom_member" class="form-control" id="exampleInputAmount" placeholder="Entrer un prenom" required>
                     </div>
                     <div class="input-group">
@@ -568,7 +568,7 @@
         });
       </script>
       <!-- Fin effet de scroll -->
-      <!-- Script pour afficher la liste eleve pour la parti MAJ Eleve -->
+      <!-- Script pour afficher la liste eleve pour la partie MAJ Eleve -->
       <script>
     		$( "#list_classe_for_maj > select" ).change(function () {
     			var classe = $('#list_classe_for_maj > select option:selected').val()
