@@ -442,6 +442,18 @@ function showFormulaireForMajEleveForAdmin ($eleve) {
 	$donnees = $reponse->fetch();
 	$texte = '<form action="admin" method="post">
 		<div class="form-group">
+		<fieldset disabled>
+		<label class="sr-only" for="exampleInputAmount">Nom de l\'élève</label>
+		<div class="input-group">
+			<div class="input-group-addon">Nom</div>
+			<input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['nom_eleve'].'">
+		</div>
+		<label class="sr-only" for="exampleInputAmount">Preno de l\'élève</label>
+		<div class="input-group">
+			<div class="input-group-addon">Prenom</div>
+			<input type="text" name="classe_eleve" class="form-control" id="exampleInputAmount" value="'.$donnees['prenom_eleve'].'">
+		</div>
+		</fieldset>
 			<label class="sr-only" for="exampleInputAmount">Classe de l\'élève</label>
 			<div class="input-group">
 				<div class="input-group-addon">Classe</div>

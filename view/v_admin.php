@@ -111,9 +111,7 @@
                     <label class="sr-only" for="exampleInputAmount">Classe de l'élève</label>
                     <div class="input-group">
                       <div class="input-group-addon">Classe</div>
-                      <select class="form-control" name="classe_eleve">
-                        <?php echo showListAllClassForAdmin (); ?>
-                      </select>
+                      <select class="form-control" name="classe_eleve"><?php echo showListAllClassForAdmin (); ?></select>
                     </div>
                     <label class="sr-only" for="exampleInputAmount">Nom d'un parent</label>
                     <div class="input-group">
@@ -167,17 +165,14 @@
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center" id="list_classe_for_maj">
               <h4>Liste des classes</h4>
-              <select class="form-control">
-                <?php echo showListAllClassForAdmin(); ?>
-              </select>
+              <select class="form-control"><?php echo showListAllClassForAdmin(); ?></select>
             </div>
             <div class="col-md-6 col-md-offset-3 text-center" id="for_list_eleve_for_maj">
               <h4>Liste des élèves</h4>
-              <select class="form-control" id="list_eleve_for_maj">
-              </select>
-              <br><br>
+              <select class="form-control" id="list_eleve_for_maj"></select>
+              <br>
             </div>
-            <div class="col-md-6 col-md-offset-4 col-xs-12 text-center" id="formulaire_eleve_for_maj">
+            <div class="col-md-4 col-md-offset-4 col-xs-12 text-center" id="formulaire_eleve_for_maj">
             </div>
           </div><br>
           <!-- Fin du menu deroulant -->
