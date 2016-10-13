@@ -458,7 +458,7 @@ function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_
 	}
 
 	$reponse = $bdd->exec("INSERT INTO `eleves`(`nom_eleve`, `prenom_eleve`, `classe`, `identifiant`, `mot_de_passe`, `nom_parent`, `prenom_parent`, `adresse_parent`, `email_parent`, `tel_parent`, `appreciation_eleve`)
-	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation.')");
+	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation')");
 
 	if ($reponse == FALSE){
 		return ('L\'ajout de l\'élève n\'a pas pu être effectué!');
@@ -802,4 +802,38 @@ function delClasseForAdmin ($classe) {
 	header('Location:admin');
 }
 // fin de la parti page administration
+
+// Script temporaire
+function showUserAndPassWord () {
+	$bdd = connectionDB();
+
+	$reponse = $bdd->query("SELECT id, identifiant, mot_de_passe FROM eleves");
+
+	$texte = '<h3>Liste identifiant élèves:<h3>';
+
+	while ($donnees = $reponse->fetch())
+	{
+		$texte .= $donnees['identifiant'].' -> '.$donnees['mot_de_passe'].'<br>';
+	}
+
+	$reponse = $bdd->query("SELECT id, identifiant, mot_de_passe FROM professeurs");
+
+	$texte .= '<h3>Liste identifiant professeurs:<h3>';
+
+	while ($donnees = $reponse->fetch())
+	{
+		$texte .= $donnees['identifiant'].' -> '.$donnees['mot_de_passe'].'<br>';
+	}
+
+	$reponse = $bdd->query("SELECT id, identifiant, mot_de_passe FROM vie_scolaire");
+
+	$texte .= '<h3>Liste identifiant membre du personnel:<h3>';
+
+	while ($donnees = $reponse->fetch())
+	{
+		$texte .= $donnees['identifiant'].' -> '.$donnees['mot_de_passe'].'<br>';
+	}
+
+	return $texte;
+}
 ?>
