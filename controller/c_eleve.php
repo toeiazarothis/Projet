@@ -15,5 +15,11 @@ if($_SESSION['stats'] != 'eleve') {
 		return header('Location:parent');
 	}
 }
+
+if (isset ($_GET['error']))
+{
+	echo errorOrSuccesOnSite ($_GET['es']);
+}
+
 include ('../view/v_eleve.php');
 ?>

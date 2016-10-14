@@ -15,4 +15,10 @@ if($_SESSION['stats'] != 'viescolaire') {
 		return header('Location:parent');
 	}
 }
+
+if (isset ($_GET['error']))
+{
+	echo errorOrSuccesOnSite ($_GET['es']);
+}
+
 include ('../view/v_viescolaire.php');?>

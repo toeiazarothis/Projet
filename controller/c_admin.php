@@ -63,5 +63,10 @@ if (isset ($_POST['classe_select_for_del'], $_POST['del_classe'])) {
 	return delClasseForAdmin (strtolower($_POST['classe_select_for_del']));
 }
 
+if (isset ($_GET['error']))
+{
+	echo errorOrSuccesOnSite ($_GET['es']);
+}
+
 include ('../view/v_admin.php');
 ?>

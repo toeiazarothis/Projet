@@ -63,5 +63,10 @@ if (isset($_POST['validate_abs'], $_POST['classe_for_absent'])) {
 	}
 }
 
+if (isset ($_GET['error']))
+{
+	echo errorOrSuccesOnSite ($_GET['es']);
+}
+
 include ('../view/v_prof.php');
 ?>

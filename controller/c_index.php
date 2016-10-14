@@ -9,7 +9,7 @@ if(isset($_POST['users'], $_POST['password'])){
 
 if (isset ($_GET['error']))
 {
-	echo errorOrSuccesOnSite ($_GET['error']);
+	echo errorOrSuccesOnSite ($_GET['es']);
 }
 
 include ('../view/v_index.php');

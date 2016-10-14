@@ -1,68 +1,6 @@
 <?php
 include ('forMySQL.php');
-
-// partie pour erreur site
-function errorOrSuccesOnSite($errorOrSucces) {
-	$texte = '';
-	if($errorOrSucces == 1){//utilisateur inexistant
-		$texte .= '<div class="alert alert-danger" id="error" style="position:fixed; width:100%">Cet utilisateur est inexistant!</div>';
-	}
-	if($errorOrSucces == 2){//mot de passe incorrect
-		$texte .= '<div class="alert alert-warning" id="error" style="position:fixed; width:100%">Vous avez saisie un mauvais mot de passe!</div>';
-	}
-	if($errorOrSucces == 3){//note ajouter
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Vous avez ajouté la note avec succès!</div>';
-	}
-	if($errorOrSucces == 4){//cours & devoir mise a jour
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Devoir & Note mise à jour pour cette classe</div>';
-	}
-	if($errorOrSucces == 5){//absence effectuer
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les absences ont été éffectués</div>';
-	}
-	if($errorOrSucces == 6){//appreciation mise a jour
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Apréciation mise à jour avec succès</div>';
-	}
-	if($errorOrSucces == 7){//ajout eleve
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cet élève a bien été ajouté à la base de données</div>';
-	}
-	if($errorOrSucces == 8){//mise a jour eleve
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cet élève ont bien été mises à jour</div>';
-	}
-	if($errorOrSucces == 9){//suppression eleve
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cet élève vient d\'être retiré de la base de données</div>';
-	}
-	if($errorOrSucces == 10){//ajout prof
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a bien été ajouté à la base de données</div>';
-	}
-	if($errorOrSucces == 11){//mise a jour prof
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce professeur ont bien été mises à jour</div>';
-	}
-	if($errorOrSucces == 12){//suppression prof
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce professeur a été retiré de la base de données/div>';
-	}
-	if($errorOrSucces == 13){//ajout personnel
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a bien été ajouté à la base de données</div>';
-	}
-	if($errorOrSucces == 14){//mise a jour personnel
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de ce membre du personnel ont bien été mises à jour</div>';
-	}
-	if($errorOrSucces == 15){//suppression personnel
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Ce membre du personnel a été retiré de la base de données/div>';
-	}
-	if($errorOrSucces == 16){//ajout classe
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a bien été ajouté à la base de données</div>';
-	}
-	if($errorOrSucces == 17){//mise a jour classe
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Les données de cette classe ont bien été mises à jour</div>';
-	}
-	if($errorOrSucces == 18){//suppression classe
-		$texte .= '<div class="alert alert-success" style="position:fixed; width:100%">Cette classe a été retiré de la base de données</div>';
-	}
-	if($errorOrSucces == 19) { //erreur ajout classe
-		$texte.= '<div class="alert alert-danger" style="position:fixed; width:100%">Cette classe existe déjà</div>';
-	}
-	return $texte;
-}
+include ('errorAndSuccess.php');
 
 // debut de  la partie page index
 // cette partie permet de verifier si l'utilisateur existe dans la BDD
@@ -98,7 +36,7 @@ function verifUserIfExist ($user){
 			return $donnees['id'];
 		}
 	}
-	return header('Location:accueil?error=1');
+	return header('Location:accueil?error=1');//Utilisateur inexitant
 }
 // fin de la parti verification de l'utilisateur
 // debut de la parti si le mot de passe de l'utilisateur est coreect
@@ -109,7 +47,7 @@ function verifPassIsUser ($user, $pass) {
 		$reponse = $bdd->query('SELECT mot_de_passe, classe FROM eleves WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
-			return header('Location:accueil?error=2');
+			return header('Location:accueil?es=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
@@ -122,7 +60,7 @@ function verifPassIsUser ($user, $pass) {
 		$reponse = $bdd->query('SELECT mot_de_passe, matiere1, matiere2, matiere3 FROM professeurs WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
-			return header('Location:accueil?error=2');
+			return header('Location:accueil?es=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
@@ -135,7 +73,7 @@ function verifPassIsUser ($user, $pass) {
 		$reponse = $bdd->query('SELECT mot_de_passe, niveau_admin FROM vie_scolaire WHERE id='.$id.'');
 		$donnees = $reponse->fetch();
 		if ($pass != $donnees['mot_de_passe']) {
-			return header('Location:accueil?error=2');
+			return header('Location:accueil?es=2');
 		}
 		$_SESSION['users'] = $user;
 		$_SESSION['userid'] = $id;
@@ -290,10 +228,10 @@ function sendNoteForProf ($eleve, $matiere, $classe, $note) {
 	$reponse = $bdd->exec('INSERT INTO `notes` (`eleve`, `matiere`, `classe`, `note`) VALUES ('.$eleve.', "'.$matiere.'", "'.$classe.'", '.$note.')');
 
 	if ($reponse == FALSE){
-		echo ('La note n\'a pas pu être ajouté!');
+        header('Location:prof?es=26');//echec envoie note
 	}
 
-	echo 'La note a bien été envoyé dans la BDD';
+    header('Location:prof?es=27');//succes envoie note
 }
 //fin de la parti dajout de note
 
@@ -309,19 +247,19 @@ function sendCoursAndDevoirForProf ($matiere, $classe, $cours, $devoir){
 		if ($donnees['matiere'] == $matiere) {
 			$reponse2 = $bdd->exec('UPDATE `cours_devoirs` SET `contenu`="'.$cours.'",`devoir`="'.$devoir.'" WHERE id='.$donnees['id'].'');
 			if ($reponse2 == FALSE){
-				echo ('Les devoirs n\'ont pas pus être ajouter!');
+				header('Location:prof?es=3');//echec envoie devoir
 			}
-			header('Location:prof');
+			header('Location:prof?es=4');//envoie devoir reussi
 		}
 	}
 
 	$reponse = $bdd->exec('INSERT INTO `cours_devoirs`(`matiere`, `classe`, `contenu`, `devoir`) VALUES ("'.$matiere.'", "'.$classe.'", "'.$cours.'", "'.$devoir.'")');
 
 	if ($reponse == FALSE){
-		echo ('Les devoirs n\'ont pas pu être ajouté!');
+		header('Location:prof?es=3');//echec envoie devoir
 	}
 
-	header('Location:prof');
+	header('Location:prof?es=4');//envoie devoir reussi
 }
 // fin de la parti pour ajouter les cours et devoir
 
@@ -373,8 +311,10 @@ function sendAbsenceEleveForProf ($idEleve) {
 	$reponse = $bdd->exec('INSERT INTO `absence`(`id_prof`, `id_eleve`, `date_debut`, `date_fin`, `motif`) VALUES (0, '.$idEleve.', "'.date('y-m-d').'", "'.date('y-m-d').'", "NO-CONFIG")');
 
 	if ($reponse == FALSE){
-		echo ('Les absences n\'ont pas pu être ajouté!');
+        header('Location:prof?es=5');//echec envoie absence
 	}
+
+    header('Location:prof?es=6');//succes envoie absence
 }
 // fin de la parti absence
 
@@ -407,10 +347,10 @@ function envoyerAppreciationEleveForProf ($eleve, $apreciation) {
 	$reponse = $bdd->exec('UPDATE `eleves` SET `appreciation_eleve`= "'.$apreciation.'" WHERE id='.$eleve.'');
 
 	if ($reponse == FALSE){
-		return ('La mise à jour de l\'appréciation de l\'élève n\'a pas pu être effectué!');
+        header('Location:prof?es=7');//echec envoie appreciation
 	}
 
-	header('Location:prof');
+	header('Location:prof?es=8');//succes envoie appreciation
 }
 //fin de la parti ajouter une appreciation
 //fin de la parti prof
@@ -450,10 +390,10 @@ function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_
 			WHERE `id`='.$donnees['id'].'');
 
 			if ($reponse == FALSE){
-				return ('La mise à jour de l\'élève n\'a pas pu être effectué!');
+                header('Location:admin?es=9');//echec ajout/modif eleve
 			}
 
-			header('Location:admin');
+            header('Location:admin?es=10');//succes ajout/modif eleve
 		}
 	}
 
@@ -461,10 +401,10 @@ function addAndModifyEleveForAdmin($nom, $prenom, $classe, $nom_parent, $prenom_
 	VALUES ('$nom', '$prenom', '$classe', '$identifiant', '$mdp', '$nom_parent', '$prenom_parent', '$adresse_parent', '$email_parent', '$tel_parent', 'Aucune appréciation')");
 
 	if ($reponse == FALSE){
-		return ('L\'ajout de l\'élève n\'a pas pu être effectué!');
+        header('Location:admin?es=9');//echec ajout/modif eleve
 	}
 
-	header('Location:admin');
+    header('Location:admin?es=10');//succes ajout/modif eleve
 }
 // fonction pour afficher la liste des classes
 function showListAllClassForAdmin () {
@@ -578,29 +518,37 @@ function delEleveForAdmin ($eleve) {
 	$reponse = $bdd->exec("DELETE FROM `eleves` WHERE `id`=$eleve");
 
 	if ($reponse == FALSE){
-		return ('La suprresion de l\'élève n\'as pas pus être effectuer');
+        header('Location:admin?es=11');//echo suppresion eleve
 	}
 
-	header('Location:admin');
+    header('Location:admin?es=12');//succes suppresion eleve
 }
 
 
 // fonction permettant d'ajouter un prof
 function addProfForAdmin($nom, $prenom, $matiere1, $matiere2, $matiere3, $tel, $adresse, $email) {
-	$bdd = connectionDB();
+    $bdd = connectionDB();
 
-  $identifiant = genereUsernameForAdmin($nom, $prenom);
-  $mdp = generePasswordForAdmin(6);
+    $identifiant = genereUsernameForAdmin($nom, $prenom);
+    $mdp = generePasswordForAdmin(6);
 
-	$reponse = $bdd->exec("INSERT INTO `professeurs`(`nom`, `prenom`, `identifiant`, `mot_de_passe`, `tel`, `adresse`, `email`, `matiere1`, `matiere2`, `matiere3`)
-	VALUES
-	('$nom', '$prenom', '$identifiant', '$mdp', '$tel', '$adresse', '$email', '$matiere1', '$matiere2', '$matiere3')");
+    $reponse = $bdd->query("SELECT id, nom, prenom, identifiant FROM professeurs");
 
-	if ($reponse == FALSE){
-		return ('L\'ajout du professeurs n\'a pas pu être effectué!');
-	}
+    while ($donnees = $reponse->fetch()) {
+        if ($donnees['nom'] == $nom && $donnees['prenom'] == $prenom) {
+            return header('Location:admin?error=17');//nom&prenom existe deja
+        }
+    }
 
-	header('Location:admin');
+    $reponse = $bdd->exec("INSERT INTO `professeurs`(`nom`, `prenom`, `identifiant`, `mot_de_passe`, `tel`, `adresse`, `email`, `matiere1`, `matiere2`, `matiere3`)
+    VALUES
+    ('$nom', '$prenom', '$identifiant', '$mdp', '$tel', '$adresse', '$email', '$matiere1', '$matiere2', '$matiere3')");
+
+    if ($reponse == FALSE){
+        header('Location:admin?es=13');//echec ajout/modif prof
+    }
+
+    header('Location:admin?es=14');//succes ajout/modif prof
 }
 // condition permettant de lancer la fonction showFormulaireProfForAdmin
 if (isset ($_POST['formulaire_for_modify_prof'])) {
@@ -672,11 +620,11 @@ function modifyProfForAdmin($profID, $matiere1, $matiere2, $matiere3, $tel, $adr
 	$reponse = $bdd->exec('UPDATE `professeurs` SET `tel`='.$tel.', `adresse`="'.$adresse.'", `email`="'.$email.'", `matiere1`="'.$matiere1.'", `matiere2`="'.$matiere2.'", `matiere3`="'.$matiere3.'"
 	WHERE `id`='.$profID.'');
 
-	if ($reponse == FALSE){
-		return ('La mise à jour du professeur n\'a pas pu être effectué!');
+    if ($reponse == FALSE){
+        header('Location:admin?es=13');//echec ajout/modif prof
 	}
 
-	header('Location:admin');
+    header('Location:admin?es=14');//succes ajout/modif prof
 }
 // fonction pour afficher la liste des eleves
 function showListProfForAdmin () {
@@ -700,10 +648,10 @@ function delProfForAdmin ($prof) {
 	$reponse = $bdd->exec("DELETE FROM `professeurs` WHERE `id`=$prof");
 
 	if ($reponse == FALSE){
-		return ('La suppresion du professeur n\'a pas pu être effectué');
+        header('Location:admin?es=15');//echec suppression prof
 	}
 
-	header('Location:admin');
+    header('Location:admin?es=16');//succes suppression prof
 }
 // function permettant d'ajouter ou modifier un membre du personnel
 function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel) {
@@ -716,7 +664,7 @@ function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel)
 
 	while ($donnees = $reponse->fetch()) {
 		if ($donnees['nom'] == $nom && $donnees['prenom'] == $prenom) {
-			return header('Location:admin?error=20');//utilsateur existe deja
+			return header('Location:admin?error=17');//nom&prenom existe deja
 		}
 	}
 
@@ -724,10 +672,10 @@ function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel)
 	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', '$niveauAdmin', '$adresse', '$email', '$tel')");
 
 	if ($reponse == FALSE){
-		return ('L\'ajout d\'un membre du personnel n\'a pas pu être effectué!');
+        header('Location:admin?error=18');//echec ajout/maj membre personnel
 	}
 
-	header('Location:admin');
+    header('Location:admin?error=19');//succes ajout/maj membre personnel
 }
 // function permettant d'afficher la liste des membre du personnel
 function showListMemberForAdmin () {
@@ -752,10 +700,10 @@ function modifyMemberForAdmin ($membre, $niveauAdmin, $adresse, $email, $tel) {
 	WHERE `id`='.$membre.'');
 
 	if ($reponse == FALSE){
-		return ('La mise à jour du membre du personnel n\'a pas pu être effectué!');
+        header('Location:admin?error=18');//echec ajout/modif membre perso
 	}
 
-	header('Location:admin');
+    header('Location:admin?error=19');//succes ajout/modif membre perso
 }
 // function permettant de supprimer un membre du personnel
 function delMemberForAdmin ($member) {
@@ -764,10 +712,10 @@ function delMemberForAdmin ($member) {
 	$reponse = $bdd->exec("DELETE FROM `vie_scolaire` WHERE `id`=$member");
 
 	if ($reponse == FALSE){
-		return ('La suppresion du membre du personnel n\'a pas pu être effectué');
+        header('Location:admin?error=20');//echec supp membre du personnel
 	}
 
-	header('Location:admin');
+    header('Location:admin?error=21');//succes supp membre du personnel
 }
 // function permettant d'ajouter une classe
 function addClasseForAdmin ($classe) {
@@ -777,17 +725,17 @@ function addClasseForAdmin ($classe) {
 
 	while ($donnees = $reponse->fetch()) {
 		if ($donnees['nom'] == $classe) {
-			return header('Location:admin?error=19');
+			return header('Location:admin?error=22');//echec add class
 		}
 	}
 
 	$reponse = $bdd->exec("INSERT INTO `classe` (`nom`, `emploi_du_temps`, `moyenne`) VALUES ('$classe', 'NO-CONFIG', 0)");
 
 	if ($reponse == FALSE) {
-		return ('L\'ajout de la classe a échoué!');
+        header('Location:admin?error=22');//echec add class
 	}
 
-	header('Location:admin');
+    header('Location:admin?error=23');//succes add class
 }
 // function permettant de supprimer une classe
 function delClasseForAdmin ($classe) {
@@ -796,10 +744,10 @@ function delClasseForAdmin ($classe) {
 	$reponse = $bdd->exec("DELETE FROM `classe` WHERE `nom`='$classe'");
 
 	if ($reponse == FALSE) {
-		return ('La suppresion de la classe n\'a pas pu être effectué');
+        header('Location:admin?error=24');//echec del class
 	}
 
-	header('Location:admin');
+    header('Location:admin?error=25');//succes del class
 }
 // fin de la parti page administration
 
