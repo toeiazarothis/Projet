@@ -95,7 +95,9 @@
               <div id="for_saisir_note_for_note"></div>
               <br>
               <div id="for_button_for_note">
-              <!-- <br><br> -->
+              <select class="" name="">
+                <option>1</option><option>2</option><option>3</option>
+              </select>
               <input type="checkbox" id="inlineCheckbox1" name="validate_note" value="yes">Confirmer l'ajout des notes
               <br><br>
               <button class="btn btn-success">Ajouter les notes</button>
