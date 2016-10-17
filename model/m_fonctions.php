@@ -121,7 +121,7 @@ function moyenneForMatiereForEleve ($userID, $matiere) {
 		}
 	}
 
-	if ($additionNote > 1) {
+	if ($additionNote >= 1) {
 		$moyenneGeneral = $additionNote / $nbNote;
 		$_SESSION['moyenneGeneral'] += $moyenneGeneral;
 		$_SESSION['nbNoteMoyenneGeneral'] += 1;
@@ -130,7 +130,7 @@ function moyenneForMatiereForEleve ($userID, $matiere) {
 }
 // fonction pour afficher la moyenne general
 function moyenneForEleve () {
-	if (isset ($_SESSION['moyenneGeneral'], $_SESSION['nbNoteMoyenneGeneral'])) {
+	if (isset ($_SESSION['moyenneGeneral'], $_SESSION['nbNoteMoyenneGeneral']) && $_SESSION['moyenneGeneral'] >= 1) {
 		$moyenneGeneral = $_SESSION['moyenneGeneral'] / $_SESSION['nbNoteMoyenneGeneral'];
 	}
 
