@@ -58,7 +58,7 @@ if (isset($_POST['validate_abs'], $_POST['classe_for_absent'])) {
 		}
 		$id += 1;
 		if ($id > $idEleve) {
-			return header('Location:prof');
+			return header('Location:prof?es=27');
 		}
 	}
 }

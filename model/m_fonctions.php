@@ -231,7 +231,7 @@ function sendNoteForProf ($eleve, $matiere, $classe, $note) {
         header('Location:prof?es=26');//echec envoie note
 	}
 
-    header('Location:prof?es=27');//succes envoie note
+    //header('Location:prof?es=27');//succes envoie note
 }
 //fin de la parti dajout de note
 
