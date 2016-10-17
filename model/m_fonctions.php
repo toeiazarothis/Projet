@@ -314,7 +314,7 @@ function sendAbsenceEleveForProf ($idEleve) {
         header('Location:prof?es=5');//echec envoie absence
 	}
 
-    header('Location:prof?es=6');//succes envoie absence
+    // header('Location:prof?es=6');//succes envoie absence
 }
 // fin de la parti absence
 
