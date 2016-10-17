@@ -1,9 +1,12 @@
 <?php
 session_start();
-include ('../model/m_fonctions.php');
+
+require ('../model/m_fonctions.php');
+
 if(!isset($_SESSION['users'], $_SESSION['userid'])) {
 	return header('Location:accueil');
 }
+
 if($_SESSION['stats'] != 'eleve') {
 	if($_SESSION['stats'] == 'prof') {
 		return header('Location:prof');
@@ -15,5 +18,11 @@ if($_SESSION['stats'] != 'eleve') {
 		return header('Location:parent');
 	}
 }
-include ('../view/v_eleve.php');
+
+if (isset ($_GET['es']))
+{
+	echo errorOrSuccesOnSite ($_GET['es']);
+}
+
+require ('../view/v_eleve.php');
 ?>

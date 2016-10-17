@@ -297,6 +297,14 @@
     		});
     	});
     </script>
+    <!-- Script pour message error or success -->
+    <script>
+      $(document).ready(function() {
+        $("#error:visible").each( function() { // On verifie si lelement est afficher
+          var hide = setTimeout('$("#error").fadeOut(500)', 2500);
+        });
+      });
+    </script>
 
 
   </body>
