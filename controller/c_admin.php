@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include ('../model/m_fonctions.php');
+require ('../model/m_fonctions.php');
 
 if(!isset($_SESSION['users'], $_SESSION['userid']) && $_SESSION['stats'] != 'viescolaire') {
 	return header('Location:accueil');
@@ -63,10 +63,10 @@ if (isset ($_POST['classe_select_for_del'], $_POST['del_classe'])) {
 	return delClasseForAdmin (strtolower($_POST['classe_select_for_del']));
 }
 
-if (isset ($_GET['error']))
+if (isset ($_GET['es']))
 {
 	echo errorOrSuccesOnSite ($_GET['es']);
 }
 
-include ('../view/v_admin.php');
+require ('../view/v_admin.php');
 ?>

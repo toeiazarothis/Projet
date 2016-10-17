@@ -1,6 +1,6 @@
 <?php
-include ('forMySQL.php');
-include ('errorAndSuccess.php');
+require ('forMySQL.php');
+require ('errorAndSuccess.php');
 
 // debut de  la partie page index
 // cette partie permet de verifier si l'utilisateur existe dans la BDD
@@ -36,7 +36,7 @@ function verifUserIfExist ($user){
 			return $donnees['id'];
 		}
 	}
-	return header('Location:accueil?error=1');//Utilisateur inexitant
+	return header('Location:accueil?es=1');//Utilisateur inexitant
 }
 // fin de la parti verification de l'utilisateur
 // debut de la parti si le mot de passe de l'utilisateur est coreect
