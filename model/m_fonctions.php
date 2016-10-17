@@ -536,7 +536,7 @@ function addProfForAdmin($nom, $prenom, $matiere1, $matiere2, $matiere3, $tel, $
 
     while ($donnees = $reponse->fetch()) {
         if ($donnees['nom'] == $nom && $donnees['prenom'] == $prenom) {
-            return header('Location:admin?error=17');//nom&prenom existe deja
+            return header('Location:admin?es=17');//nom&prenom existe deja
         }
     }
 
@@ -664,7 +664,7 @@ function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel)
 
 	while ($donnees = $reponse->fetch()) {
 		if ($donnees['nom'] == $nom && $donnees['prenom'] == $prenom) {
-			return header('Location:admin?error=17');//nom&prenom existe deja
+			return header('Location:admin?es=17');//nom&prenom existe deja
 		}
 	}
 
@@ -672,10 +672,10 @@ function addMemberForAdmin ($nom, $prenom, $niveauAdmin, $adresse, $email, $tel)
 	VALUES ('$identifiant', '$nom', '$prenom', '$mdp', '$niveauAdmin', '$adresse', '$email', '$tel')");
 
 	if ($reponse == FALSE){
-        header('Location:admin?error=18');//echec ajout/maj membre personnel
+        header('Location:admin?es=18');//echec ajout/maj membre personnel
 	}
 
-    header('Location:admin?error=19');//succes ajout/maj membre personnel
+    header('Location:admin?es=19');//succes ajout/maj membre personnel
 }
 // function permettant d'afficher la liste des membre du personnel
 function showListMemberForAdmin () {
@@ -700,10 +700,10 @@ function modifyMemberForAdmin ($membre, $niveauAdmin, $adresse, $email, $tel) {
 	WHERE `id`='.$membre.'');
 
 	if ($reponse == FALSE){
-        header('Location:admin?error=18');//echec ajout/modif membre perso
+        header('Location:admin?es=18');//echec ajout/modif membre perso
 	}
 
-    header('Location:admin?error=19');//succes ajout/modif membre perso
+    header('Location:admin?es=19');//succes ajout/modif membre perso
 }
 // function permettant de supprimer un membre du personnel
 function delMemberForAdmin ($member) {
@@ -712,10 +712,10 @@ function delMemberForAdmin ($member) {
 	$reponse = $bdd->exec("DELETE FROM `vie_scolaire` WHERE `id`=$member");
 
 	if ($reponse == FALSE){
-        header('Location:admin?error=20');//echec supp membre du personnel
+        header('Location:admin?es=20');//echec supp membre du personnel
 	}
 
-    header('Location:admin?error=21');//succes supp membre du personnel
+    header('Location:admin?es=21');//succes supp membre du personnel
 }
 // function permettant d'ajouter une classe
 function addClasseForAdmin ($classe) {
@@ -725,17 +725,17 @@ function addClasseForAdmin ($classe) {
 
 	while ($donnees = $reponse->fetch()) {
 		if ($donnees['nom'] == $classe) {
-			return header('Location:admin?error=22');//echec add class
+			return header('Location:admin?es=22');//echec add class
 		}
 	}
 
 	$reponse = $bdd->exec("INSERT INTO `classe` (`nom`, `emploi_du_temps`, `moyenne`) VALUES ('$classe', 'NO-CONFIG', 0)");
 
 	if ($reponse == FALSE) {
-        header('Location:admin?error=22');//echec add class
+        header('Location:admin?es=22');//echec add class
 	}
 
-    header('Location:admin?error=23');//succes add class
+    header('Location:admin?es=23');//succes add class
 }
 // function permettant de supprimer une classe
 function delClasseForAdmin ($classe) {
@@ -744,10 +744,10 @@ function delClasseForAdmin ($classe) {
 	$reponse = $bdd->exec("DELETE FROM `classe` WHERE `nom`='$classe'");
 
 	if ($reponse == FALSE) {
-        header('Location:admin?error=24');//echec del class
+        header('Location:admin?es=24');//echec del class
 	}
 
-    header('Location:admin?error=25');//succes del class
+    header('Location:admin?es=25');//succes del class
 }
 // fin de la parti page administration
 
