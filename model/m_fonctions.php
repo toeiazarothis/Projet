@@ -97,7 +97,7 @@ function matiereForEleve ($userID, $matiere) {
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['eleve'] == $userID && $donnees['matiere'] == $matiere) {
-			$texte .= $donnees['note'].'/20(Coefficient: '.$donnees['coefficient'].') ';
+			$texte .= $donnees['note'].'/20(Coeff: '.$donnees['coefficient'].') ';
 		}
 	}
 
