@@ -19,7 +19,7 @@ if($_SESSION['stats'] != 'prof') {
 	}
 }
 
-if (isset($_POST['validate_note'], $_POST['classe_for_note'])) {
+if (isset($_POST['validate_note'], $_POST['classe_for_note'], $_POST['coef_for_note'])) {
 	// $idEleve = prepareForSendAbsence ($_POST['classe_for_absent']);
 	$bdd = connectionDB();
 	$reponse = $bdd->query('SELECT MAX(id), classe FROM eleves WHERE classe="'.$_POST['classe_for_note'].'"');
@@ -28,7 +28,7 @@ if (isset($_POST['validate_note'], $_POST['classe_for_note'])) {
 	$id = 0;
 	while ($id <= $idEleve) {
 		if ($_POST["$id"] >= 1){
-			echo sendNoteForProf ($id, $_POST['matiere_for_note'], $_POST['classe_for_note'], $_POST["$id"]);
+			echo sendNoteForProf ($id, $_POST['matiere_for_note'], $_POST['classe_for_note'], $_POST['coef_for_note'], $_POST["$id"]);
 		}
 		$id += 1;
 		if ($id > $idEleve) {

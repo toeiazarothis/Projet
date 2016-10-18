@@ -90,14 +90,14 @@ function verifPassIsUser ($user, $pass) {
 function matiereForEleve ($userID, $matiere) {
 	$bdd = connectionDB();
 
-	$reponse = $bdd->query('SELECT eleve, note, matiere FROM notes ORDER BY id DESC');
+	$reponse = $bdd->query('SELECT eleve, note, matiere, coefficient FROM notes ORDER BY id DESC');
 
 	$texte = '';
 
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['eleve'] == $userID && $donnees['matiere'] == $matiere) {
-			$texte .= $donnees['note'].'/20 ';
+			$texte .= $donnees['note'].'/20(Coefficient: '.$donnees['coefficient'].') ';
 		}
 	}
 
@@ -107,22 +107,22 @@ function matiereForEleve ($userID, $matiere) {
 function moyenneForMatiereForEleve ($userID, $matiere) {
 	$bdd = connectionDB();
 
-	$reponse = $bdd->query('SELECT eleve, note, matiere FROM notes ORDER BY id DESC');
+	$reponse = $bdd->query('SELECT eleve, note, matiere, coefficient FROM notes ORDER BY id DESC');
 
-	$nbNote = 0;
+	$nbCoef = 0;
 
 	$additionNote = 0;
 
 	while ($donnees = $reponse->fetch())
 	{
 		if ($donnees['eleve'] == $userID && $donnees['matiere'] == $matiere) {
-			$additionNote += $donnees['note'];
-			$nbNote += 1;
+			$additionNote += $donnees['note'] * $donnees['coefficient'];
+			$nbCoef += $donnees['coefficient'];
 		}
 	}
 
 	if ($additionNote >= 1) {
-		$moyenneGeneral = $additionNote / $nbNote;
+		$moyenneGeneral = $additionNote / $nbCoef;
 		$_SESSION['moyenneGeneral'] += $moyenneGeneral;
 		$_SESSION['nbNoteMoyenneGeneral'] += 1;
 		return $moyenneGeneral;
@@ -211,7 +211,7 @@ function afficherListeEleveDansClassePourNote ($classe) {
  			$texte .= '<div class="form-group">
  					<div class="input-group">
  						<div class="input-group-addon">'.ucfirst($donnees['prenom_eleve']).' '.strtoupper($donnees['nom_eleve']).'</div>
- 						<input type="number" class="form-control" id="NoteScolaire" name="'.$donnees['id'].'" step="0.5" value="" min="0" max="20" placeholder="Entrer la note de l\'élève">
+ 						<input type="number" class="form-control" id="NoteScolaire" name="'.$donnees['id'].'" step="0.1" value="" min="0" max="20" placeholder="Entrer la note de l\'élève">
  						<div class="input-group-addon">20</div>
  					</div>
  				</div>';
@@ -222,10 +222,10 @@ function afficherListeEleveDansClassePourNote ($classe) {
 }
 
 // fonction permettant d'envoyer la note dans la colonne note de la table Eleve de la BDD
-function sendNoteForProf ($eleve, $matiere, $classe, $note) {
+function sendNoteForProf ($eleve, $matiere, $classe, $coef, $note) {
 	$bdd = connectionDB();
 
-	$reponse = $bdd->exec('INSERT INTO `notes` (`eleve`, `matiere`, `classe`, `note`) VALUES ('.$eleve.', "'.$matiere.'", "'.$classe.'", '.$note.')');
+	$reponse = $bdd->exec('INSERT INTO `notes` (`eleve`, `matiere`, `classe`, `note`, `coefficient`) VALUES ('.$eleve.', "'.$matiere.'", "'.$classe.'", '.$note.', '.$coef.')');
 
 	if ($reponse == FALSE){
         header('Location:prof?es=26');//echec envoie note
@@ -577,37 +577,37 @@ function showFormulaireProfForAdmin ($prof) {
 	<div class="input-group">
 		<div class="input-group-addon">Matière n°1</div>
 		<select class="form-control" name="matiere_1_prof" id="matiere_for_note">
-			<option value="aucune">Sélectionner une matière</<option>
-			<option value="francais">Français</<option>
-			<option value="histoire">Histoire</<option>
-			<option value="mathematique">Mathématique</<option>
-			<option value="eps">EPS</<option>
-			<option value="science">Science</<option>
-			<option value="anglais">Anglais</<option>
+			<option value="aucune">Sélectionner une matière</option>
+			<option value="francais">Français</option>
+			<option value="histoire">Histoire</option>
+			<option value="mathematique">Mathématique</option>
+			<option value="eps">EPS</option>
+			<option value="science">Science</option>
+			<option value="anglais">Anglais</option>
 		</select>
 	</div>
 	<div class="input-group">
 		<div class="input-group-addon">Matière n°2</div>
 		<select class="form-control" name="matiere_2_prof" id="matiere_for_note">
-			<option value="aucune">Sélectionner une matière</<option>
-			<option value="francais">Français</<option>
-			<option value="histoire">Histoire</<option>
-			<option value="mathematique">Mathématique</<option>
-			<option value="eps">EPS</<option>
-			<option value="science">Science</<option>
-			<option value="anglais">Anglais</<option>
+			<option value="aucune">Sélectionner une matière</option>
+			<option value="francais">Français</option>
+			<option value="histoire">Histoire</option>
+			<option value="mathematique">Mathématique</option>
+			<option value="eps">EPS</option>
+			<option value="science">Science</option>
+			<option value="anglais">Anglais</option>
 		</select>
 	</div>
 	<div class="input-group">
 		<div class="input-group-addon">Matière n°3</div>
 		<select class="form-control" name="matiere_3_prof" id="matiere_for_note">
-			<option value="aucune">Sélectionner une matière</<option>
-			<option value="francais">Français</<option>
-			<option value="histoire">Histoire</<option>
-			<option value="mathematique">Mathématique</<option>
-			<option value="eps">EPS</<option>
-			<option value="science">Science</<option>
-			<option value="anglais">Anglais</<option>
+			<option value="aucune">Sélectionner une matière</option>
+			<option value="francais">Français</option>
+			<option value="histoire">Histoire</option>
+			<option value="mathematique">Mathématique</option>
+			<option value="eps">EPS</option>
+			<option value="science">Science</option>
+			<option value="anglais">Anglais</option>
 		</select>
 	</div>';
 

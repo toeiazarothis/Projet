@@ -95,12 +95,9 @@
               <div id="for_saisir_note_for_note"></div>
               <br>
               <div id="for_button_for_note">
-              <select class="" name="">
-                <option>1</option><option>2</option><option>3</option>
-              </select>
-              <input type="checkbox" id="inlineCheckbox1" name="validate_note" value="yes">Confirmer l'ajout des notes
-              <br><br>
-              <button class="btn btn-success">Ajouter les notes</button>
+                <input type="checkbox" id="inlineCheckbox1" name="validate_note" value="yes">Confirmer l'ajout des notes
+                <br><br>
+                <button class="btn btn-success">Ajouter les notes</button>
               </div>
               <br>
               <div id="result_for_send_note">
@@ -249,7 +246,9 @@
 				url: './model/m_fonctions.php',
 				type: 'post',
 				data: { 'eleve_for_note': for_eleve },
-				success: function(response) { $("#for_eleve_for_note" ).html(response);}
+				success: function(response) { $("#for_eleve_for_note" ).html('<h4>Entrer un coefficient</h4>' +
+                    '<div><input type="number" class="form-control" id="CoefScolaire" name="coef_for_note" step="0.1" value="1" min="1" max="5"></div><br><br>' +
+                    response);}
 			});
 		});
 	</script>
