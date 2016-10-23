@@ -75,7 +75,7 @@
                       <i class="fa fa-circle fa-stack-2x text-primary"></i>
                       <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h4 class="service-heading">Mikomi</h4>
+                  <h4 class="service-heading"><a href="http://mikomi.hol.es/" target="_blank">Le site Mikomi</a></h4>
                   <h3 class="service-sub-heading"></h3>
               </div>
           </div>
